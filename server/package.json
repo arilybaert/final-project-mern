@@ -1,7 +1,7 @@
 {
   "name": "final-project-mern-arilybaert",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/gdmgent-1920-mobdev2/final-project-mern-arilybaert.git",
   "author": "arilybaert <arilybae@arteveldehs.be>",
   "license": "MIT",

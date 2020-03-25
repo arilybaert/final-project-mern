@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const gameSchema = new Schema({
     _id: {type: String, required: true},
     games:[{
-        gameID: {type: String, required: true},
-        isStartTimeTBD: {type: String, required: true},
-        isGameActivated: {type: String, required: true},
+        _id: {type: String, required: true},
+        isStartTimeTBD: {type: Boolean, required: true},
+        isGameActivated: {type: Boolean, required: true},
         startTimeEastern: {type: String, required: false},
         startDateEastern: {type: Date, required: true},
         startTimeISO: {type: String, required: true},

@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 let Game = require('../models/game.model');
 require('dotenv').config();
 
-const url = process.env.API_SCOREBOARD_URL;
+// const url = process.env.API_SCOREBOARD_URL;
 
 // // FETCH SCORES BY DAY FROM API
 // fetch(url)
@@ -31,38 +31,47 @@ router.route('/').get((req, res) => {
 // ADD GAMES
 router.route('/add').post((req, res) => {
     const _id = req.body._id;
-    const gameID = req.body.gameID;
-    const isStartTimeTBD = req.body.isStartTimeTBD;
-    const isGameActivated = req.body.isGameActivated;
-    const startTimeEastern = req.body.startDateEastern;
-    const startDateEastern = req.body.startDateEastern;
-    const startTimeISO = req.body.startTimeISO;
-    const vTeam = req.body.vTeam;
-    const vTeamTricode = req.body.vTeamTricode;
-    const vTeamScore = req.body.vTeamScore;
-    const hTeam = req.body.hTeam;
-    const hTeamTricode = req.body.hTeamTricode;
-    const hTeamScore = req.body.hTeamScore;
+    let games = [];
+    req.body.games.forEach(game => {
+
+        const _id = game._id;
+        const isStartTimeTBD = game.isStartTimeTBD;
+        const isGameActivated = game.isGameActivated;
+        const startTimeEastern = game.startDateEastern;
+        const startDateEastern = game.startDateEastern;
+        const startTimeISO = game.startTimeISO;
+        const vTeam = game.vTeam;
+        const vTeamTricode = game.vTeamTricode;
+        const vTeamScore = game.vTeamScore;
+        const hTeam = game.hTeam;
+        const hTeamTricode = game.hTeamTricode;
+        const hTeamScore = game.hTeamScore;
+
+        games.push({
+            _id,
+            isGameActivated,
+            isStartTimeTBD,
+            startDateEastern,
+            startTimeEastern,
+            startTimeISO,
+            hTeam,
+            hTeamScore,
+            hTeamTricode,
+            vTeam,
+            vTeamScore,
+            vTeamTricode,
+        });
+    });
 
     const newGame = new Game ({
         _id,
-        gameID,
-        isGameActivated,
-        isStartTimeTBD,
-        startDateEastern,
-        startTimeEastern,
-        startTimeISO,
-        hTeam,
-        hTeamScore,
-        hTeamTricode,
-        vTeam,
-        vTeamScore,
-        vTeamTricode,
-    });
+        games: games
+    })
 
     newGame.save()
-        .then(() => res.json('Game added cuz'))
-        .catch(err => res.status(400).json('error' + err));
+    .then(() => res.json('Game added cuz'))
+    .catch(err => res.status(400).json('error' + err));
+
 });
 
 // GET SPECIFIC GAME
