@@ -21,7 +21,7 @@ connection.once('open', () => {
 })
 
 // REQUIRE AND LOCATE FILES
-const gamesRouter = require('./routes/games');
+const gamesRouter = require('./routes/gameDays');
 app.use('/games', gamesRouter);
 
 // START SERVER
