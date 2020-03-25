@@ -1,0 +1,214 @@
+// COLORS
+$primary: #0630AA;
+$secondary: #FF2D00;
+$black: rgb(19, 16, 16);
+$white: rgb(238, 232, 232);
+
+// FONTS
+$fontsize-primary: 'American Typewriter';
+$font-content: 'Arial';
+
+$font-title: 20pt;
+$fontsize-scores: 17pt;
+$fontsize-small: 13pt;
+
+// NAVIGATION
+
+.o-title {
+
+  margin-top: 1.5vh;
+  background-color: $primary;
+  padding: 3%;
+
+  .o-accountLogo {
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .a-title {
+      color: $white;
+      font-size: $font-title;
+      font-family: $fontsize-primary;
+  }
+
+  .a-title__bold {
+      font-weight: bolder;
+  }
+}
+
+// DATE PICKER
+
+.o-datePicker {
+
+  box-sizing: border-box;
+  background-color: $secondary;
+  padding: 2.3vh;
+  border-radius: 45pt;
+  margin-top: 2vh;
+
+
+  .m-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .a-arrow {
+          height: 25px;
+      }
+
+      .a-arrow__transform {
+          transform: scaleX(-1);
+      }
+  }
+
+
+  .a-currentDate {
+      display: block;
+      text-align: center;
+      font-family: $font-content;
+      font-weight: bold;
+      font-size: $fontsize-small;
+      color: $white;
+  }
+
+}
+
+// SCORES
+
+.o-scores {
+
+  margin-top: 3vh;
+  box-sizing: border-box;
+  box-shadow: 3px 2px 8px 1px rgba(0,0,0,0.35);
+  padding: 1vh;
+  border-radius: 45pt;
+
+
+  .m-gameStatus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+  }
+  .a-teamScore {
+      font-family: $font-content;
+      font-size: 19pt;
+      color: $primary;
+  }
+
+  // @TODO
+  .a-teamScore__win {
+      // font-weight: bold;
+  }
+  
+  .m-logo {
+      text-align: center;
+
+      .a-logo {
+          height: 40px;
+      }
+      .a-teamName {
+          color: $primary;
+          font-family: $font-content;
+          display: block;
+          text-align: center;
+      }
+  }
+}
+
+
+// BOTTOM NAVIGATION
+.o-bottomNav {
+    display: flex;
+    position:fixed;
+    max-height: 115px;
+	bottom:0;
+	left:0;
+	right:0;
+    z-index:1000;
+    padding: 3%;
+    background-color: $secondary;
+    color: $white;
+    box-shadow: 0px 0px 6px 0px $black;
+
+    .m-bottomNav__element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-bottomNav__element:link {
+        color: $white;
+    }
+    .m-bottomNav__element:hover{
+        color: $white;
+    }
+    .m-bottomNav__element:active {
+        color: $white;
+    }
+    .m-bottomNav__element:visited {
+        color: $white;
+    }
+}
+
+
+// STANDINGS
+
+.o-tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+
+    .m-standingsTable {
+        text-align: center;
+        padding: 3px;
+        width: 95%;
+        box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.23);
+
+        th {
+            padding: 5px;
+        }
+    }
+}
+
+// FAVORITES
+
+.o-favoHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    border-radius: 45pt;
+    padding: 2.3vh;
+    margin-top: 2vh;
+
+    .a-favoritesHeader {
+        color: $white;
+        font-size: $fontsize-primary;
+        font-family: $font-content;
+        font-weight: bold;
+    }
+
+}
+
+.o-favoAddBtn {
+    display: flex;
+    position:fixed;
+	bottom:15vh;
+	right: 5vw;
+    z-index:2000;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: $secondary;
+    color: $white;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    .a-favoAddBtn {
+        font-size: 50pt;
+        line-height: 0rem;
+    }
+}

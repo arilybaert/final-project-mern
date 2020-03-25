@@ -1,38 +1,161 @@
-.App {
+.o-title {
+  margin-top: 1.5vh;
+  background-color: #0630AA;
+  padding: 3%;
+}
+.o-title .o-accountLogo {
+  color: #eee8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-title .a-title {
+  color: #eee8e8;
+  font-size: 20pt;
+  font-family: "American Typewriter";
+}
+.o-title .a-title__bold {
+  font-weight: bolder;
+}
+
+.o-datePicker {
+  box-sizing: border-box;
+  background-color: #FF2D00;
+  padding: 2.3vh;
+  border-radius: 45pt;
+  margin-top: 2vh;
+}
+.o-datePicker .m-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-datePicker .m-arrow .a-arrow {
+  height: 25px;
+}
+.o-datePicker .m-arrow .a-arrow__transform {
+  transform: scaleX(-1);
+}
+.o-datePicker .a-currentDate {
+  display: block;
+  text-align: center;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 13pt;
+  color: #eee8e8;
+}
+
+.o-scores {
+  margin-top: 3vh;
+  box-sizing: border-box;
+  box-shadow: 3px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  padding: 1vh;
+  border-radius: 45pt;
+}
+.o-scores .m-gameStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.o-scores .a-teamScore {
+  font-family: "Arial";
+  font-size: 19pt;
+  color: #0630AA;
+}
+.o-scores .m-logo {
+  text-align: center;
+}
+.o-scores .m-logo .a-logo {
+  height: 40px;
+}
+.o-scores .m-logo .a-teamName {
+  color: #0630AA;
+  font-family: "Arial";
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.o-bottomNav {
+  display: flex;
+  position: fixed;
+  max-height: 115px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 3%;
+  background-color: #FF2D00;
+  color: #eee8e8;
+  box-shadow: 0px 0px 6px 0px #131010;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.o-bottomNav .m-bottomNav__element {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.o-bottomNav .m-bottomNav__element:link {
+  color: #eee8e8;
+}
+.o-bottomNav .m-bottomNav__element:hover {
+  color: #eee8e8;
+}
+.o-bottomNav .m-bottomNav__element:active {
+  color: #eee8e8;
+}
+.o-bottomNav .m-bottomNav__element:visited {
+  color: #eee8e8;
 }
 
-.App-link {
-  color: #61dafb;
+.o-tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+.o-tableContainer .m-standingsTable {
+  text-align: center;
+  padding: 3px;
+  width: 95%;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.23);
+}
+.o-tableContainer .m-standingsTable th {
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.o-favoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF2D00;
+  border-radius: 45pt;
+  padding: 2.3vh;
+  margin-top: 2vh;
+}
+.o-favoHeader .a-favoritesHeader {
+  color: #eee8e8;
+  font-size: "American Typewriter";
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+.o-favoAddBtn {
+  display: flex;
+  position: fixed;
+  bottom: 15vh;
+  right: 5vw;
+  z-index: 2000;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #FF2D00;
+  color: #eee8e8;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.o-favoAddBtn .a-favoAddBtn {
+  font-size: 50pt;
+  line-height: 0rem;
 }
