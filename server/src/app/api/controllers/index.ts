@@ -4,5 +4,5 @@ import PostController from './PostController';
 
 export {
     HelloController,
-    PostController
+    PostController,
 };

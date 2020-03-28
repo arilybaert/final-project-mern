@@ -9,12 +9,19 @@ import { default as http, createServer, Server } from 'http';
 
 import { default as Router } from './router';
 import { GlobalMiddleware } from './middleware';
+import { IAppError } from './utilities';
+import { default as Config, IConfig} from './services/config';
+import { default as Logger, ILogger } from './services/logger';
 class App {
     public app: Application;
+    private config: IConfig;
+    private logger: ILogger;
     private server: Server;
     private router: Router;
 
-    constructor () {
+    constructor (logger: ILogger, config: IConfig) {
+        this.config = config;
+        this.logger = logger;
         this.createExpress();
         this.createServer();
     }
@@ -35,13 +42,18 @@ class App {
         next(error);
     }
 
-    private errorHandler(error: Error, req: Request, res: Response, next: NextFunction): void {
-        if (error['status'] === 404){
-            res.status(404).render('pages/404');
+    private errorHandler(
+        error: IAppError,
+        req: Request,
+        res: Response,
+        next: NextFunction,
+      ): void {
+        if (error.status === 404) {
+          res.status(404).render('pages/404');
         } else {
-            res.status(500).json({message: 'status 500 bruv'});
+          res.status(error.status).render('pages/404');
         }
-    }
+      }
 
     // CREATE SERVER
     private createServer(): void {
@@ -52,7 +64,9 @@ class App {
 
         })
         this.server.on('listening', () => {
-            console.log('listening on 8080');
+            this.logger.info(
+                `listening on ${this.config.server.host} : ${this.config.server.port}`, {}
+            )
         })
     }
 
@@ -62,7 +76,7 @@ class App {
 
     // START SERVER
     public start(): void{
-        this.server.listen(8080, 'localhost');
+        this.server.listen(this.config.server.port, this.config.server.host);
     }
 
     // STOP SERVER
@@ -74,6 +88,7 @@ class App {
 
     //GRACEFULL SHUTDOWN
     private gracefulShutdown(error?: Error) : void {
+        this.logger.info('Server is gracefully shutdown', error || {});
         if(error) {
             process.exit(1);
         }
