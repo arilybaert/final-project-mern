@@ -1,5 +1,5 @@
 import App from './app';
-import { default as Config, IConfig} from './app/services/config';
+import { default as Config, IConfig, Environment} from './app/services/config';
 import Logger, { ILogger } from './app/services/logger';
 import MongoDBDatabase from './app/services/database/MongoDBDatabase';
 
@@ -16,11 +16,16 @@ import MongoDBDatabase from './app/services/database/MongoDBDatabase';
     // CREATE A DB SERVICE
     const mongoDBDatabase = new MongoDBDatabase(logger, config);
     const connected = await mongoDBDatabase.connect();
+
+    if(config.env === Environment.development) {
+        mongoDBDatabase.seed();
+    }
     logger.info('We have a connection!', connected);
 
     const app: App = new App(logger, config);
     app.start();
 
+    // STOP ALL RUNNING PROCESSES
     const stopAllProcesses = async () => {
         app.stop();
         await mongoDBDatabase.disconnect();

@@ -54,3 +54,1288 @@
 2020-03-28 15:02:41 [[32minfo[39m]: 	listening on localhost : 8080 {
   "object": {}
 }
+2020-03-28 15:05:49 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 15:05:51 [[32minfo[39m]: 	Connected to th mongodb database {}
+2020-03-28 15:05:51 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 15:05:51 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 15:05:59 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 15:06:00 [[32minfo[39m]: 	Connected to th mongodb database {
+  "object": {}
+}
+2020-03-28 15:06:00 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 15:06:00 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 15:06:46 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 15:06:47 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 15:06:47 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 15:06:47 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 15:07:22 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 15:07:23 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 15:07:23 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 15:07:23 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:47:52 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:47:53 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:47:53 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:47:53 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:49:06 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:49:07 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:49:07 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:49:07 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:49:50 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:49:51 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:49:51 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:49:51 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:50:08 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:50:09 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:50:09 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:50:09 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:50:16 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:50:17 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:50:17 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:50:17 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:51:20 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:52:24 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:52:24 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:52:24 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:53:18 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:53:20 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:53:20 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:53:21 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:53:21 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:53:21 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:53:31 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:53:32 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:53:32 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:53:32 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:55:15 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:55:16 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:55:16 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:55:16 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:56:18 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:56:20 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:56:20 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 18:56:23 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:56:23 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 18:56:30 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:56:30 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:56:30 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:57:12 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 18:57:14 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 18:57:14 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 18:57:14 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 18:57:14 [[32minfo[39m]: 	Message created with id 5e7f9e0a1502b13f3cd6a817 {
+  "object": {}
+}
+2020-03-28 19:07:19 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:07:36 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:07:36 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:07:36 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:07:37 [[32minfo[39m]: 	Message created with id 5e7fa0787bfd42405163803a {
+  "object": {}
+}
+2020-03-28 19:07:53 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:07:54 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:07:54 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:07:54 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:07:54 [[32minfo[39m]: 	Message created with id 5e7fa08a3be5f7406cab65b8 {
+  "object": {}
+}
+2020-03-28 19:08:21 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:08:23 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:08:23 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:08:23 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:08:23 [[32minfo[39m]: 	Message created with id 5e7fa0a745b509408388f83f {
+  "object": {}
+}
+2020-03-28 19:09:09 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:09:38 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:09:38 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:09:38 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:09:38 [[32minfo[39m]: 	Message created with id 5e7fa0f2c4cc8b40db26c791 {
+  "object": {}
+}
+2020-03-28 19:12:52 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:12:54 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:12:54 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:12:54 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:13:29 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:13:38 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:13:38 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:13:38 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:14:09 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:14:12 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:14:13 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:14:13 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:14:21 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:14:22 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:14:22 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:14:22 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:14:28 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:14:30 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:14:30 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:14:30 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:15:19 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:15:20 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:15:20 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:15:20 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:15:35 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:15:37 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:15:37 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:15:37 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:16:30 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:16:32 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:16:32 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:16:32 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:33:56 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:33:59 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:33:59 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:33:59 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:34:00 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:34:01 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:34:01 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:34:01 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:34:07 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:34:26 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:34:26 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:34:26 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:34:41 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:34:42 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:34:42 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:34:42 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:35:05 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:35:07 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:35:07 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:35:07 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:35:16 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:35:18 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:35:18 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:35:18 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:35:43 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:35:45 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:35:45 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:35:45 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:35:58 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:36:00 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:36:00 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:36:00 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:37:39 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:37:41 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:37:41 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:37:41 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:38:37 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:38:40 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:38:40 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:38:40 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:41:07 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:41:07 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:41:07 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-28 19:41:12 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:43:58 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-28 19:44:00 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:44:00 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:44:00 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 19:44:06 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-28 19:44:06 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-28 19:44:06 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:07:13 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:07:13 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:07:13 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd01 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd02 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd03 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd04 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd06 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd05 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd07 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd09 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd08 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0b {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0a {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0c {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0f {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0d {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd0e {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd10 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd12 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd11 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd13 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd15 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd14 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd16 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd17 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd18 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd19 {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd1a {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd1b {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd1c {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd1d {
+  "object": {}
+}
+2020-03-29 12:07:14 [[32minfo[39m]: 	User created with id 5e808f72cec18e159a42bd1e {
+  "object": {}
+}
+2020-03-29 12:12:28 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:12:30 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:12:30 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:12:30 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:12:47 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c2 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c1 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c3 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c4 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c6 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c5 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c7 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c8 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35c9 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35ca {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35cb {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35cc {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35cd {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35ce {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35cf {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d0 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d1 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d2 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d3 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d5 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d4 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d6 {
+  "object": {}
+}
+2020-03-29 12:12:49 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d7 {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d8 {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35d9 {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35da {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35db {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35dc {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35dd {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35de {
+  "object": {}
+}
+2020-03-29 12:12:50 [[32minfo[39m]: 	User created with id 5e8090c1c230f9162a7b35df {
+  "object": {}
+}
+2020-03-29 12:13:58 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:14:00 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:14:00 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:14:00 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:14:13 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:14:15 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:14:15 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2ad {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2ac {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2ae {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b0 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2af {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b1 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b2 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b3 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b4 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b5 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b6 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b7 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2ba {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b8 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2b9 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2bb {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2bc {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2bd {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2be {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2bf {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c0 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c1 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c2 {
+  "object": {}
+}
+2020-03-29 12:14:16 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c3 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c4 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c5 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c6 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c7 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c8 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2c9 {
+  "object": {}
+}
+2020-03-29 12:14:17 [[32minfo[39m]: 	User created with id 5e80911843e53c1666d9a2ca {
+  "object": {}
+}
+2020-03-29 12:15:33 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:15:35 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:15:35 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:15:35 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098b5 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098b6 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098b7 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098ba {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098b8 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098b9 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098bb {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098bd {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098bc {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098be {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098bf {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c0 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c1 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c2 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c3 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c5 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c4 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c6 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c8 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c7 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098c9 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098ca {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098cb {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098cc {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098cd {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098ce {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098cf {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098d0 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098d1 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098d2 {
+  "object": {}
+}
+2020-03-29 12:15:36 [[32minfo[39m]: 	User created with id 5e809168361e9f16902098d3 {
+  "object": {}
+}
+2020-03-29 12:18:28 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:18:30 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:18:30 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:18:30 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:18:45 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67725 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67723 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67724 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67721 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67729 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67726 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67728 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67727 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6771f {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772b {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772c {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772a {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772f {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67730 {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772e {
+  "object": {}
+}
+2020-03-29 12:18:47 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6772d {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67731 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67732 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67733 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67735 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67734 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67737 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67736 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67738 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6773b {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6773a {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67739 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6773c {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67720 {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc6773d {
+  "object": {}
+}
+2020-03-29 12:18:48 [[32minfo[39m]: 	User created with id: 5e8092278a6b52171cc67722 {
+  "object": {}
+}
+2020-03-29 13:27:31 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:27:34 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:27:34 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:27:34 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:28:21 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:28:22 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:28:22 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:28:22 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:28:35 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:28:37 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:28:37 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:28:37 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:28:57 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:28:58 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:28:59 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:28:59 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-29 13:29:02 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:29:02 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:29:02 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:33:04 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:33:07 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:33:07 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:33:07 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-29 13:34:31 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:34:31 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:34:31 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:41:03 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:41:05 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:41:05 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:41:05 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:44:11 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:44:14 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:44:14 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:44:14 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:44:30 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:44:32 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:44:32 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:44:32 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:44:38 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:44:40 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:44:40 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:44:40 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:45:10 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:45:12 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:45:12 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:45:12 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:48:59 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:49:01 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:49:01 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:49:01 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:51:44 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:52:03 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:52:03 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:52:03 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-03-29 13:53:15 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-03-29 13:53:17 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-03-29 13:53:17 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-03-29 13:53:17 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
