@@ -1,9 +1,4 @@
-import FavoritesPage from './FavoritePage';
-import HomePage from './HomePage';
-import StandingsPage from './StandingsPage';
-
-export {
-    FavoritesPage,
-    HomePage,
-    StandingsPage
-};
+export const LANDING = '/';
+export const HOME = '/home';
+export const STANDINGS = '/standings';
+export const FAVORITES = '/favorites';
