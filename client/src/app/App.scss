@@ -90,6 +90,9 @@ $fontsize-small: 13pt;
       align-items: center;
       justify-content: center;
       padding: 0;
+      .a-gameStatus{
+          text-align: center;
+      }
   }
   .a-teamScore {
       font-family: $font-content;

@@ -1,10 +1,12 @@
 import { default as mongoose, Connection } from 'mongoose';
 import { default as faker } from 'faker';
-import { default as fetch } from 'node-fetch';
+import { default as DateMaker } from '../../utilities/DateMaker';
+
 
 import { IConfig } from '../config';
 import { ILogger } from '../logger';
 import { IMessage, Message, IUser, User, Post, IPost, IGameDay, IGame, GameDay, Game } from '../../models/mongoose';
+import { GameDayController } from '../../api/controllers';
 
 class MongoDBDatabase {
     private config: IConfig;
@@ -13,23 +15,18 @@ class MongoDBDatabase {
 
     private users: Array<IUser>;
     private posts: Array<IPost>;
-    private gameDays: Array<IGameDay>;
 
-    private games: Array<IGame>;
+    private gameDayController: GameDayController;
 
-    private date: string;
-
-    public tempGames: Array<string> = [];
 
     constructor(logger: ILogger, config: IConfig) {
-        this.date = "20200311";
         this.logger = logger;
         this.config = config;
 
         this.users = [];
         this.posts = [];
-        this.gameDays = [];
-        this.tempGames = [];
+        this.gameDayController = new GameDayController();
+
     }
 
     public connect(): Promise<any> {
@@ -37,6 +34,8 @@ class MongoDBDatabase {
             mongoose.connect(this.config.mongoDBConnection, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
+                useCreateIndex: true,
+                useFindAndModify: false,
             })
             .then(data => {
                 this.db = mongoose.connection;
@@ -63,7 +62,7 @@ class MongoDBDatabase {
             })
         })
     }
-
+    // CREATE EMPTY MESSAGE
     private messageCreate = async (body: string) => {
         const message = new Message({ body });
         try {
@@ -75,6 +74,7 @@ class MongoDBDatabase {
         }
     }
 
+    // FILL MESSAGE
     private createMessages = async () => {
         await Promise.all([
             (async () => this.messageCreate(faker.lorem.paragraph()))
@@ -82,6 +82,8 @@ class MongoDBDatabase {
 
         ]);
     }
+
+    // CREATE EMPTY USER
     private userCreate = async (
         email: string,
         password: string,
@@ -115,6 +117,7 @@ class MongoDBDatabase {
         }
       };
 
+    // FILL USER
     private createUsers = async () => {
         const promises = [];
     
@@ -143,6 +146,8 @@ class MongoDBDatabase {
     
         return await Promise.all(promises);
       };
+
+    // CREATE EMPTY POST
     private postCreate = async (
       title: string,
       synopsis: string,
@@ -166,128 +171,74 @@ class MongoDBDatabase {
       }
     };
 
-  private createPosts = async () => {
-      const promises = [];
-  
-      for (let i = 0; i < 16; i++) {
-        promises.push(
-          this.postCreate(
-            faker.lorem.sentence(),
-            faker.lorem.paragraph(),
-            `<p>${faker.lorem.paragraphs(10, '</p><p>')}</p>`,
-          ),
-        );
-      }
-  
-      return await Promise.all(promises);
-    };
+    // FILL POST
+    private createPosts = async () => {
+        const promises = [];
+    
+        for (let i = 0; i < 16; i++) {
+          promises.push(
+            this.postCreate(
+              faker.lorem.sentence(),
+              faker.lorem.paragraph(),
+              `<p>${faker.lorem.paragraphs(10, '</p><p>')}</p>`,
+            ),
+          );
+        }
+    
+        return await Promise.all(promises);
+      };
 
-  // NEW GAMEDAY
-  private gameDayCreate = async (
-    _id: string,
-    games: Array<IGame>,
-  ) => {
-    const gameDayDetail = {
-      _id,
-      games,
-    };
+    // SEED DATA TO DB
+    public seed = async () => {
+        const messages = await Message.estimatedDocumentCount().exec()
+            .then(async count => {
+                if(count === 0) {
+                    await this.createMessages();
+                } 
+                return Message.find().exec();
+            });
 
-    const gameDay: IGameDay = new GameDay(gameDayDetail);
+      this.users = await User.estimatedDocumentCount().exec().then(async (count) => {
+              if(count === 0) {
+                  await this.createUsers()
+              }
+              return User.find().exec();
+          })
 
-    try {
-      const createdGameDay = await gameDay.save();
-      this.gameDays.push(createdGameDay);
-
-      this.logger.info(`Psot created with id: ${createdGameDay._id}`, {});
-    } catch (err) {
-      this.logger.error(`An error occurred when creating a gameday ${err}`, err);
-    }
-  };
-
-  // PUT DATA IN GAMEDAYS
-  private createGamedays = async () => {
-      const promises = [];
-      const games = [];
-      let data = await this.getGames();
-      data.games.forEach(function (game) {
-        const _id = game.gameId;
-        const isStartTimeTBD = game.isStartTimeTBD;
-        const isGameActivated = game.isGameActivated;
-        const startTimeEastern = game.startTimeEastern;
-        const startDateEastern = game.startDateEastern;
-        const startTimeISO = game.startTimeUTC;
-        const vTeam = game.vTeam.teamId;
-        const vTeamTricode = game.vTeam.triCode;
-        const vTeamScore = game.vTeam.score;
-        const hTeam = game.hTeam.teamId;
-        const hTeamTricode = game.hTeam.triCode;
-        const hTeamScore = game.hTeam.score;
-        
-        games.push({
-          _id,
-          isStartTimeTBD,
-          isGameActivated,
-          startTimeEastern,
-          startDateEastern,
-          startTimeISO,
-          vTeam,
-          vTeamTricode,
-          vTeamScore,
-          hTeam,
-          hTeamTricode,
-          hTeamScore,
-});
+        this.posts = await Post.estimatedDocumentCount().exec().then(async (count) => {
+          if(count === 0) {
+              await this.createPosts()
+          }
+          return Post.find().exec();
       })
 
-        promises.push(
-          this.gameDayCreate(
-            this.date,
-            games,
-          ),
-        );
+        GameDay.countDocuments({_id: DateMaker.date()}).exec().then(async (count) => { 
+          if(count>0){
+              console.log('file found');
+              this.gameDayController.createGamedays(DateMaker.date(), DateMaker.date());
+
+          } else {
+              console.log('file not found');
+              await this.gameDayController.createGamedays()
+          }
+          return GameDay.findById({_id: DateMaker.date()});
+      }); 
+        
+        
+        
+        
+        // this.games = await GameDay.estimatedDocumentCount().exec().then(async(count) => {
+
+        //   if(count === 0) {
+        //     await this.createGamedays()
+        //   } 
+        //   return GameDay.find().exec()
+        // })
+      
+        // CHECK IF GAMEDAY IS SAVED IN DB
 
 
-      return await Promise.all(promises);
-    };
-
-  // GET GAMES FROM API
-  private getGames = async () => {
-    const url = `http://data.nba.net/10s/prod/v1/${this.date}/scoreboard.json`;
-    const response = await fetch(url);
-    return response.json();
-  }
-
-  // SEED DATA TO DB
-  public seed = async () => {
-      const messages = await Message.estimatedDocumentCount().exec()
-          .then(async count => {
-              if(count === 0) {
-                  await this.createMessages();
-              } 
-              return Message.find().exec();
-          });
-
-          this.users = await User.estimatedDocumentCount().exec().then(async (count) => {
-                  if(count === 0) {
-                      await this.createUsers()
-                  }
-                  return User.find().exec();
-              })
-
-            this.posts = await Post.estimatedDocumentCount().exec().then(async (count) => {
-              if(count === 0) {
-                  await this.createPosts()
-              }
-              return Post.find().exec();
-          })
-
-          this.gameDays = await GameDay.estimatedDocumentCount().exec().then(async(count) => {
-            if(count === 0) {
-              await this.createGamedays()
-            }
-            return GameDay.find().exec()
-          })
-  }
+    }
 }
 
 

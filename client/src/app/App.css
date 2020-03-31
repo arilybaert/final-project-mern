@@ -58,6 +58,9 @@
   justify-content: center;
   padding: 0;
 }
+.o-scores .m-gameStatus .a-gameStatus {
+  text-align: center;
+}
 .o-scores .a-teamScore {
   font-family: "Arial";
   font-size: 19pt;

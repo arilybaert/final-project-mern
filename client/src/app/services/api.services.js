@@ -5,10 +5,10 @@ const ApiContext = createContext();
 const useApi = () => useContext(ApiContext);
 
 const ApiProvider = ({children}) => {
-const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = `http://localhost:8080/api`;
 
-const findAllPosts = async () => {
-    let url = `${BASE_URL}/posts`;
+const findAllPosts = async (date) => {
+    let url = `${BASE_URL}/gamedays/${date}`;
     const response = await fetch(url);
     return response.json()
 }

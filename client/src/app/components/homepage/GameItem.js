@@ -2,28 +2,28 @@ import React from 'react';
 import classnames from 'classnames';
 
 
-const GameItem = () => {
+const GameItem = ({data}) => {
 
     return (
         <div className={classnames("row", "o-scores")}>
-            <div className={classnames("col-4", "m-logo")}>
+            <div className={classnames("col-3", "m-logo")}>
                 <img className="a-logo" alt="teamlogo" title="teamlogo"></img>
-                <span className="a-teamName">Pistons</span>
+                <span className="a-teamName">{data.hTeamTricode}</span>
             </div>
-            <div className={classnames("col-1", "m-gameStatus")}>
-                <span className="a-teamScore">137</span>
+            <div className={classnames("col-2", "m-gameStatus")}>
+                <span className="a-teamScore">{data.hTeamScore}</span>
             </div>
             <div className={classnames("col-2", "m-gameStatus")}>
                 <span className="a-gameStatus">
-                  Final
+                  {data.isStartTimeTBD? 'To Be Determined' : data.startTimeEastern}
                   </span>
             </div>
-            <div className={classnames("col-1", "m-gameStatus")}>
-                <span className="a-teamScore">177</span>
+            <div className={classnames("col-2", "m-gameStatus")}>
+                <span className="a-teamScore">{data.vTeamScore}</span>
             </div>
-            <div className={classnames("col-4", "m-logo")}>
+            <div className={classnames("col-3", "m-logo")}>
                 <img className="a-logo" alt="teamlogo" title="teamlogo"></img>
-                <span className="a-teamName">Lakers</span>
+                <span className="a-teamName">{data.vTeamTricode}</span>
             </div>
         </div>
     )

@@ -5,18 +5,7 @@ import { useApi } from '../services';
 
 const HomePage = ({children}) => {
 
-    const { findAllPosts } = useApi();
-    const [ posts, setPosts ] = useState();
 
-    useEffect(() => {
-        const fetchPost = async () => {
-            const data = await findAllPosts();
-            console.log(data);
-            setPosts(data);
-
-        }
-        fetchPost();
-    }, [])
     return (
         <div>
             <Navbar/>

@@ -1072,3 +1072,48 @@
 2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
   "object": {}
 }
+2020-03-31 12:01:31 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200311" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200311"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200311\" }"
+  }
+}
+2020-03-31 12:02:37 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200311" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200311"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200311\" }"
+  }
+}
+2020-03-31 12:50:16 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200331" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200331"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200331\" }"
+  }
+}

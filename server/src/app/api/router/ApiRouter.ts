@@ -34,7 +34,7 @@ class ApiRouter {
         this.router.get('/posts/:id', this.postController.show);
         this.router.get('/users', this.userController.index);
         this.router.get('/users/:id', this.userController.show);
-        this.router.get('/gamesdays', this.userController.index);
+        this.router.get('/gamedays', this.gameDayController.index);
         this.router.get('/gamedays/:id', this.gameDayController.show);
     }
 }
