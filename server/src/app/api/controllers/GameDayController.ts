@@ -2,13 +2,11 @@ import { Request, Response, NextFunction } from 'express';
 import { default as fetch } from 'node-fetch';
 import { default as DateMaker } from '../../utilities/DateMaker';
 
-import { ILogger } from '../../services/logger';
 import {  IGameDay, IGame, GameDay, Game } from '../../models/mongoose';
 
 
 class GameDayController {
     private gameDays: Array<IGameDay>;
-    private logger: ILogger;
     private games: Array<IGame>;
 
     private date: string;

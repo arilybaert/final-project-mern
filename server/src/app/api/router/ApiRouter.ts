@@ -1,5 +1,5 @@
 import {default as express, Router, Application, Request, Response } from 'express';
-import { HelloController, PostController, MessageController, UserController, GameDayController } from '../controllers';
+import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController } from '../controllers';
 
 
 class ApiRouter {
@@ -9,6 +9,7 @@ class ApiRouter {
     private messageController: MessageController;
     private userController: UserController;
     private gameDayController: GameDayController;
+    private teamController: TeamController;
 
     constructor() {
         this.router = express.Router();
@@ -23,6 +24,7 @@ class ApiRouter {
         this.postController = new PostController();
         this.userController = new UserController();
         this.gameDayController = new GameDayController();
+        this.teamController = new TeamController()
 
     }
 
@@ -36,6 +38,7 @@ class ApiRouter {
         this.router.get('/users/:id', this.userController.show);
         this.router.get('/gamedays', this.gameDayController.index);
         this.router.get('/gamedays/:id', this.gameDayController.show);
+        this.router.get('/teams', this.teamController.index);
     }
 }
 
