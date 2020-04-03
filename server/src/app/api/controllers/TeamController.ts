@@ -4,9 +4,11 @@ import {  ITeam, Team, teamSchema } from '../../models/mongoose';
 
 class TeamController {
     private teams: Array<ITeam>;
+    private TEAMS_URL: string;
 
     constructor() {
         this.teams = [];
+        this.TEAMS_URL = 'http://data.nba.net/10s/prod/v2/2019/teams.json';
     }
 
     teamCreate = async (
@@ -104,7 +106,7 @@ class TeamController {
     };
 
     getTeams = async () => {
-        const url = `http://data.nba.net/10s/prod/v2/2019/teams.json`;
+        const url = `${this.TEAMS_URL}`;
         const response = await fetch(url);
         return response.json();
     }

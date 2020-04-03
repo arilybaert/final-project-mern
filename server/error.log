@@ -1117,3 +1117,9 @@
     "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200331\" }"
   }
 }
+2020-04-03 20:01:00 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-04-03 20:01:26 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}

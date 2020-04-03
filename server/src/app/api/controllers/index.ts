@@ -4,6 +4,7 @@ import MessageController from './MessageController';
 import UserController from './UserController';
 import GameDayController from './GameDayController';
 import TeamController from './TeamController';
+import GameStatsController from './GameStatsController';
 
 
 export {
@@ -13,5 +14,6 @@ export {
     UserController,
     GameDayController,
     TeamController,
+    GameStatsController,
     
 };
