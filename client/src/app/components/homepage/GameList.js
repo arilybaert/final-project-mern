@@ -4,7 +4,8 @@ import { default as React, useState, useEffect, useCallback } from 'react';
 
 const GameList = () => {
 
-    const { findAllPosts } = useApi();
+    const { findGames } = useApi();
+    const { refreshTeams } = useApi();
     const [ games, setGames ] = useState();
 
     // MAKE DATE READABLE
@@ -30,11 +31,12 @@ const GameList = () => {
 
     // FETCH DATA
     useEffect(() => {
-        const fetchPost = async () => {
-            const data = await findAllPosts(date());
+        const fetchGame = async () => {
+            const data = await findGames(date());
+            await refreshTeams();
             setGames(data.games);
         }
-        fetchPost();
+        fetchGame();
     }, [])
     return (
         <div className="row">

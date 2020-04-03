@@ -1,5 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
+import { IoIosPerson } from 'react-icons/io';
+
+
 
 const Navbar = () => {
     return (
@@ -9,7 +12,8 @@ const Navbar = () => {
                 <span className={classnames("a-titlte__normal", "a-title")}>Crew</span>
             </div>
             <div className={classnames("col-2", "o-accountLogo")}>
-                <img alt="login"></img>
+            <IoIosPerson size='2.1rem'/>
+
             </div>
         </div>
     )

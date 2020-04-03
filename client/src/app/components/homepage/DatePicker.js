@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
-
-
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
 const DatePicker = () => {
 
     return (
@@ -10,7 +10,7 @@ const DatePicker = () => {
                 <div className="row">
 
                     <div className={classnames("col-4", "m-arrow")}>
-                        <img  title="arrow" alt="arrow" className={classnames("a-arrow", "a-arrow__transform")}></img>
+                        <IoIosArrowBack size='2.1rem' color='white'/>
                     </div>
 
                     <div className="col-4">
@@ -18,7 +18,8 @@ const DatePicker = () => {
                     </div>
 
                     <div className={classnames("col-4", "m-arrow")} >
-                        <img  title="arrow" alt="arrow" className="a-arrow"></img>
+                        <IoIosArrowForward size='2.1rem' color='white'/>
+
                     </div>
                 </div>
             </div>

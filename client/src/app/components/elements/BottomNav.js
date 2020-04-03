@@ -1,24 +1,32 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
+import { IoIosPodium } from 'react-icons/io';
+import { IoIosHome } from 'react-icons/io';
+import { IoIosStar } from 'react-icons/io';
+
+
+
 
 const BottomNav = () => {
 
     return (
         <div className={classnames("o-bottomNav", "row")}>
             <Link to={"/"} className="col m-bottomNav__element">
-                    <img className="a-bottomNavLogo" alt="logo"></img>
+                    <IoIosHome size='2.1rem'/>
                     <span>Home</span>
+
             </Link>
 
             <Link to={"/standings"} className={classnames("col", "m-bottomNav__element")}>
-                    <img className="a-bottomNavLogo" alt="logo"></img>
+                    <IoIosPodium text-shadow="0 0 3px #000" size='2.1rem' />
                     <span>Standings</span>
             </Link>
 
             <Link to={"/favorites"} className={classnames("col", "m-bottomNav__element")}>
-                    <img className="a-bottomNavLogo" alt="logo"></img>
+                    <IoIosStar size='2.1rem'/>
                     <span>Favorites</span>
+
             </Link>
         </div>
     )
