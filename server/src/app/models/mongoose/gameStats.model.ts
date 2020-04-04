@@ -8,6 +8,11 @@ interface IGameStats extends Document {
 
 const gameStatsSchema = new Schema ({
     _id: { type: String, required: true },
+    startTimeUTC: { type: String, required: true },
+    startTimeEastern: { type: String, required: true },
+    isStartTimeTBD: { type: Boolean, required: true },
+    vTeamScore: { type: String, required: true },
+    hTeamScore: { type: String, required: true },
     vTeam: [{
         leaders: [{
             points: [{

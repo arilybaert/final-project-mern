@@ -29,11 +29,21 @@ class GameStatsController {
     // EMPTY GAMES STATS
         gameStatsCreate = async (
             _id: string,
+            startTimeUTC: string,
+            startTimeEastern: string,
+            isStartTimeTBD: Boolean,
+            vTeamScore: string,
+            hTeamScore: string,
             vTeam: Array<any>,
             hTeam: Array<any>,
         ) => {
             const gameStatsDetail = {
                 _id,
+                startTimeUTC,
+                startTimeEastern,
+                isStartTimeTBD,
+                vTeamScore,
+                hTeamScore,
                 vTeam,
                 hTeam,
             }
@@ -50,6 +60,7 @@ class GameStatsController {
             }
         }
 
+        // FILL THE GAMESTATS
         createGameStats = async () => {
             const vTeamActivePlayers: Array<any> = []
             const hTeamActivePlayers: Array<any> = []
@@ -120,8 +131,12 @@ class GameStatsController {
                     
             });
 
-
             const gameStats = {
+                startTimeUTC: data.basicGameData.startTimeUTC,
+                startTimeEastern: data.basicGameData.startTimeEastern,
+                isStartTimeTBD: data.basicGameData.isStartTimeTBD,
+                vTeamScore: data.basicGameData.vTeam.score,
+                hTeamScore: data.basicGameData.hTeam.score,
                 vTeam: {
                     leaders: {
                         points : {
@@ -164,6 +179,7 @@ class GameStatsController {
                 }
             };
 
+            // CREATE OR UPDATE GAMESTATS IN DB
             GameStats.findOneAndUpdate({_id: _id}, gameStats, {new: true, upsert: true}, function (err) {
                 if(err) {
                     console.log(`Error occured when find and update gamestats ${err}`);
@@ -171,8 +187,11 @@ class GameStatsController {
                     console.log('Gamestats are updated!');
                 }});
 
+            // @TODO GET request returns an empty array on first try
 
         }
+
+        // SHOW GAME STATS
         index = async (req: Request, res: Response, next: NextFunction) => {
             try {
                 await this.createGameStats();
