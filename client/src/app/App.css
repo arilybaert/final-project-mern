@@ -162,3 +162,126 @@
   font-size: 50pt;
   line-height: 0rem;
 }
+
+.o-gameStats {
+  background-color: #FF2D00;
+  border-radius: 25px 25px 0px 0px;
+  padding-bottom: 5vw;
+}
+
+.o-bgc {
+  background-color: #FF2D00;
+  padding-bottom: 5vw;
+}
+
+.o-title {
+  margin-top: 1.5vh;
+  background-color: #0630AA;
+  padding: 2vh;
+}
+.o-title .a-title {
+  color: #eee8e8;
+  font-size: 20pt;
+  font-family: "American Typewriter";
+  font-weight: bold;
+}
+.o-title .a-title__bold {
+  font-weight: bolder;
+}
+
+.o-mainStat {
+  margin-top: 5vh;
+  padding: 3vh;
+}
+.o-mainStat .m-mainStat {
+  text-align: center;
+}
+.o-mainStat .m-mainStat .a-logo {
+  height: 90px;
+}
+.o-mainStat .m-mainStat .a-score {
+  display: block;
+  font-size: 23pt;
+  font-family: "Arial";
+  color: #eee8e8;
+}
+.o-mainStat .m-mainStat .a-teamLocation {
+  color: #eee8e8;
+}
+
+.o-actionbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-actionbar .m-actionbar {
+  width: 80vw;
+  background-color: #eee8e8;
+  border-radius: 40px;
+  padding: 0.5vh;
+}
+.o-actionbar .m-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-actionbar .m-logo .a-actionLogo {
+  color: #0630AA;
+}
+.o-actionbar .m-logo .m-stats {
+  background-color: #0630AA;
+  color: #eee8e8;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 5px;
+}
+.o-actionbar .m-logo .m-stats .a-statSelect {
+  background-color: #eee8e8;
+  color: #0630AA;
+  border: 1px solid #0630AA;
+  border-radius: 15px;
+  padding: 4px;
+}
+.o-actionbar .m-logo .m-stats .a-statNone {
+  color: #eee8e8;
+}
+
+.o-leaders {
+  text-align: center;
+  color: #eee8e8;
+}
+.o-leaders .a-leader__score {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.o-table {
+  padding-top: 1.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-table .m-table {
+  font-size: 12pt;
+  color: #eee8e8;
+  text-align: center;
+}
+.o-table td:first-child {
+  text-align: left;
+  margin-left: 3px;
+}
+.o-table th:first-child {
+  text-align: left;
+  margin-left: 3px;
+}
+.o-table td {
+  padding-top: 2vh;
+  padding-left: 1vw;
+}
+
+.a-noGameNotification {
+  padding: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}

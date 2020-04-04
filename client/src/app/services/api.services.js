@@ -1,4 +1,4 @@
-import { default as React, useEffect, useState, useContext, createContext } from 'react';
+import { default as React, useContext, createContext } from 'react';
 
 const ApiContext = createContext();
 
@@ -17,7 +17,7 @@ const findGames = async (date) => {
 // FIND TEAMS
 const refreshTeams = async () => {
     let url = `${BASE_URL}/teams`;
-    const response = await fetch(url);
+    await fetch(url);
     // return response.json()
 }
 
@@ -26,9 +26,14 @@ const findTeam = async (id) => {
     const response = await fetch(url);
     return response.json();
 }
-
+// FIND GAMES statistics
+const findGameStats = async (date, id) => {
+    let url = `${BASE_URL}/gameStats/${date}/${id}`;
+    const response = await fetch(url);
+    return response.json()
+}
     return (
-        <ApiContext.Provider value={{ findGames, refreshTeams, findTeam }}>
+        <ApiContext.Provider value={{ findGames, refreshTeams, findTeam, findGameStats }}>
             {children}
         </ApiContext.Provider>
     );

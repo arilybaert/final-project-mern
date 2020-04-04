@@ -10,7 +10,7 @@ const DatePicker = () => {
                 <div className="row">
 
                     <div className={classnames("col-4", "m-arrow")}>
-                        <IoIosArrowBack size='2.1rem' color='white'/>
+                        <IoIosArrowBack size='2rem' color='white'/>
                     </div>
 
                     <div className="col-4">
@@ -18,7 +18,7 @@ const DatePicker = () => {
                     </div>
 
                     <div className={classnames("col-4", "m-arrow")} >
-                        <IoIosArrowForward size='2.1rem' color='white'/>
+                        <IoIosArrowForward size='2rem' color='white'/>
 
                     </div>
                 </div>

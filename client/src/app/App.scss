@@ -215,3 +215,151 @@ $fontsize-small: 13pt;
         line-height: 0rem;
     }
 }
+
+
+// GAMESTATS
+// BACKGROUND
+
+.o-gameStats {
+    background-color: $secondary;
+    border-radius: 25px 25px 0px 0px;
+    padding-bottom: 5vw;
+}
+.o-bgc {
+    background-color: $secondary;
+    padding-bottom: 5vw;
+}
+
+// NAVIGATION
+.o-title {
+
+    margin-top: 1.5vh;
+    background-color: $primary;
+    padding: 2vh;
+
+    .a-title {
+        color: $white;
+        font-size: $font-title;
+        font-family: $fontsize-primary;
+        font-weight: bold;
+    }
+
+    .a-title__bold {
+        font-weight: bolder;
+    }
+}
+
+.o-mainStat {
+    // background-color: $secondary;
+    // border-radius: 25px 25px 0px 0px;
+    margin-top: 5vh;
+    padding: 3vh;
+
+    .m-mainStat {
+        text-align: center;
+        .a-logo {
+            height: 90px;
+        }
+        
+        .a-score {
+            display: block;
+            font-size: 23pt;
+            font-family: $font-content;
+            color: $white;
+        }
+
+        .a-teamLocation {
+            color: $white;
+        }
+    }
+}
+
+// ACTIONBAR
+.o-actionbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .m-actionbar {
+        width: 80vw;
+        background-color: $white;
+        border-radius: 40px;
+        padding: 0.5vh;
+    }
+
+    .m-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .a-actionLogo {
+            color: $primary;
+        }
+
+        .m-stats {
+            background-color: $primary;
+            color: $white;
+            box-sizing: border-box;
+            border-radius: 15px;
+            padding: 5px;
+
+
+            .a-statSelect {
+                background-color: $white;
+                color: $primary;
+                border: 1px solid $primary;
+                border-radius: 15px;
+                padding: 4px;
+            }
+            .a-statNone {
+                color: $white;
+            }
+        }
+    }
+}
+
+// LEADER
+.o-leaders {
+    text-align: center;
+    color: $white;
+
+    .a-leader__score {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+}
+
+// STATS TABLE
+.o-table {
+    padding-top: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    .m-table {
+        font-size: 12pt;
+        color: $white;
+        text-align: center;
+    }
+    td:first-child { 
+        text-align: left; 
+        margin-left: 3px;
+    }
+    th:first-child { 
+        text-align: left;
+        margin-left: 3px;
+
+    }
+    td {
+        padding-top: 2vh;
+        padding-left: 1vw;
+    }
+}
+
+.a-noGameNotification {
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}

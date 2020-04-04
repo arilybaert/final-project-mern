@@ -1,6 +1,8 @@
 import GameItem from './GameItem';
 import { useApi } from '../../services';
-import { default as React, useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+
+import { default as React, useState, useEffect } from 'react';
 
 const GameList = () => {
 
@@ -37,13 +39,15 @@ const GameList = () => {
             setGames(data.games);
         }
         fetchGame();
-    }, [])
+    }, []);
+
+
     return (
         <div className="row">
             <div className="col-12">
                 {
                     games && games.map((data) => {
-                        return <GameItem data={data} key={data._id}/>
+                        return <Link  key={data._id} to={{pathname:`/games/${data.startDateEastern}/${data._id}`}}><GameItem data={data} key={data._id} /></Link>
                     })
                 }
                 

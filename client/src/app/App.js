@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 
-import {HomePage, StandingsPage, FavoritesPage} from './pages';
+import {HomePage, StandingsPage, FavoritesPage, GameStats} from './pages';
 import * as Routes from './routes'
 import { ApiProvider } from './services';
 
@@ -21,6 +21,7 @@ function App() {
 
             <Route path={Routes.LANDING} exact component={HomePage}/>
             <Redirect from={Routes.HOME} to={Routes.LANDING}/>
+            <Route path={Routes.GAMESTATS} exact component={GameStats}/>
             <Route path={Routes.STANDINGS} exact component={StandingsPage}/>
             <Route path={Routes.FAVORITES} exact component={FavoritesPage}/>
 

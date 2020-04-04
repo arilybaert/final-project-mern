@@ -27,50 +27,75 @@ class GameStatsController {
     } 
 
     // EMPTY GAMES STATS
-        gameStatsCreate = async (
-            _id: string,
-            startTimeUTC: string,
-            startTimeEastern: string,
-            isStartTimeTBD: Boolean,
-            vTeamScore: string,
-            hTeamScore: string,
-            vTeam: Array<any>,
-            hTeam: Array<any>,
-        ) => {
-            const gameStatsDetail = {
-                _id,
-                startTimeUTC,
-                startTimeEastern,
-                isStartTimeTBD,
-                vTeamScore,
-                hTeamScore,
-                vTeam,
-                hTeam,
-            }
-
-            const gameStats: IGameStats = new GameStats(gameStatsDetail);
-
-            try {
-                const createdGameStats = await gameStats.save();
-                this.gameStats.push(createdGameStats);
-
-                console.log('Gamestats created');
-            } catch (err) {
-                console.log('An error occured when creating GAME STATS');
-            }
+    gameStatsCreate = async (
+        _id: string,
+        status: string,
+        startTimeUTC: string,
+        startTimeEastern: string,
+        isStartTimeTBD: Boolean,
+        vTeamScore: string,
+        hTeamScore: string,
+        vTeam: Array<any>,
+        hTeam: Array<any>,
+    ) => {
+        const gameStatsDetail = {
+            _id,
+            status,
+            startTimeUTC,
+            startTimeEastern,
+            isStartTimeTBD,
+            vTeamScore,
+            hTeamScore,
+            vTeam,
+            hTeam,
         }
 
-        // FILL THE GAMESTATS
-        createGameStats = async () => {
-            const vTeamActivePlayers: Array<any> = []
-            const hTeamActivePlayers: Array<any> = []
-            
-            let data = await this.getGameStats(this.gameDate, this.gameId);
-            
-            const vTeamId = data.basicGameData.vTeam.teamId;
-            const hTeamId = data.basicGameData.hTeam.teamId;
-            const _id = data.basicGameData.gameId;
+        const gameStats: IGameStats = new GameStats(gameStatsDetail);
 
+        try {
+            const createdGameStats = await gameStats.save();
+            this.gameStats.push(createdGameStats);
+
+            console.log('Gamestats created');
+        } catch (err) {
+            console.log('An error occured when creating GAME STATS');
+        }
+    }
+
+        // FILL THE GAMESTATS
+    createGameStats = async (date: string, id: string) => {
+
+        const vTeamActivePlayers: Array<any> = []
+        const hTeamActivePlayers: Array<any> = []
+        
+        let data = await this.getGameStats(date, id);
+        
+        const vTeamId = data.basicGameData.vTeam.teamId;
+        const hTeamId = data.basicGameData.hTeam.teamId;
+        const _id = data.basicGameData.gameId;
+        let gameStats;
+
+        // SAVE PARTIAL IF GAME IS TBD
+        if(data.basicGameData.isStartTimeTBD === true ) {
+            gameStats = {
+                status: "game tbd",
+                isStartTimeTBD: data.basicGameData.isStartTimeTBD,
+                vTeamScore: data.basicGameData.vTeam.score,
+                hTeamScore: data.basicGameData.hTeam.score,
+                }
+        }
+        // SAVE PARTIAL IF GAME HASN'T STARTED YET
+        else if(data.basicGameData.isStartTimeTBD === false && data.basicGameData.gameDuration.minutes === "") {
+
+            gameStats = {
+                status: "game hasn't started",
+                isStartTimeTBD: data.basicGameData.isStartTimeTBD,
+                vTeamScore: data.basicGameData.vTeam.score,
+                hTeamScore: data.basicGameData.hTeam.score,
+                }
+            }
+        else {
+            console.log('here to');
             data.stats.activePlayers.forEach(function (activePlayer)  {
                 if(activePlayer.teamId === vTeamId) {
                     const playerId = activePlayer.personId;
@@ -131,7 +156,9 @@ class GameStatsController {
                     
             });
 
-            const gameStats = {
+            gameStats = {
+                status: "game",
+
                 startTimeUTC: data.basicGameData.startTimeUTC,
                 startTimeEastern: data.basicGameData.startTimeEastern,
                 isStartTimeTBD: data.basicGameData.isStartTimeTBD,
@@ -178,30 +205,44 @@ class GameStatsController {
                     activePlayers: hTeamActivePlayers
                 }
             };
+    }
+        // CREATE OR UPDATE GAMESTATS IN DB
+        GameStats.findOneAndUpdate({_id: _id}, gameStats, {new: true, upsert: true}, function (err) {
+            if(err) {
+                console.log(`Error occured when find and update gamestats ${err}`);
+            } else {
+                console.log('Gamestats are updated!');
+            }});
 
-            // CREATE OR UPDATE GAMESTATS IN DB
-            GameStats.findOneAndUpdate({_id: _id}, gameStats, {new: true, upsert: true}, function (err) {
-                if(err) {
-                    console.log(`Error occured when find and update gamestats ${err}`);
-                } else {
-                    console.log('Gamestats are updated!');
-                }});
+        // @TODO GET request returns an empty array on first try
 
-            // @TODO GET request returns an empty array on first try
+    }
 
+    // SHOW GAME STATS
+    index = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            await this.createGameStats(this.gameDate, this.gameId);
+            const gameStats = await GameStats.find().exec();
+            return res.status(200).json(gameStats);
+
+        } catch(err) {
+            next(err);
         }
+    }
 
-        // SHOW GAME STATS
-        index = async (req: Request, res: Response, next: NextFunction) => {
-            try {
-                await this.createGameStats();
-                const gameStats = await GameStats.find().exec();
-                return res.status(200).json(gameStats);
-    
-            } catch(err) {
-                next(err);
-            }
+    show = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { id } = req.params;
+            const { date } = req.params;
+
+            await this.createGameStats(date, id);
+            console.log(this.createGameStats(date, id))
+            const gameStats = await GameStats.findById(id).exec();
+            return res.status(200).json(gameStats);
+        } catch(err) {
+            next(err);
         }
+    }
 }
 
 export default GameStatsController;
