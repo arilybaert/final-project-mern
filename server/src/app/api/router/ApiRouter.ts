@@ -44,6 +44,7 @@ class ApiRouter {
         this.router.get('/teams/:id', this.teamController.show);
         this.router.get('/gameStats', this.gameStatsController.index);
         this.router.get('/gameStats/:date/:id', this.gameStatsController.show);
+        this.router.get('/gameStats/sort', this.gameStatsController.sort);
     }
 }
 

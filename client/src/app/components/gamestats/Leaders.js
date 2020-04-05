@@ -14,12 +14,12 @@ const Leaders = ({gameStats}) => {
         console.log(gameStats);
         const setValues = async () => {
             if(gameStats != undefined) {
-                setPoints(gameStats.hTeam[0].leaders[0].points[0].points);
-                setPointsPlayer(`${gameStats.hTeam[0].leaders[0].points[0].firstName.substring(0, 1)}. ${gameStats.hTeam[0].leaders[0].points[0].lastName}`);
-                setRebounds(gameStats.hTeam[0].leaders[0].rebounds[0].rebounds);
-                setReboundsPlayer(`${gameStats.hTeam[0].leaders[0].rebounds[0].firstName.substring(0, 1)}. ${gameStats.hTeam[0].leaders[0].rebounds[0].lastName}`);
-                setAssists(gameStats.hTeam[0].leaders[0].assists[0].assists);
-                setAssistsPlayer(`${gameStats.hTeam[0].leaders[0].assists[0].firstName.substring(0, 1)}. ${gameStats.hTeam[0].leaders[0].assists[0].lastName}`);
+                setPoints(gameStats.hTeam.leaders.points.points);
+                setPointsPlayer(`${gameStats.hTeam.leaders.points.firstName.substring(0, 1)}. ${gameStats.hTeam.leaders.points.lastName}`);
+                setRebounds(gameStats.hTeam.leaders.rebounds.rebounds);
+                setReboundsPlayer(`${gameStats.hTeam.leaders.rebounds.firstName.substring(0, 1)}. ${gameStats.hTeam.leaders.rebounds.lastName}`);
+                setAssists(gameStats.hTeam.leaders.assists.assists);
+                setAssistsPlayer(`${gameStats.hTeam.leaders.assists.firstName.substring(0, 1)}. ${gameStats.hTeam.leaders.assists.lastName}`);
             }
         }
         setValues()

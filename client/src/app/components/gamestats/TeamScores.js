@@ -1,18 +1,31 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import classnames from 'classnames';
 
-const TeamScores = () => {
+const TeamScores = ({gameStats}) => {
+    const [hTeamScore, setHTeamScore] = useState();
+    const [vTeamScore, setVTeamScore] = useState();
 
+    
+    useEffect( () => {
+        const setValues = async () => {
+            if(gameStats != undefined) {
+                setHTeamScore(gameStats.hTeamScore);
+                setVTeamScore(gameStats.vTeamScore);
+            }
+        }
+        setValues()
+
+    }, [gameStats])
 
     return(
         <div className={classnames("row", "o-mainStat", "o-gameStats")}>
             <div className="col-6 m-mainStat">
 
                 <span className="a-score">
-                     score vTeam
+                     {hTeamScore}
                 </span>
                 <span className="a-teamLocation">
-                Away
+                    Home
                 </span>
 
 
@@ -20,11 +33,11 @@ const TeamScores = () => {
             <div className={classnames("col-6", "m-mainStat", "o-bgc")}>
 
                 <span className="a-score">
-                    score hTeam
+                    {vTeamScore}
 
                 </span>
                 <span className="a-teamLocation">
-                Home
+                    Away
                 </span>
 
             </div>

@@ -102,7 +102,7 @@ class GameStatsController {
                     const teamId = activePlayer.teamId;
                     const firstName = activePlayer.firstName;
                     const lastName = activePlayer.lastName;
-                    const points = String(activePlayer.sortKey.points + activePlayer.sortKey.ftm);
+                    const points = activePlayer.sortKey.points + activePlayer.sortKey.ftm;
                     const tpm = activePlayer.tmp;
                     const assists = activePlayer.assists;
                     const rebounds = activePlayer.totReb;
@@ -215,7 +215,6 @@ class GameStatsController {
             }});
 
         // @TODO GET request returns an empty array on first try
-
     }
 
     // SHOW GAME STATS
@@ -243,6 +242,50 @@ class GameStatsController {
             next(err);
         }
     }
+
+    sort = async (req: Request, res: Response, next: NextFunction) => {
+
+        // TRY 1
+
+        const id = '0021900805';
+        const stats = await GameStats.findById(id).sort({'vTeam.activePlayers.points': -1}).exec();
+        return res.status(200).json(stats);
+        
+        // TRY 2
+        
+        // GameStats.find({ _id: '0021900805'} ).sort({'hTeam.activePlayers.points': -1}).exec(function(err, result) {
+                
+        //         if(err){
+        //             console.log(err);
+        //         } else {
+        //             return res.status(200).json(result);
+        //         }
+        // }
+        //     );
+
+        // TRY 3
+
+        //  GameStats.aggregate(
+        //     [
+        //     // {$match: {'_id': '0021900805'}},
+        //     {$unwind: '$hTeam.activePlayers'},
+        //      {$sort:  {'hTeam.activePlayers.points': 1}}, 
+        //      { $group:{
+        //        "_id": "$hTeam.activePlayers",
+        //              }
+        //      }
+        //     ],
+        //     function(err, result) {
+        //         if(err){
+        //             console.log(err);
+        //         }else {
+        //             return res.status(200).json(result);
+
+        //         }
+        //     }
+        //  );
+    }
+    
 }
 
 export default GameStatsController;

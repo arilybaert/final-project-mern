@@ -25,7 +25,7 @@ const GameStats = () => {
     return (
         <div>
             <Navbar/>
-            <TeamScores />
+            <TeamScores gameStats={gameStats}/>
             <ActionBar/>
             <Leaders gameStats={gameStats}/>
             <StatsTable gameStats={gameStats}/>

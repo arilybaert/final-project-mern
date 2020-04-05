@@ -2,8 +2,8 @@ import { default as mongoose, Schema, Document } from 'mongoose';
 
 interface IGameStats extends Document {
     _id: string;
-    vTeam: Array<any>
-    hTeam: Array<any>
+    vTeam: object;
+    hTeam: object;
 };
 
 const gameStatsSchema = new Schema ({
@@ -14,27 +14,27 @@ const gameStatsSchema = new Schema ({
     isStartTimeTBD: { type: Boolean, required: true },
     vTeamScore: { type: String, required: false },
     hTeamScore: { type: String, required: false },
-    vTeam: [{
-        leaders: [{
-            points: [{
+    vTeam: {
+        leaders: {
+            points: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 points: {type: String, required: false},
-            }],
-            rebounds: [{
+            },
+            rebounds: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 rebounds: {type: String, required: false},
-            }],
-            assists: [{
+            },
+            assists: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 assists: {type: String, required: false},
-            }],
-        }],
+            },
+        },
         activePlayers: [{
             _id: { type: String, required: false },
             teamId: { type: String, required: false },
@@ -49,34 +49,34 @@ const gameStatsSchema = new Schema ({
             stl: { type: String, required: false },
             blk: { type: String, required: false },
         }]
-    }],
-    hTeam: [{
-        leaders: [{
-            points: [{
+    },
+    hTeam: {
+        leaders: {
+            points: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 points: {type: String, required: false},
-            }],
-            rebounds: [{
+            },
+            rebounds: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 rebounds: {type: String, required: false},
-            }],
-            assists: [{
+            },
+            assists: {
                 _id: {type: String, required: false},
                 firstName: {type: String, required: false},
                 lastName: {type: String, required: false},
                 assists: {type: String, required: false},
-            }],
-        }],
+            },
+        },
         activePlayers: [{
             _id: { type: String, required: false },
             teamId: { type: String, required: false },
             firstName: { type: String, required: false },
             lastName: { type: String, required: false },
-            points: { type: String, required: false },
+            points: { type: Number, required: false },
             tpm: { type: String, required: false },
             assists: { type: String, required: false },
             rebounds: { type: String, required: false },
@@ -85,7 +85,7 @@ const gameStatsSchema = new Schema ({
             stl: { type: String, required: false },
             blk: { type: String, required: false },
         }]
-    }]
+    }
 },
 {
     timestamps: true,
