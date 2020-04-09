@@ -8,7 +8,7 @@ const TeamScores = ({gameStats}) => {
     
     useEffect( () => {
         const setValues = async () => {
-            if(gameStats != undefined) {
+            if(gameStats !== undefined) {
                 setHTeamScore(gameStats.hTeamScore);
                 setVTeamScore(gameStats.vTeamScore);
             }

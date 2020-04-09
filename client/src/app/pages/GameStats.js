@@ -16,7 +16,6 @@ const GameStats = () => {
     useEffect(( ) => {
         const fetchGameStats = async () => {
             const data = await findGameStats(date, id);
-             // console.log(data);
             setGameStats(data);
         }
         fetchGameStats();
@@ -26,7 +25,7 @@ const GameStats = () => {
         <div>
             <Navbar/>
             <TeamScores gameStats={gameStats}/>
-            <ActionBar/>
+            <ActionBar gameStats={gameStats}/>
             <Leaders gameStats={gameStats}/>
             <StatsTable gameStats={gameStats}/>
         </div>

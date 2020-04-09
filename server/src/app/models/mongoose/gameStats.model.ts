@@ -15,6 +15,7 @@ const gameStatsSchema = new Schema ({
     vTeamScore: { type: String, required: false },
     hTeamScore: { type: String, required: false },
     vTeam: {
+        triCode: { type: String, required: true },
         leaders: {
             points: {
                 _id: {type: String, required: false},
@@ -40,7 +41,7 @@ const gameStatsSchema = new Schema ({
             teamId: { type: String, required: false },
             firstName: { type: String, required: false },
             lastName: { type: String, required: false },
-            points: { type: String, required: false },
+            points: { type: Number, required: false },
             tpm: { type: String, required: false },
             assists: { type: String, required: false },
             rebounds: { type: String, required: false },
@@ -51,6 +52,7 @@ const gameStatsSchema = new Schema ({
         }]
     },
     hTeam: {
+        triCode: { type: String, required: true },
         leaders: {
             points: {
                 _id: {type: String, required: false},

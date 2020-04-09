@@ -268,11 +268,12 @@
 }
 .o-table td:first-child {
   text-align: left;
-  margin-left: 3px;
+  padding-left: 3vw;
+  width: 31vw;
 }
 .o-table th:first-child {
   text-align: left;
-  margin-left: 3px;
+  padding-left: 3vw;
 }
 .o-table td {
   padding-top: 2vh;

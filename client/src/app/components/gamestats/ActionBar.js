@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
-const ActionBar = () => {
+const ActionBar = ({gameStats}) => {
 
+    const [vTeamTriCode, setVTeamTriCode ] = useState();
+    const [hTeamTriCode, setHTeamTriCode ] = useState();
+
+    useEffect(() => {
+        const setValues = () => {
+            if(gameStats !== undefined) {
+                setVTeamTriCode(gameStats[0].vTeam.triCode);
+                setHTeamTriCode(gameStats[0].hTeam.triCode);
+            }
+        };
+        setValues();
+    },[gameStats])
     return (
         <div className="row o-bgc">
         <div className="col-12 o-actionbar">
@@ -16,8 +28,8 @@ const ActionBar = () => {
                     </div>
                     <div className="col-4 m-logo">
                         <div className="m-stats">
-                            <a href="score.php?date=<?php echo $date;?>&id=<?php echo $gameId;?>&team=away" className="a-statSelect">$triCodeV</a>
-                            <a href="score.php?date=<?php echo $date;?>&id=<?php echo $gameId;?>&team=home" className="a-statNone">$triCodeH;</a>
+                            <a href="score.php?date=<?php echo $date;?>&id=<?php echo $gameId;?>&team=away" className="a-statSelect">{hTeamTriCode}</a>
+                            <a href="score.php?date=<?php echo $date;?>&id=<?php echo $gameId;?>&team=home" className="a-statNone">{vTeamTriCode}</a>
                         </div>
                     </div>
                     <div className="col-4 m-logo">

@@ -95,15 +95,14 @@ class GameStatsController {
                 }
             }
         else {
-            console.log('here to');
             data.stats.activePlayers.forEach(function (activePlayer)  {
                 if(activePlayer.teamId === vTeamId) {
                     const playerId = activePlayer.personId;
                     const teamId = activePlayer.teamId;
                     const firstName = activePlayer.firstName;
                     const lastName = activePlayer.lastName;
-                    const points = activePlayer.sortKey.points + activePlayer.sortKey.ftm;
-                    const tpm = activePlayer.tmp;
+                    const points = activePlayer.points;
+                    const tpm = activePlayer.tpm;
                     const assists = activePlayer.assists;
                     const rebounds = activePlayer.totReb;
                     const fgp = activePlayer.fgp;
@@ -130,8 +129,8 @@ class GameStatsController {
                     const teamId = activePlayer.teamId;
                     const firstName = activePlayer.firstName;
                     const lastName = activePlayer.lastName;
-                    const points = String(activePlayer.sortKey.points + activePlayer.sortKey.ftm);
-                    const tpm = activePlayer.tmp;
+                    const points = activePlayer.points;
+                    const tpm = activePlayer.tpm;
                     const assists = activePlayer.assists;
                     const rebounds = activePlayer.totReb;
                     const fgp = activePlayer.fgp;
@@ -165,6 +164,7 @@ class GameStatsController {
                 vTeamScore: data.basicGameData.vTeam.score,
                 hTeamScore: data.basicGameData.hTeam.score,
                 vTeam: {
+                  triCode: data.basicGameData.vTeam.triCode,
                     leaders: {
                         points : {
                             firstName: data.stats.vTeam.leaders.points.players['0'].firstName,
@@ -185,6 +185,7 @@ class GameStatsController {
                     activePlayers: vTeamActivePlayers
                 },
                 hTeam: {
+                  triCode: data.basicGameData.hTeam.triCode,
                     leaders: {
                         points : {
                             firstName: data.stats.hTeam.leaders.points.players['0'].firstName,
@@ -235,7 +236,6 @@ class GameStatsController {
             const { date } = req.params;
 
             await this.createGameStats(date, id);
-            console.log(this.createGameStats(date, id))
             const gameStats = await GameStats.findById(id).exec();
             return res.status(200).json(gameStats);
         } catch(err) {
@@ -243,49 +243,108 @@ class GameStatsController {
         }
     }
 
-    sort = async (req: Request, res: Response, next: NextFunction) => {
+//     sort = async (req: Request, res: Response, next: NextFunction) => {
 
-        // TRY 1
+//         // TRY 1
 
-        const id = '0021900805';
-        const stats = await GameStats.findById(id).sort({'vTeam.activePlayers.points': -1}).exec();
-        return res.status(200).json(stats);
+//         // const id = '0021900805';
+//         // const stats = await GameStats.findById(id).sort({'vTeam.activePlayers.points': -1}).exec();
+//         // return res.status(200).json(stats);
         
-        // TRY 2
+//         // TRY 2
         
-        // GameStats.find({ _id: '0021900805'} ).sort({'hTeam.activePlayers.points': -1}).exec(function(err, result) {
+//         // GameStats.find({ _id: '0021900805'} ).sort({'hTeam.activePlayers.points': -1}).exec(function(err, result) {
                 
-        //         if(err){
-        //             console.log(err);
-        //         } else {
-        //             return res.status(200).json(result);
-        //         }
-        // }
-        //     );
+//         //         if(err){
+//         //             console.log(err);
+//         //         } else {
+//         //             return res.status(200).json(result);
+//         //         }
+//         // }
+//         //     );
 
-        // TRY 3
+//         // TRY 3
 
-        //  GameStats.aggregate(
-        //     [
-        //     // {$match: {'_id': '0021900805'}},
-        //     {$unwind: '$hTeam.activePlayers'},
-        //      {$sort:  {'hTeam.activePlayers.points': 1}}, 
-        //      { $group:{
-        //        "_id": "$hTeam.activePlayers",
-        //              }
-        //      }
-        //     ],
-        //     function(err, result) {
-        //         if(err){
-        //             console.log(err);
-        //         }else {
-        //             return res.status(200).json(result);
+//         //  GameStats.aggregate(
+//         //     [
+//         //     // {$match: {'_id': '0021900805'}},
+//         //     {$unwind: '$hTeam.activePlayers'},
+//         //      {$sort:  {'hTeam.activePlayers.points': 1}}, 
+//         //      { $group:{
+//         //        "_id": "$hTeam.activePlayers",
+//         //              }
+//         //      }
+//         //     ],
+//         //     function(err, result) {
+//         //         if(err){
+//         //             console.log(err);
+//         //         }else {
+//         //             return res.status(200).json(result);
 
-        //         }
-        //     }
-        //  );
-    }
+//         //         }
+//         //     }
+//         //  );
+//     }
     
+
+sort = async (req: Request, res: Response, next: NextFunction) => {
+    
+    const { id } = req.params;
+    const { date } = req.params;
+    await this.createGameStats(date, id);
+
+    // const id = "0021900805";
+    const stats = await GameStats.aggregate([
+      {
+        $match: {
+          _id: id, // or mongoose.Types.ObjectId(id)
+        },
+      },
+      {
+        $unwind: "$hTeam.activePlayers",
+      },
+      {
+        $sort: {
+          "hTeam.activePlayers.points": -1,
+        },
+      },
+      {
+        $group: {
+          _id: "$_id",
+          activePlayers: {
+            $push: "$hTeam.activePlayers",
+          },
+          doc: {
+            $first: "$$ROOT",
+          },
+        },
+      },
+      {
+        $replaceRoot: {
+          newRoot: {
+            $mergeObjects: [
+              "$doc",
+              {
+                hTeamActivePlayers: "$activePlayers",
+              },
+            ],
+          },
+        },
+      },
+      {
+        $addFields: {
+          "hTeam.activePlayers": "$hTeamActivePlayers",
+        },
+      },
+      {
+        $project: {
+          hTeamActivePlayers: 0,
+        },
+      },
+    ]);
+  
+    return res.status(200).json(stats);
+  };
 }
 
 export default GameStatsController;

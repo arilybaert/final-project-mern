@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const StatsTable = () => {
+const StatsTable = ({gameStats}) => {
+
+    const [activeVPlayers, setActiveVPlayers] = useState();
+    const [activeHPlayers, setActiveHPlayers] = useState();
+
+    useEffect(() => {
+        const setValues = () => {
+            if (gameStats !== undefined) {
+                console.log(gameStats);
+                setActiveVPlayers(gameStats[0].vTeam.activePlayers);
+                setActiveHPlayers(gameStats[0].hTeam.activePlayers)
+            }
+        }
+        setValues();
+    }, [gameStats]);
 
     return (
         <div className="row o-table o-bgc">
@@ -8,23 +22,26 @@ const StatsTable = () => {
             <tr>
                 <th></th>
                 <th>pt.</th>
-                <th>2pt</th>
                 <th>3pt</th>
                 <th>%</th>
                 <th>stl</th>
                 <th>blk</th>
                 <th>to</th>
             </tr>   
-                                <tr>
-                                    <td>James</td>
-                                    <td>44</td>
-                                    <td>6</td>
-                                    <td>3</td>
-                                    <td>45%</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                    <td>3</td>
-                                </tr>
+            {
+                    activeHPlayers && activeHPlayers.map((data) => {
+                            return (<tr>
+                                        <td>{`${data.firstName.substring(0, 1)}. ${data.lastName}`}</td>
+                                        <td>{data.points}</td>
+                                        <td>{data.tpm}</td>
+                                        <td>{data.fgp}</td>
+                                        <td>{data.stl}</td>
+                                        <td>{data.blk}</td>
+                                        <td>{data.to}</td>
+                                    </tr>)
+                    })
+                }
+                                
         </table>
     </div>    
     )
