@@ -1,14 +1,19 @@
-import GameItem from './GameItem';
-import { useApi } from '../../services';
+import { default as React, useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { default as React, useState, useEffect } from 'react';
+import {NBAContext} from '../context';
+import GameItem from './GameItem';
+import { useApi } from '../../services';
+
 
 const GameList = () => {
 
     const { findGames } = useApi();
     const { refreshTeams } = useApi();
     const [ games, setGames ] = useState();
+
+    const { utilDate } = useContext(NBAContext);
+
 
     // MAKE DATE READABLE
     const addZero = (input, n) => {
@@ -34,12 +39,17 @@ const GameList = () => {
     // FETCH DATA
     useEffect(() => {
         const fetchGame = async () => {
-            const data = await findGames(date());
-            await refreshTeams();
+            console.log(utilDate);
+            const data = await findGames('20200411');
+            // await refreshTeams();
             setGames(data.games);
         }
-        fetchGame();
-    }, []);
+
+        if(utilDate !== undefined){
+            fetchGame();
+            
+        }
+    },[utilDate]);
 
 
     return (

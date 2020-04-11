@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import {NBAContextProvider} from './components/context';
 import { IconContext } from 'react-icons';
 
 import {HomePage, StandingsPage, FavoritesPage, GameStats} from './pages';
@@ -18,6 +19,8 @@ function App() {
 
         <Router basename='/'>
           <Switch>
+            <NBAContextProvider>
+
 
             <Route path={Routes.LANDING} exact component={HomePage}/>
             <Redirect from={Routes.HOME} to={Routes.LANDING}/>
@@ -25,7 +28,7 @@ function App() {
             <Route path={Routes.STANDINGS} exact component={StandingsPage}/>
             <Route path={Routes.FAVORITES} exact component={FavoritesPage}/>
 
-
+            </NBAContextProvider>
           </Switch>
         </Router>
 

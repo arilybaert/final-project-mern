@@ -72,8 +72,11 @@ class GameDayController {
     });
           })
   
-            if (id){
-              const temp = {
+          GameDay.countDocuments({_id: date}).exec().then(async (count) => { 
+
+            if(count>0){
+            console.log('file found');      
+            const temp = {
                 'games': games,
               }
               GameDay.findOneAndUpdate({_id: id}, temp, {new: true, upsert: false}, function (err) {
@@ -84,6 +87,7 @@ class GameDayController {
             })
                 .catch(err => console.log(err));
             } else {
+
                 console.log('game created');
 
               promises.push(
@@ -94,6 +98,7 @@ class GameDayController {
               );
               return await Promise.all(promises);
             }
+          })
         };
   
       // GET GAMES FROM API
