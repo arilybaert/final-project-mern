@@ -10,12 +10,14 @@ const ActionBar = ({gameStats}) => {
     useEffect(() => {
         const setValues = () => {
             if(gameStats !== undefined) {
-                setVTeamTriCode(gameStats[0].vTeam.triCode);
-                setHTeamTriCode(gameStats[0].hTeam.triCode);
+                setVTeamTriCode(gameStats.vTeam.triCode);
+                setHTeamTriCode(gameStats.hTeam.triCode);
             }
         };
         setValues();
-    },[gameStats])
+    },[gameStats]);
+
+
     return (
         <div className="row o-bgc">
         <div className="col-12 o-actionbar">

@@ -12,7 +12,7 @@ const Navbar = () => {
                 <span className={classnames("a-titlte__normal", "a-title")}>Crew</span>
             </div>
             <div className={classnames("col-2", "o-accountLogo")}>
-            <IoIosPerson size='2.1rem'/>
+            <IoIosPerson size='2em'/>
 
             </div>
         </div>

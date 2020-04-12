@@ -13,18 +13,18 @@ const BottomNav = () => {
     return (
         <div className={classnames("o-bottomNav", "row")}>
             <Link to={"/"} className="col m-bottomNav__element">
-                    <IoIosHome size='2.1rem'/>
+                    <IoIosHome size='2em'/>
                     <span>Home</span>
 
             </Link>
 
             <Link to={"/standings"} className={classnames("col", "m-bottomNav__element")}>
-                    <IoIosPodium text-shadow="0 0 3px #000" size='2.1rem' />
+                    <IoIosPodium text-shadow="0 0 3px #000" size='2em' />
                     <span>Standings</span>
             </Link>
 
             <Link to={"/favorites"} className={classnames("col", "m-bottomNav__element")}>
-                    <IoIosStar size='2.1rem'/>
+                    <IoIosStar size='2em'/>
                     <span>Favorites</span>
 
             </Link>

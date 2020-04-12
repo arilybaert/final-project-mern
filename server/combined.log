@@ -6499,3 +6499,156 @@
 2020-04-11 19:04:27 [[32minfo[39m]: 	listening on localhost : 8080 {
   "object": {}
 }
+2020-04-12 07:58:32 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 07:58:32 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 07:58:32 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 09:46:55 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 09:46:58 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 09:46:58 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 09:46:58 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 09:53:34 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 09:53:37 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 09:53:37 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 09:53:37 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 10:02:15 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 10:02:17 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 10:02:17 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 10:02:17 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 10:07:17 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 10:07:19 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 10:07:19 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 10:07:19 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 11:39:12 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 11:39:13 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 11:39:13 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 11:39:13 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:06:50 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:06:52 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:06:52 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:06:52 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:10:37 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:10:40 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:10:40 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:10:40 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:10:52 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:10:53 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:10:53 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:10:53 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:16:38 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:16:40 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:16:40 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:16:40 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:17:04 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:17:05 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:17:05 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:17:05 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:23:20 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:23:22 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:23:22 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:23:22 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}
+2020-04-12 12:23:49 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-04-12 12:23:51 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-12 12:23:51 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-12 12:23:51 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}

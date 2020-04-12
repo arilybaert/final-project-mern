@@ -82,16 +82,32 @@ class GameStatsController {
                 isStartTimeTBD: data.basicGameData.isStartTimeTBD,
                 vTeamScore: data.basicGameData.vTeam.score,
                 hTeamScore: data.basicGameData.hTeam.score,
+                vTeam: {
+                    triCode: data.basicGameData.vTeam.triCode,
+                    
+                },
+                hTeam: {
+                    triCode: data.basicGameData.hTeam.triCode,
+                    
+                }
                 }
         }
         // SAVE PARTIAL IF GAME HASN'T STARTED YET
         else if(data.basicGameData.isStartTimeTBD === false && data.basicGameData.gameDuration.minutes === "") {
 
             gameStats = {
-                status: "game hasn't started",
-                isStartTimeTBD: data.basicGameData.isStartTimeTBD,
-                vTeamScore: data.basicGameData.vTeam.score,
-                hTeamScore: data.basicGameData.hTeam.score,
+                    status: "game hasn't started",
+                    isStartTimeTBD: data.basicGameData.isStartTimeTBD,
+                    vTeamScore: data.basicGameData.vTeam.score,
+                    hTeamScore: data.basicGameData.hTeam.score,
+                    vTeam: {
+                        triCode: data.basicGameData.vTeam.triCode,
+                        
+                    },
+                    hTeam: {
+                        triCode: data.basicGameData.hTeam.triCode,
+                        
+                    }
                 }
             }
         else {
@@ -208,7 +224,7 @@ class GameStatsController {
             };
     }
         // CREATE OR UPDATE GAMESTATS IN DB
-        GameStats.findOneAndUpdate({_id: _id}, gameStats, {new: true, upsert: true}, function (err) {
+        await GameStats.findOneAndUpdate({_id: _id}, gameStats, {new: true, upsert: true}, function (err) {
             if(err) {
                 console.log(`Error occured when find and update gamestats ${err}`);
             } else {
@@ -243,14 +259,17 @@ class GameStatsController {
         }
     }
 
-//     sort = async (req: Request, res: Response, next: NextFunction) => {
+    sort = async (req: Request, res: Response, next: NextFunction) => {
 
-//         // TRY 1
+        // TRY 1
 
-//         // const id = '0021900805';
-//         // const stats = await GameStats.findById(id).sort({'vTeam.activePlayers.points': -1}).exec();
-//         // return res.status(200).json(stats);
+        const { id } = req.params;
+        const { date } = req.params;
+        await this.createGameStats(date, id);
+        const stats = await GameStats.findById(id).sort({'vTeam.activePlayers.points': -1}).exec();
+        return res.status(200).json(stats);
         
+    }
 //         // TRY 2
         
 //         // GameStats.find({ _id: '0021900805'} ).sort({'hTeam.activePlayers.points': -1}).exec(function(err, result) {
@@ -287,64 +306,64 @@ class GameStatsController {
 //     }
     
 
-sort = async (req: Request, res: Response, next: NextFunction) => {
+// sort = async (req: Request, res: Response, next: NextFunction) => {
     
-    const { id } = req.params;
-    const { date } = req.params;
-    await this.createGameStats(date, id);
+//     const { id } = req.params;
+//     const { date } = req.params;
+//     await this.createGameStats(date, id);
 
-    // const id = "0021900805";
-    const stats = await GameStats.aggregate([
-      {
-        $match: {
-          _id: id, // or mongoose.Types.ObjectId(id)
-        },
-      },
-      {
-        $unwind: "$hTeam.activePlayers",
-      },
-      {
-        $sort: {
-          "hTeam.activePlayers.points": -1,
-        },
-      },
-      {
-        $group: {
-          _id: "$_id",
-          activePlayers: {
-            $push: "$hTeam.activePlayers",
-          },
-          doc: {
-            $first: "$$ROOT",
-          },
-        },
-      },
-      {
-        $replaceRoot: {
-          newRoot: {
-            $mergeObjects: [
-              "$doc",
-              {
-                hTeamActivePlayers: "$activePlayers",
-              },
-            ],
-          },
-        },
-      },
-      {
-        $addFields: {
-          "hTeam.activePlayers": "$hTeamActivePlayers",
-        },
-      },
-      {
-        $project: {
-          hTeamActivePlayers: 0,
-        },
-      },
-    ]);
+//     // const id = "0021900805";
+//     const stats = await GameStats.aggregate([
+//       {
+//         $match: {
+//           _id: id, // or mongoose.Types.ObjectId(id)
+//         },
+//       },
+//       {
+//         $unwind: "$hTeam.activePlayers",
+//       },
+//       {
+//         $sort: {
+//           "hTeam.activePlayers.points": -1,
+//         },
+//       },
+//       {
+//         $group: {
+//           _id: "$_id",
+//           activePlayers: {
+//             $push: "$hTeam.activePlayers",
+//           },
+//           doc: {
+//             $first: "$$ROOT",
+//           },
+//         },
+//       },
+//       {
+//         $replaceRoot: {
+//           newRoot: {
+//             $mergeObjects: [
+//               "$doc",
+//               {
+//                 hTeamActivePlayers: "$activePlayers",
+//               },
+//             ],
+//           },
+//         },
+//       },
+//       {
+//         $addFields: {
+//           "hTeam.activePlayers": "$hTeamActivePlayers",
+//         },
+//       },
+//       {
+//         $project: {
+//           hTeamActivePlayers: 0,
+//         },
+//       },
+//     ]);
   
-    return res.status(200).json(stats);
-  };
+//     return res.status(200).json(stats);
+//   };
 }
 
 export default GameStatsController;

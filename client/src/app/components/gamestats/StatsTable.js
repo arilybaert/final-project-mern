@@ -8,9 +8,8 @@ const StatsTable = ({gameStats}) => {
     useEffect(() => {
         const setValues = () => {
             if (gameStats !== undefined) {
-                console.log(gameStats);
-                setActiveVPlayers(gameStats[0].vTeam.activePlayers);
-                setActiveHPlayers(gameStats[0].hTeam.activePlayers)
+                setActiveVPlayers(gameStats.vTeam.activePlayers);
+                setActiveHPlayers(gameStats.hTeam.activePlayers)
             }
         }
         setValues();

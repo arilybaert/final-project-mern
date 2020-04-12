@@ -65,7 +65,7 @@ useEffect(() => {
                 <div className="row">
 
                         <div className={classnames("col-4", "m-arrow")} onClick={handleLeftClick}>
-                            <IoIosArrowBack size='2rem' color='white'/>
+                            <IoIosArrowBack size='2em' color='white'/>
                         </div>
 
                     <div className="col-4">
@@ -73,7 +73,7 @@ useEffect(() => {
                     </div>
 
                     <div className={classnames("col-4", "m-arrow")} onClick={handleRightClick}>
-                        <IoIosArrowForward size='2rem' color='white'/>
+                        <IoIosArrowForward size='2em' color='white'/>
 
                     </div>
                 </div>

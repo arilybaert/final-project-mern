@@ -38,7 +38,7 @@ class GameDayController {
       };
   
       // FILL GAMEDAYS
-      createGamedays = async (date: string = DateMaker.date(), id?: string) => {
+      createGamedays = async (date: any, id?: any) => {
           const promises = [];
           const games: Array<any> = [];
           let data = await this.getGames(date);
@@ -72,14 +72,14 @@ class GameDayController {
     });
           })
   
-          GameDay.countDocuments({_id: date}).exec().then(async (count) => { 
+          await GameDay.countDocuments({_id: date}).exec().then(async (count) => { 
 
             if(count>0){
             console.log('file found');      
             const temp = {
                 'games': games,
               }
-              GameDay.findOneAndUpdate({_id: id}, temp, {new: true, upsert: false}, function (err) {
+              await GameDay.findOneAndUpdate({_id: id}, temp, {new: true, upsert: false}, function (err) {
                 if (err) {
                     console.log(err);
                 }
@@ -121,7 +121,7 @@ class GameDayController {
             const { id } = req.params;
             // const gameday = await  GameDay.findById(id).sort({_createdAt: -1}).exec();
             // return res.status(200).json(gameday);
-                    await this.createGamedays(id, id);
+                    await this.createGamedays(id);
                     const gameday =  await GameDay.findById(id).sort({_createdAt: -1}).exec();
                     return res.status(200).json(gameday);
 
