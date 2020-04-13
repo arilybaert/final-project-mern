@@ -40,7 +40,8 @@ const GameList = () => {
     useEffect(() => {
         const fetchGame = async () => {
             if(utilDate !== null){
-                const data = await findGames(utilDate);
+                // const data = await findGames(utilDate);
+                const data = await findGames('20200307');
                  // await refreshTeams();
                 setGames(data.games);
             }

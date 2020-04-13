@@ -8,9 +8,11 @@ import {ActionBar, Leaders, StatsTable,TeamScores} from '../components/gamestats
 const GameStats = () => {
     const { findGameStats } = useApi();
 
-    const [gameStats, setGameStats] = useState();
     let { id } = useParams();
     let { date } = useParams();
+    
+    const [gameStats, setGameStats] = useState();
+
 
     // FETCH DATA
     useEffect(( ) => {
@@ -20,6 +22,7 @@ const GameStats = () => {
         }
         fetchGameStats();
     }, [date, id]);
+
 
     return (
         <div>

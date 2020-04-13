@@ -241,9 +241,11 @@
   border: 1px solid #0630AA;
   border-radius: 15px;
   padding: 4px;
+  cursor: pointer;
 }
 .o-actionbar .m-logo .m-stats .a-statNone {
   color: #eee8e8;
+  cursor: pointer;
 }
 
 .o-leaders {
@@ -257,9 +259,11 @@
 
 .o-table {
   padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 25px 25px;
 }
 .o-table .m-table {
   font-size: 12pt;
