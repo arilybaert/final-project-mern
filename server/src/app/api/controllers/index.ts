@@ -5,6 +5,8 @@ import UserController from './UserController';
 import GameDayController from './GameDayController';
 import TeamController from './TeamController';
 import GameStatsController from './GameStatsController';
+import StandingsController from './StandingsController';
+
 
 
 export {
@@ -15,5 +17,5 @@ export {
     GameDayController,
     TeamController,
     GameStatsController,
-    
+    StandingsController,
 };

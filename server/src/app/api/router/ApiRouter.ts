@@ -1,5 +1,5 @@
 import {default as express, Router, Application, Request, Response } from 'express';
-import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController, GameStatsController } from '../controllers';
+import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController, GameStatsController, StandingsController } from '../controllers';
 
 
 class ApiRouter {
@@ -11,6 +11,7 @@ class ApiRouter {
     private gameDayController: GameDayController;
     private teamController: TeamController;
     private gameStatsController: GameStatsController
+    private standingsController: StandingsController
 
     constructor() {
         this.router = express.Router();
@@ -27,6 +28,7 @@ class ApiRouter {
         this.gameDayController = new GameDayController();
         this.teamController = new TeamController()
         this.gameStatsController = new GameStatsController();
+        this.standingsController = new StandingsController();
 
     }
 
@@ -45,6 +47,7 @@ class ApiRouter {
         this.router.get('/gameStats', this.gameStatsController.index);
         this.router.get('/gameStats/:date/:id', this.gameStatsController.show);
         this.router.get('/gameStats/sort/:date/:id', this.gameStatsController.sort);
+        this.router.get('/standings/all', this.standingsController.show);
     }
 }
 

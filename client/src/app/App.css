@@ -116,6 +116,7 @@
   justify-content: center;
   align-items: center;
   padding: 3%;
+  margin-bottom: 20vw;
 }
 .o-tableContainer .m-standingsTable {
   text-align: center;
@@ -126,7 +127,9 @@
 .o-tableContainer .m-standingsTable th {
   padding: 5px;
 }
-
+.o-tableContainer .m-standingsTable .a-standings {
+  padding: 1vh;
+}
 .o-favoHeader {
   display: flex;
   justify-content: center;

@@ -163,6 +163,7 @@ $fontsize-small: 13pt;
     justify-content: center;
     align-items: center;
     padding: 3%;
+    margin-bottom: 20vw;
 
     .m-standingsTable {
         text-align: center;
@@ -173,8 +174,17 @@ $fontsize-small: 13pt;
         th {
             padding: 5px;
         }
+
+        .a-standings {
+            padding: 1vh;
+        }
+
+        tbody { 
+            
+        }
     }
 }
+
 
 // FAVORITES
 

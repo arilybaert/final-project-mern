@@ -1,30 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classnames from 'classnames';
 
+import { useApi } from '../../services';
+import StandingsData from './StandingsData';
 const Standings = () => {
+    const { findStandings } = useApi();
+    
+    const [standings, setStandings] = useState();
+    // FETCH DATA
+    useEffect(( ) => {
+        const fetchStandings = async () => {
+            const data = await findStandings();
+            setStandings(data[0].allStandings);
+        }
+        fetchStandings();
+    }, []);
+
 
     return (
         <div className={classnames("row", "o-standings")}>
             <div className={classnames("col-12", "o-tableContainer")}>
                 <table className="m-standingsTable">
-                    <tr>
-                        <th>P</th>
-                        <th>Logo</th>
-                        <th>Teams</th>
-                        <th>W</th>
-                        <th>L</th>
-                        <th>%</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img alt="logo"></img>
-                        </td>
-                        <td>LaL</td>
-                        <td>40</td>
-                        <td>12</td>
-                        <td>.77</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>Logo</th>
+                            <th>Teams</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        standings && standings.map((data) => {
+                            return <StandingsData key={data._id} data={data}/>
+                        })
+                    }
+                    </tbody>
+                   
                 </table>
             </div>
         </div>

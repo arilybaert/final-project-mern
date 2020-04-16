@@ -32,8 +32,14 @@ const findGameStats = async (date, id) => {
     const response = await fetch(url);
     return response.json()
 }
+// FIND GAMES statistics
+const findStandings = async () => {
+    let url = `${BASE_URL}/standings/all`;
+    const response = await fetch(url);
+    return response.json()
+}
     return (
-        <ApiContext.Provider value={{ findGames, refreshTeams, findTeam, findGameStats }}>
+        <ApiContext.Provider value={{ findGames, refreshTeams, findTeam, findGameStats, findStandings}}>
             {children}
         </ApiContext.Provider>
     );
