@@ -130,6 +130,14 @@
 .o-tableContainer .m-standingsTable .a-standings {
   padding: 1vh;
 }
+
+.a-leagueTitle {
+  background-color: #0630AA;
+  font-weight: bold;
+  color: #eee8e8;
+  padding: 1vh;
+}
+
 .o-favoHeader {
   display: flex;
   justify-content: center;
@@ -292,4 +300,24 @@
   color: white;
   text-align: center;
   font-weight: bold;
+}
+
+.o-signinForm {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-signinForm .m-signinForm {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  padding: 5vw;
+  justify-content: space-evenly;
+}
+.o-signinForm label {
+  margin-bottom: 0.3vh;
+}
+.o-signinForm input {
+  margin-bottom: 0.3vh;
 }

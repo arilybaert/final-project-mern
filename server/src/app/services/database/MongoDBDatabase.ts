@@ -211,33 +211,6 @@ class MongoDBDatabase {
           }
           return Post.find().exec();
       })
-
-        GameDay.countDocuments({_id: DateMaker.date()}).exec().then(async (count) => { 
-          if(count>0){
-              console.log('file found');
-              this.gameDayController.createGamedays(DateMaker.date(), DateMaker.date());
-
-          } else {
-              console.log('file not found');
-              await this.gameDayController.createGamedays()
-          }
-          return GameDay.findById({_id: DateMaker.date()});
-      }); 
-        
-        
-        
-        
-        // this.games = await GameDay.estimatedDocumentCount().exec().then(async(count) => {
-
-        //   if(count === 0) {
-        //     await this.createGamedays()
-        //   } 
-        //   return GameDay.find().exec()
-        // })
-      
-        // CHECK IF GAMEDAY IS SAVED IN DB
-
-
     }
 }
 

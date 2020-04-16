@@ -15,10 +15,25 @@ export interface IServerConfig {
     protocol: string;
 }
 
+export interface IAuthConfig {
+    bcryptSalt: number;
+    jwt: IJwtConfig;
+    facebook?: IFacebookConfig;
+}
+
+export interface IFacebookConfig {
+    clientId: string;
+    clientSecret: string;
+}
+
+export interface IJwtConfig {
+    secret: string;
+    session: boolean;
+}
 export interface IConfig {
     env: Environment;
     docs: boolean;
     server: IServerConfig;
     mongoDBConnection: string;
-
+    auth:IAuthConfig;
 }

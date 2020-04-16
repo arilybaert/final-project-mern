@@ -178,13 +178,15 @@ $fontsize-small: 13pt;
         .a-standings {
             padding: 1vh;
         }
-
-        tbody { 
-            
-        }
     }
 }
 
+.a-leagueTitle {
+    background-color: $primary;
+    font-weight: bold;
+    color: $white;
+    padding: 1vh;
+}
 
 // FAVORITES
 
@@ -378,4 +380,28 @@ $fontsize-small: 13pt;
     color: white;
     text-align: center;
     font-weight: bold;
+}
+
+
+// SIGN IN FORM
+
+.o-signinForm {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .m-signinForm {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 2px 8px 1px rgba(0,0,0,0.35);
+        padding: 5vw;
+        justify-content: space-evenly;
+    }
+    label {
+        margin-bottom: 0.3vh;
+    }
+    input {
+        margin-bottom: 0.3vh;
+    }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import { IoIosPerson } from 'react-icons/io';
+import * as Routes from '../../routes';
+import { Link } from 'react-router-dom'
 
 
 
@@ -12,7 +14,9 @@ const Navbar = () => {
                 <span className={classnames("a-titlte__normal", "a-title")}>Crew</span>
             </div>
             <div className={classnames("col-2", "o-accountLogo")}>
-            <IoIosPerson size='2em'/>
+                <Link to={Routes.SIGNIN}>
+                    <IoIosPerson size='2em'/>
+                </Link>
 
             </div>
         </div>

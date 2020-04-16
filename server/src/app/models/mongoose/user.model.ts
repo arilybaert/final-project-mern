@@ -27,6 +27,8 @@ interface IUser extends Document {
 
   role: string;
   profile?: IProfile;
+
+  comparePassword(candidatePassword: String, cb: Function): void;
 }
 
 const userSchema: Schema = new Schema({
@@ -87,6 +89,17 @@ userSchema.pre('save', function(next) {
     return next(err);
   }
 });
+
+userSchema.methods.comparePassword = function(
+  candidatePassword: String,
+  cb: Function,
+) {
+  const user = this;
+  bcrypt.compare(candidatePassword, user.password, (err, isMatch) => {
+    if (err) return cb(err, null);
+    return cb(null, isMatch);
+  });
+};
 
 const User = mongoose.model<IUser>('User', userSchema);
 

@@ -12,12 +12,15 @@ import { GlobalMiddleware } from './middleware';
 import { IAppError } from './utilities';
 import { default as Config, IConfig} from './services/config';
 import { default as Logger, ILogger } from './services/logger';
+import  AuthService  from './services/auth';
 class App {
     public app: Application;
     private config: IConfig;
     private logger: ILogger;
     private server: Server;
     private router: Router;
+    private authService: AuthService;
+
 
     constructor (logger: ILogger, config: IConfig) {
         this.config = config;
@@ -33,8 +36,13 @@ class App {
         this.createRouter();
         this.app.use(this.clientErrorHandler);
         this.app.use(this.errorHandler);
+        this.createPassport();
     }
 
+    private createPassport(): void
+ {
+     this.authService = new AuthService(this.config);
+ }
     private clientErrorHandler(error: Error, req: Request, res: Response, next: NextFunction): void {
         if (req.xhr) {
             res.status(404).json({error});

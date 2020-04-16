@@ -6,6 +6,8 @@ const NBAContextProvider = ({children}) => {
 
     // Date is send with API to get the correct gameday / game stats
     const [utilDate, setUtilDate] = useState();
+    const [displayLeague, setDisplayLeague] = useState('All');
+
 
     // Toggle to show stats from HOME or AWAY team
     const [displayHTeam, setDisplayHTeam] = useState(true);
@@ -15,7 +17,7 @@ const NBAContextProvider = ({children}) => {
     }
 
     return (
-        <NBAContext.Provider value={{utilDate, setUtilDate, displayHTeam, toggleStats}}>
+        <NBAContext.Provider value={{utilDate, setUtilDate, displayHTeam, toggleStats, displayLeague, setDisplayLeague}}>
             {children}
         </NBAContext.Provider>
     )

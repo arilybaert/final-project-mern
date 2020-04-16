@@ -48,6 +48,9 @@ class ApiRouter {
         this.router.get('/gameStats/:date/:id', this.gameStatsController.show);
         this.router.get('/gameStats/sort/:date/:id', this.gameStatsController.sort);
         this.router.get('/standings/all', this.standingsController.show);
+
+        this.router.post('/auth/signin/', this.userController.signInLocal);
+        this.router.post('/auth/signup/', this.userController.signupLocal);
     }
 }
 

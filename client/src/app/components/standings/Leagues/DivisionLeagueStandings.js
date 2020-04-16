@@ -1,10 +1,10 @@
 import React from 'react';
 
-const StandingsData = ({data}) => {
+const DivisionLeagueStandings = ({data}) => {
 
     return (
         <tr>
-            <td className="a-standings">{data.defaultOrder}</td>
+            <td className="a-standings">{data.divRank}</td>
             <td>
                 <img alt="logo"></img>
             </td>
@@ -16,4 +16,4 @@ const StandingsData = ({data}) => {
     )
 }
 
-export default StandingsData;
+export default DivisionLeagueStandings;
