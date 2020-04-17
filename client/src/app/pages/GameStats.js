@@ -16,11 +16,17 @@ const GameStats = () => {
 
     // FETCH DATA
     useEffect(( ) => {
+        const abortContoller = new AbortController();
+        const signal = abortContoller.signal;
         const fetchGameStats = async () => {
-            const data = await findGameStats(date, id);
+            const data = await findGameStats(date, id, signal);
             setGameStats(data);
         }
         fetchGameStats();
+
+        // return function cleanup() {
+        //     abortContoller.abort();
+        // }
     }, [date, id]);
 
 

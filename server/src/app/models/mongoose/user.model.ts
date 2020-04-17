@@ -1,4 +1,5 @@
 import { default as mongoose, Schema, Document } from 'mongoose';
+var findOrCreate = require('mongoose-findorcreate')
 import { default as bcrypt } from 'bcrypt';
 
 interface ILocalProvider {
@@ -69,6 +70,8 @@ const userSchema: Schema = new Schema({
   },
 });
 
+userSchema.plugin(findOrCreate);
+
 userSchema.pre('save', function(next) {
   const user: IUser = this as IUser;
 
@@ -102,5 +105,6 @@ userSchema.methods.comparePassword = function(
 };
 
 const User = mongoose.model<IUser>('User', userSchema);
+
 
 export { IUser, User, userSchema };

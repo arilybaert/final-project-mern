@@ -27,9 +27,9 @@ const findTeam = async (id) => {
     return response.json();
 }
 // FIND GAMES statistics
-const findGameStats = async (date, id) => {
+const findGameStats = async (date, id, signal) => {
     let url = `${BASE_URL}/gameStats/sort/${date}/${id}`;
-    const response = await fetch(url);
+    const response = await fetch(url, {signal: signal});
     return response.json()
 }
 // FIND GAMES statistics

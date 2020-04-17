@@ -1,4 +1,5 @@
 import {default as express, Router, Application, Request, Response } from 'express';
+import passport from "passport";
 import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController, GameStatsController, StandingsController } from '../controllers';
 
 
@@ -51,6 +52,24 @@ class ApiRouter {
 
         this.router.post('/auth/signin/', this.userController.signInLocal);
         this.router.post('/auth/signup/', this.userController.signupLocal);
+        this.router.get("/auth/facebook", passport.authenticate("facebook"));
+
+
+        this.router.get(
+            "/auth/facebook/callback",
+            passport.authenticate("facebook", {
+            successRedirect: "/",
+            failureRedirect: "/fail"
+            })
+        );
+        
+        this.router.get("/fail", (req, res) => {
+            res.send("Failed attempt");
+        });
+        
+        this.router.get("/", (req, res) => {
+            res.send("Success");
+        });
     }
 }
 

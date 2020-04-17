@@ -122,27 +122,27 @@ class MongoDBDatabase {
         const promises = [];
     
         this.userCreate(
-          'drdynscript@gmail.com',
-          'nmdgent007!',
+          'test@test.com',
+          'azerty',
           'administrator',
-          'Philippe',
-          'De Pauw - Waterschoot',
-          'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/42580828_10214673932035654_3017264055002857472_n.jpg?_nc_cat=104&_nc_sid=85a577&_nc_oc=AQkUCFAyscOEkhhfuiS4Fq4sY8_1_l56xU0xQurtXuVXLu3ipVfwpCB0eSPIcRhoFLI&_nc_ht=scontent-bru2-1.xx&oh=b032a18ceb8fc6e7e678f676cf356a4e&oe=5EA14E2B',
+          'Ari',
+          'Lybaert',
+          'https://www.ocregister.com/wp-content/uploads/2020/01/ocfqup-01.web_.lakers1ccc51599-1.jpg?w=620',
         );
     
-        for (let i = 0; i < 30; i++) {
-          const gender = Math.round(Math.random());
-          promises.push(
-            this.userCreate(
-              faker.internet.email(),
-              'nmdgent007!',
-              'user',
-              faker.name.firstName(gender),
-              faker.name.lastName(gender),
-              faker.internet.avatar(),
-            ),
-          );
-        }
+        // for (let i = 0; i < 30; i++) {
+        //   const gender = Math.round(Math.random());
+        //   promises.push(
+        //     this.userCreate(
+        //       faker.internet.email(),
+        //       'nmdgent007!',
+        //       'user',
+        //       faker.name.firstName(gender),
+        //       faker.name.lastName(gender),
+        //       faker.internet.avatar(),
+        //     ),
+        //   );
+        // }
     
         return await Promise.all(promises);
       };

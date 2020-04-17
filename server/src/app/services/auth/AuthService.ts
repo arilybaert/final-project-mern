@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { default as passport, PassportStatic } from 'passport';
 import { default as passportLocal } from 'passport-local';
+import { default as passportFacebook } from 'passport-facebook';
 import { default as passportJwt } from 'passport-jwt';
 import { default as jwt } from 'jsonwebtoken';
 
@@ -13,6 +14,7 @@ class AuthService {
   private config: IConfig;
   public passport: PassportStatic;
   private LocalStrategy = passportLocal.Strategy;
+  private FacebookStrategy = passportFacebook.Strategy;
   private ExtractJwt = passportJwt.ExtractJwt;
   private JwtStrategy = passportJwt.Strategy;
 
@@ -59,6 +61,24 @@ class AuthService {
         },
       ),
     );
+  }
+
+  private initialiseFacebookStrategy = () => {
+    passport.use(new this.FacebookStrategy({
+      clientID: process.env.AUTH_FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.AUTH_FACEBOOK_CLIENT_SECRET,
+      callbackURL: "http://www.localhost:3000/home"
+    },
+    function(accessToken, refreshToken, profile, done) {
+      const { email, } = profile._json;
+      const userData = {
+        email,
+        
+      };
+      new User(userData).save();
+      done(null, profile);
+    }
+  ));
   }
 
   initializeJwtStrategy = () => {

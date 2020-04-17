@@ -12,6 +12,7 @@ const GameItem = ({data}) => {
 
     // FETCH DATA
     useEffect(() => {
+
         const fetchGame = async () => {
             const vTeamData = await findTeam(data.vTeam);
             const hTeamData = await findTeam(data.hTeam);

@@ -6,6 +6,7 @@ Author: drdynscript
 
 import { default as express, Application, NextFunction, Request, Response } from 'express';
 import { default as http, createServer, Server } from 'http';
+import passport from "passport";
 
 import { default as Router } from './router';
 import { GlobalMiddleware } from './middleware';
