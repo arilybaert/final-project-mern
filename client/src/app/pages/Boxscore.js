@@ -5,7 +5,7 @@ import { useApi } from '../services';
 import {Navbar} from '../components/elements';
 import {ActionBar, Leaders, StatsTable,TeamScores} from '../components/gamestats'
 
-const GameStats = () => {
+const Boxscore = () => {
     const { findGameStats } = useApi();
 
     let { id } = useParams();
@@ -42,4 +42,4 @@ const GameStats = () => {
     )
 }
 
-export default GameStats;
+export default Boxscore;

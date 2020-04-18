@@ -1,13 +1,13 @@
 import React from 'react';
 import {FavoAddBtn, FavoGameList, FavoHeader} from '../components/favorites';
-import {Navbar, BottomNav} from '../components/elements';
+import {DatePicker, Navbar, BottomNav} from '../components/elements';
 
 
 const FavoritePage = () => {
     return (
         <div>
             <Navbar/>
-            <FavoHeader/>
+            <DatePicker/>
             <FavoGameList/>
             <FavoAddBtn/>
             <BottomNav/>

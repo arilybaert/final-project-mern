@@ -17,8 +17,8 @@ const findGames = async (date) => {
 // FIND TEAMS
 const refreshTeams = async () => {
     let url = `${BASE_URL}/teams`;
-    await fetch(url);
-    // return response.json()
+    const response = await fetch(url);
+    return response.json()
 }
 
 const findTeam = async (id) => {

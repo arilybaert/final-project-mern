@@ -1,6 +1,5 @@
 import {default as React} from 'react'; 
-import {DatePicker, GameList, } from '../components/homepage';
-import {Navbar, BottomNav} from '../components/elements';
+import {Navbar, BottomNav, DatePicker, GameList,} from '../components/elements';
 
 const HomePage = ({children}) => {
 

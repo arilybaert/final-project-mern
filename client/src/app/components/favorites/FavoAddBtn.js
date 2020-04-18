@@ -1,11 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
+import {FAVORITES_EDIT} from '../../routes';
 
 const FavoAddBtn = () => {
 
     return (
-        <div className="o-favoAddBtn">
-            <span className="a-favoAddBtn">+</span>
-        </div>
+        <Link to={FAVORITES_EDIT}>
+            <div className="o-favoAddBtn">
+                <span className="a-favoAddBtn">+</span>
+            </div>
+        </Link>
     )
 }
 
