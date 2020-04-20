@@ -1,3 +1,8 @@
+/*
+ Author getUnique: Sai gowtham
+ https://reactgo.com/removeduplicateobjects/
+*/
+
 import React, { useEffect, useContext, useState } from 'react';
 import {Link} from 'react-router-dom';
 
@@ -38,7 +43,21 @@ const FavoGameList = () => {
     //     return readable;
     // };
 
+    function getUnique(arr, comp) {
 
+        const unique = arr
+             .map(e => e[comp])
+      
+           // store the keys of the unique objects
+          .map((e, i, final) => final.indexOf(e) === i && i)
+      
+          // eliminate the dead keys & store unique objects
+          .filter(e => arr[e]).map(e => arr[e]);
+      
+         return unique;
+      }
+      
+      // console.log(getUnique(arr,'id'));
     useEffect(() => {
         console.log(checkedTeams);
     }, [checkedTeams]);
@@ -57,13 +76,18 @@ const FavoGameList = () => {
                      // await refreshTeams();
                      checkedTeams.forEach((team) => {
                          data.games.forEach((game) => {
-                             if(team === game.hTeam || game.vTeam){
+                             if(team === game.hTeam){
                                 tempGames.push(game);
+                            } else if (team === game.vTeam) {
+                                tempGames.push(game);
+
                              }
                          })
                      })
-                     console.log(data);
-                    setGames(tempGames);
+                     // console.log(data);
+                     // console.log(tempGames);
+
+                    setGames(getUnique(tempGames,'_id'));
                 }
             }
         }

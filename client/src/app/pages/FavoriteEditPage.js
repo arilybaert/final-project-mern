@@ -69,12 +69,23 @@ const FavoriteEditPage = ({}) => {
         <div className='row'>
             <div className={classnames('col-12', 'o-checkbox')}>
                 {
-                NBATeamsCheckBox && NBATeamsCheckBox.map((NBATeam) => (
-                    <label key={NBATeam.key}>
-                        {NBATeam.label}
-                        <input type='checkbox' name={NBATeam.key}   onChange={handleChange}/>
-                    </label>
-                    ))
+                NBATeamsCheckBox && NBATeamsCheckBox.map((NBATeam) => {
+                    if(checkedTeams.includes(NBATeam.key)){
+                        return(
+                            <label key={NBATeam.key}>
+                                {NBATeam.label}
+                                <input type='checkbox' checked name={NBATeam.key}   onChange={handleChange}/>
+                            </label>
+                            )
+                    } else {
+                        return(
+                            <label key={NBATeam.key}>
+                                {NBATeam.label}
+                                <input type='checkbox'  name={NBATeam.key}   onChange={handleChange}/>
+                            </label>
+                    )
+                    }
+                })
                 }
                 <Link to={FAVORITES}>
                     <button>SAVE</button>
