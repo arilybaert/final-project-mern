@@ -13,8 +13,8 @@ const Navbar = () => {
                 <span className={classnames("a-title__bold", "a-title")}>Banana Boat </span>
                 <span className={classnames("a-titlte__normal", "a-title")}>Crew</span>
             </div>
-            <div className={classnames("col-2", "o-accountLogo")}>
-                <Link to={Routes.SIGNIN}>
+            <div className={classnames("col-2")}>
+                <Link className='a-accountLogo' to={Routes.SIGNIN}>
                     <IoIosPerson size='2em'/>
                 </Link>
 

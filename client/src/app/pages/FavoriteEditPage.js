@@ -64,36 +64,56 @@ const FavoriteEditPage = ({}) => {
     }
 
     return (
-        <div>
+        <div className='o-checkbox'>
         <Navbar/>
-        <div className='row'>
-            <div className={classnames('col-12', 'o-checkbox')}>
+
                 {
                 NBATeamsCheckBox && NBATeamsCheckBox.map((NBATeam) => {
+                    // RETURN CHECKED OR UNCHECKED CHECKBOX
                     if(checkedTeams.includes(NBATeam.key)){
                         return(
-                            <label key={NBATeam.key}>
-                                {NBATeam.label}
-                                <input type='checkbox' checked name={NBATeam.key}   onChange={handleChange}/>
-                            </label>
+                            <div className="row">
+                                <div className={classnames('col-12', 'o-teamsCheckbox')}>
+                                    <label key={NBATeam.key}>
+                                        {NBATeam.label}
+                                        <input type='checkbox' checked name={NBATeam.key}   onChange={handleChange}/>
+                                    </label>
+                                </div>
+                            </div>
                             )
                     } else {
                         return(
-                            <label key={NBATeam.key}>
-                                {NBATeam.label}
-                                <input type='checkbox'  name={NBATeam.key}   onChange={handleChange}/>
-                            </label>
+                            <div className={classnames('row', 'o-teamsCheckbox')} key={NBATeam.key}>
+                                <div className={classnames('col-12')}>
+                                    <div className='row'>
+                                        <div className='col'>
+                                            <image alt='image' title='image'></image>
+                                        </div>
+                                        <div className={classnames('col', 'a-teamnameCheckbox')}>
+                                            <span>
+                                                {NBATeam.label}
+                                            </span>
+                                        </div>
+                                        <div className={classnames('col', 'm-inputCheckbox')}>
+                                            <input type='checkbox'  name={NBATeam.key}   onChange={handleChange} className='a-inputCheckbox'/>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
                     )
                     }
                 })
                 }
-                <Link to={FAVORITES}>
-                    <button>SAVE</button>
-                </Link>
-            </div>
-        </div>
 
-        </div>
+
+                        <Link to={FAVORITES}>
+                            <button className='a-buttonCheckbox'>SAVE</button>
+                        </Link>
+
+
+            </div>
+
     )
 }
 

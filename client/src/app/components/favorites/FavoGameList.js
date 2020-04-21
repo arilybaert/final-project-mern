@@ -5,6 +5,7 @@
 
 import React, { useEffect, useContext, useState } from 'react';
 import {Link} from 'react-router-dom';
+import classnames from 'classnames';
 
 import { useApi } from '../../services';
 import FavoGameItem from './FavoGameItem';
@@ -114,7 +115,7 @@ if(render === true){
     } else {
         return (
             <div className="row">
-                <div className="col-12">
+                <div className={classnames('col-12', 'm-noFavoriteGames')}>
                     <p> No favorite Teams selected ... </p>
                 </div>
             </div>

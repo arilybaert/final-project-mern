@@ -18,6 +18,10 @@
   font-weight: bolder;
 }
 
+.a-accountLogo {
+  color: #eee8e8;
+}
+
 .o-datePicker {
   box-sizing: border-box;
   background-color: #FF2D00;
@@ -122,6 +126,7 @@
   text-align: center;
   padding: 3px;
   width: 95%;
+  border-radius: 15px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.23);
 }
 .o-tableContainer .m-standingsTable th {
@@ -129,6 +134,10 @@
 }
 .o-tableContainer .m-standingsTable .a-standings {
   padding: 1vh;
+}
+
+.m-tableHead {
+  border-radius: 15px;
 }
 
 .a-leagueTitle {
@@ -156,29 +165,64 @@
 
 .o-favoAddBtn {
   display: flex;
-  position: fixed;
-  bottom: 15vh;
-  right: 5vw;
-  z-index: 2000;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  background-color: #FF2D00;
+  padding: 3vh;
+  margin-top: 1vh;
+  border-radius: 15px;
+  background-color: #0630AA;
   color: #eee8e8;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
 }
 .o-favoAddBtn .a-favoAddBtn {
-  font-size: 50pt;
+  font-size: 15pt;
   line-height: 0rem;
 }
 
 .o-checkbox {
+  margin-bottom: 15vh;
+}
+
+.o-teamsCheckbox {
+  box-shadow: 3px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 1vh;
+  padding: 1vh;
+  margin-top: 1vh;
+}
+
+.a-teamnameCheckbox {
+  text-align: center;
+  font-size: 15pt;
+}
+
+.m-inputCheckbox {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.a-inputCheckbox {
+  height: 25px;
+  width: 25px;
+}
+
+.a-buttonCheckbox {
+  padding: 2vh 4vh;
+  border-radius: 10px;
+  background-color: #FF2D00;
+  border: none;
+  color: #eee8e8;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.23);
+}
+
+.m-noFavoriteGames {
+  margin-top: 1vh;
+  text-align: center;
 }
 
 .o-gameStats {

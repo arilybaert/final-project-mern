@@ -51,9 +51,9 @@ const Standings = () => {
             <div className={classnames("row", "o-standings")}>
                 <div className={classnames("col-12", "o-tableContainer")}>
                     <table className="m-standingsTable">
-                        <thead>
+                        <thead >
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>ALL</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>ALL</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -83,7 +83,7 @@ const Standings = () => {
                     <table className="m-standingsTable">
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>EAST</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>EAST</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -103,7 +103,7 @@ const Standings = () => {
                         </tbody>
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>WEST</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>WEST</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -133,7 +133,7 @@ const Standings = () => {
 
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>SOUTH EAST</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>SOUTH EAST</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -153,7 +153,7 @@ const Standings = () => {
                         </tbody>
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>ATLANTIC</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>ATLANTIC</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -174,7 +174,7 @@ const Standings = () => {
 
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>CENTRAL</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>CENTRAL</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -195,7 +195,7 @@ const Standings = () => {
 
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>SOUTH WEST</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>SOUTH WEST</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -216,7 +216,7 @@ const Standings = () => {
 
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>PACIFIC</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>PACIFIC</th>
                             </tr>
                             <tr>
                                 <th>P</th>
@@ -237,7 +237,7 @@ const Standings = () => {
 
                         <thead>
                             <tr>
-                                <th colSpan='6' className={classnames('a-leagueTitle')}>NORTH WEST</th>
+                                <th colSpan='6' className={classnames('a-leagueTitle', 'm-tableHead')}>NORTH WEST</th>
                             </tr>
                             <tr>
                                 <th>P</th>

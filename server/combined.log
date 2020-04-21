@@ -7258,3 +7258,12 @@
 2020-04-20 10:27:47 [[32minfo[39m]: 	listening on localhost : 8080 {
   "object": {}
 }
+2020-04-21 14:30:18 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-04-21 14:30:18 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-04-21 14:30:18 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}

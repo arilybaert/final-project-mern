@@ -8,8 +8,8 @@ const FavoritePage = () => {
         <div>
             <Navbar/>
             <DatePicker/>
-            <FavoGameList/>
             <FavoAddBtn/>
+            <FavoGameList/>
             <BottomNav/>
         </div>
     )

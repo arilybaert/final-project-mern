@@ -8,7 +8,7 @@ const FavoAddBtn = () => {
     return (
         <Link to={FAVORITES_EDIT}>
             <div className="o-favoAddBtn">
-                <span className="a-favoAddBtn">+</span>
+                <span className="a-favoAddBtn">Edit</span>
             </div>
         </Link>
     )
