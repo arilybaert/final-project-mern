@@ -1,12 +1,12 @@
 import React from 'react';
 
 const AllLeagueData = ({data}) => {
-
+// TODO ADD STYLE TO IMAGE
     return (
         <tr>
             <td className="a-standings">{data.defaultOrder}</td>
             <td>
-                <img alt="logo"></img>
+                <img alt="logo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${data.teamCode}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
             </td>
             <td>{data.teamName}</td>
             <td>{data.win}</td>

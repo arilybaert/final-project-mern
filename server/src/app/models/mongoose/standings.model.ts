@@ -16,6 +16,8 @@ const standingsSchema = new Schema ({
         teamName: { type: String, required: true },
         confRank: { type: Number, required: true },
         defaultOrder: {type: Number, required: true },
+        teamCode: {type: String, required: true},
+        teamNickname: {type: String, required: true},
     }],
     conferenceStandings: {
         east: [{
@@ -25,6 +27,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             confRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         }],
         west: [{
             teamId: { type: String, required: true },
@@ -33,6 +37,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             confRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         }]
     },
     divisionStandings: {
@@ -43,6 +49,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
         atlantic: {
             teamId: { type: String, required: true },
@@ -51,6 +59,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
         central: {
             teamId: { type: String, required: true },
@@ -59,6 +69,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
         southwest: {
             teamId: { type: String, required: true },
@@ -67,6 +79,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
         pacific: {
             teamId: { type: String, required: true },
@@ -75,6 +89,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
         northwest: {
             teamId: { type: String, required: true },
@@ -83,6 +99,8 @@ const standingsSchema = new Schema ({
             winPctV2: { type: String, required: true },
             teamName: { type: String, required: true },
             divRank: { type: Number, required: true },
+            teamCode: {type: String, required: true},
+            teamNickname: {type: String, required: true},
         },
     }
 },

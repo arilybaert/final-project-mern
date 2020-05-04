@@ -1,5 +1,6 @@
 import { default as fetch } from 'node-fetch';
 import { IStandings, Standings } from '../../models/mongoose';
+import { TeamController } from '../controllers';
 
 class StandingsSeeder {
     private standings: Array<any>;
@@ -82,6 +83,8 @@ class StandingsSeeder {
             const teamName = team.teamSitesOnly.teamName;
             const confRank = team.confRank;
             const defaultOrder = team.sortKey.defaultOrder;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             allStandings.push({
                 teamId,
@@ -91,6 +94,8 @@ class StandingsSeeder {
                 teamName,
                 confRank,
                 defaultOrder,
+                teamCode,
+                teamNickname
             })
         });
         // DIVISION STANDINGS
@@ -101,6 +106,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             southeastStandings.push({
                 teamId,
@@ -109,6 +116,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname
             })
         });
         div.league.standard.conference.east.atlantic.forEach(function(team) {
@@ -118,6 +127,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             atlanticStandings.push({
                 teamId,
@@ -126,6 +137,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname,
             })
         });
         div.league.standard.conference.east.central.forEach(function(team) {
@@ -135,6 +148,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             centralStandings.push({
                 teamId,
@@ -143,6 +158,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname,
             })
         });
         div.league.standard.conference.west.southwest.forEach(function(team) {
@@ -152,6 +169,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             southwestStandings.push({
                 teamId,
@@ -160,6 +179,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname,
             })
         });
         div.league.standard.conference.west.pacific.forEach(function(team) {
@@ -169,6 +190,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             pacificStandings.push({
                 teamId,
@@ -177,6 +200,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname,
             })
         });
         div.league.standard.conference.west.northwest.forEach(function(team) {
@@ -186,6 +211,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const divRank = team.divRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             northwestStandings.push({
                 teamId,
@@ -194,6 +221,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 divRank,
+                teamCode,
+                teamNickname,
             })
         });
         // CONFERENCE STANDINGS
@@ -204,6 +233,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const confRank = team.confRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             confEastStandings.push({
                 teamId,
@@ -212,6 +243,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 confRank,
+                teamCode,
+                teamNickname,
             })
         })
         conf.league.standard.conference.west.forEach(function (team) {
@@ -221,6 +254,8 @@ class StandingsSeeder {
             const winPctV2 = team.winPctV2;
             const teamName = team.teamSitesOnly.teamName;
             const confRank = team.confRank;
+            const teamCode = team.teamSitesOnly.teamCode;
+            const teamNickname = team.teamSitesOnly.teamNickname;
 
             confWestStandings.push({
                 teamId,
@@ -229,6 +264,8 @@ class StandingsSeeder {
                 winPctV2,
                 teamName,
                 confRank,
+                teamCode,
+                teamNickname,
             })
         })
 
