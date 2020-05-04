@@ -4,7 +4,7 @@ import { Standings } from '../../models/mongoose';
 
 class StandingsController {
     private standingsSeeder: StandingsSeeder;
-    
+
     constructor() {
         this.standingsSeeder = new StandingsSeeder();
     }
@@ -18,7 +18,6 @@ class StandingsController {
             next(err);
         }
     }
-    
 }
 
 export default StandingsController;
