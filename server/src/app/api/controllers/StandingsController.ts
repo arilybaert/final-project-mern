@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import {StandingsSeeder} from '../seeder';
+import { StandingsSeeder } from '../seeder';
 import { Standings } from '../../models/mongoose';
 
 class StandingsController {

@@ -1,6 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
 import { default as fetch } from 'node-fetch';
-import { IStandings, Standings, standingsSchema } from '../../models/mongoose';
+import { IStandings, Standings } from '../../models/mongoose';
 
 class StandingsSeeder {
     private standings: Array<any>;
