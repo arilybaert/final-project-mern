@@ -29,7 +29,7 @@ const GameItem = ({data}) => {
     return (
         <div className={classnames("row", "o-scores")}>
             <div className={classnames("col-3", "m-logo")}>
-                <img className="a-logo" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${vUrlName}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
+                {/* <img className="a-logo" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${vUrlName}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img> */}
                 <span className="a-teamName">{vTeamName}</span>
             </div>
             <div className={classnames("col-2", "m-gameStatus")}>
@@ -44,7 +44,7 @@ const GameItem = ({data}) => {
                 <span className="a-teamScore">{data.vTeamScore}</span>
             </div>
             <div className={classnames("col-3", "m-logo")}>
-                <img className="a-logo" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${hUrlName}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
+                {/* <img className="a-logo" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${hUrlName}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img> */}
                 <span className="a-teamName">{hTeamName}</span>
             </div>
         </div>

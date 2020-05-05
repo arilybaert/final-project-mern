@@ -70,6 +70,7 @@ class GameStatsSeeder {
         let data = await this.getGameStats(date, id);
         
         const vTeamId = data.basicGameData.vTeam.teamId;
+        
         const hTeamId = data.basicGameData.hTeam.teamId;
         const _id = data.basicGameData.gameId;
         let gameStats;
@@ -82,10 +83,12 @@ class GameStatsSeeder {
                 vTeamScore: data.basicGameData.vTeam.score,
                 hTeamScore: data.basicGameData.hTeam.score,
                 vTeam: {
+                    teamId: data.basicGameData.vTeam.teamId,
                     triCode: data.basicGameData.vTeam.triCode,
                     
                 },
                 hTeam: {
+                    teamId: data.basicGameData.hTeam.teamId,
                     triCode: data.basicGameData.hTeam.triCode,
                     
                 }
@@ -100,10 +103,12 @@ class GameStatsSeeder {
                     vTeamScore: data.basicGameData.vTeam.score,
                     hTeamScore: data.basicGameData.hTeam.score,
                     vTeam: {
+                        teamId: data.basicGameData.vTeam.teamId,
                         triCode: data.basicGameData.vTeam.triCode,
                         
                     },
                     hTeam: {
+                        teamId: data.basicGameData.hTeam.teamId,
                         triCode: data.basicGameData.hTeam.triCode,
                         
                     }
@@ -179,7 +184,8 @@ class GameStatsSeeder {
                 vTeamScore: data.basicGameData.vTeam.score,
                 hTeamScore: data.basicGameData.hTeam.score,
                 vTeam: {
-                  triCode: data.basicGameData.vTeam.triCode,
+                    teamId: data.basicGameData.vTeam.teamId,
+                    triCode: data.basicGameData.vTeam.triCode,
                     leaders: {
                         points : {
                             firstName: data.stats.vTeam.leaders.points.players['0'].firstName,
@@ -200,7 +206,8 @@ class GameStatsSeeder {
                     activePlayers: vTeamActivePlayers
                 },
                 hTeam: {
-                  triCode: data.basicGameData.hTeam.triCode,
+                    teamId: data.basicGameData.hTeam.teamId,
+                    triCode: data.basicGameData.hTeam.triCode,
                     leaders: {
                         points : {
                             firstName: data.stats.hTeam.leaders.points.players['0'].firstName,

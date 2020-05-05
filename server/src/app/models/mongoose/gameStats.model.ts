@@ -16,6 +16,7 @@ const gameStatsSchema = new Schema ({
     hTeamScore: { type: String, required: false },
     vTeam: {
         triCode: { type: String, required: true },
+        teamId: { type: String, required: true },
         leaders: {
             points: {
                 _id: {type: String, required: false},
@@ -52,6 +53,7 @@ const gameStatsSchema = new Schema ({
         }]
     },
     hTeam: {
+        teamId: { type: String, required: true },
         triCode: { type: String, required: true },
         leaders: {
             points: {

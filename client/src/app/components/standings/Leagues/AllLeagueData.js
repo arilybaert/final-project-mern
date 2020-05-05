@@ -6,7 +6,7 @@ const AllLeagueData = ({data}) => {
         <tr>
             <td className="a-standings">{data.defaultOrder}</td>
             <td>
-                <img alt="logo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${data.teamCode}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
+                <img alt="logo" class="a-standingsLogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${data.teamCode}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
             </td>
             <td>{data.teamName}</td>
             <td>{data.win}</td>

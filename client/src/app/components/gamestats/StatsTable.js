@@ -35,6 +35,7 @@ const StatsTable = ({gameStats}) => {
         return (
             <div className="row o-table o-bgc">
             <table className="m-table col-12">
+                <thead>
                 <tr>
                     <th></th>
                     <th>pt.</th>
@@ -44,6 +45,8 @@ const StatsTable = ({gameStats}) => {
                     <th>blk</th>
                     <th>to</th>
                 </tr>   
+                </thead>
+                <tbody>
                 {
                         activePlayers && activePlayers.map((data) => {
                                 return (<tr>
@@ -57,6 +60,7 @@ const StatsTable = ({gameStats}) => {
                                         </tr>)
                         })
                     }
+                </tbody>
                                     
             </table>
         </div>    

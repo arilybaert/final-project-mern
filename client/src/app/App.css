@@ -135,6 +135,9 @@
 .o-tableContainer .m-standingsTable .a-standings {
   padding: 1vh;
 }
+.o-tableContainer .m-standingsTable .a-standingsLogo {
+  height: 3vh;
+}
 
 .m-tableHead {
   border-radius: 15px;
