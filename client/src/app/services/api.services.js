@@ -7,18 +7,24 @@ const useApi = () => useContext(ApiContext);
 const ApiProvider = ({children}) => {
 const BASE_URL = `http://localhost:8080/api`;
 
+// FIND ALL GAMES
+const findAllGames = async () => {
+    let url = `${BASE_URL}/gamedays`;
+    const response = await fetch(url);
+    return response.json();
+}
 // FIND GAMES PER DAY
 const findGames = async (date) => {
     let url = `${BASE_URL}/gamedays/${date}`;
     const response = await fetch(url);
-    return response.json()
+    return response.json();
 }
 
 // FIND TEAMS
 const refreshTeams = async () => {
     let url = `${BASE_URL}/teams`;
     const response = await fetch(url);
-    return response.json()
+    return response.json();
 }
 
 const findTeam = async (id) => {
@@ -38,8 +44,18 @@ const findStandings = async () => {
     const response = await fetch(url);
     return response.json()
 }
+
+/*
+EDIT
+*/
+
+const hardDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
     return (
-        <ApiContext.Provider value={{ findGames, refreshTeams, findTeam, findGameStats, findStandings}}>
+        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday}}>
             {children}
         </ApiContext.Provider>
     );

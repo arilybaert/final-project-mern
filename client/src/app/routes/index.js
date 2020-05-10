@@ -9,3 +9,4 @@ export const SIGNIN = '/auth/signIn';
 export const BACKOFFICE_LANDING = '/admin';
 export const BACKOFFICE_DASHBOARD = '/admin/dashboard';
 export const BACKOFFICE_UPLOAD= '/admin/upload';
+export const BACKOFFICE_EDIT_GAMEDAYS= '/admin/edit/gamedays';

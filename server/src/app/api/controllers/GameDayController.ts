@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
+
 import { GameDaySeeder } from '../seeder';
 import {  GameDay } from '../../models/mongoose';
 
@@ -34,7 +35,30 @@ class GameDayController {
             next(err);
         }
     }
+    
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
 
+            const { id } = req.params;
+            GameDay.deleteOne({_id: id}).exec();
+            console.log(`deleted: ${id}`);
+
+        } catch(err) {
+            next(err);
+        }
+    }
+
+    softDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            GameDay.softdelete({_id: id}).exec();
+            console.log(`deleted: ${id}`);
+
+        } catch(err) {
+            next(err);
+        }
+    }
 }
 
 export default GameDayController;

@@ -23,6 +23,9 @@ const Navbar = () => {
       <li class="nav-item">
         <Link to={Routes.LANDING} class="nav-link" >Web app</Link>
       </li>
+      <li class="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_GAMEDAYS} class="nav-link" >Gamedays</Link>
+      </li>
       
     </ul>
     <div class="my-2 my-lg-0">

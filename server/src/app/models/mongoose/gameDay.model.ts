@@ -1,5 +1,5 @@
 import { default as mongoose, Schema, Document } from 'mongoose';
-
+import soft_delete from 'mongoose-softdelete';
 interface IGame extends Document {
     _id: string;
     isStartTimeTBD: Boolean;
