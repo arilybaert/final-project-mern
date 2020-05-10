@@ -1,6 +1,7 @@
 import {default as express, Router, Application, Request, Response } from 'express';
 import passport from "passport";
-import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController, GameStatsController, StandingsController } from '../controllers';
+import { HelloController, PostController, MessageController, UserController, GameDayController, TeamController, GameStatsController, StandingsController, UploadController } from '../controllers';
+import multer from 'multer';
 
 
 class ApiRouter {
@@ -11,14 +12,18 @@ class ApiRouter {
     private userController: UserController;
     private gameDayController: GameDayController;
     private teamController: TeamController;
-    private gameStatsController: GameStatsController
-    private standingsController: StandingsController
+    private gameStatsController: GameStatsController;
+    private standingsController: StandingsController;
+    private uploadController: UploadController;
+    private upload: Object;
 
     constructor() {
         this.router = express.Router();
 
         this.registerControllers();
         this.registerRoutes();
+
+        // this.upload = multer({ dest: `/uploads` }); // multer configuration
     }
 
     private registerControllers (): void {
@@ -30,6 +35,7 @@ class ApiRouter {
         this.teamController = new TeamController()
         this.gameStatsController = new GameStatsController();
         this.standingsController = new StandingsController();
+        this.uploadController = new UploadController()
 
     }
 
@@ -53,6 +59,9 @@ class ApiRouter {
         this.router.post('/auth/signin/', this.userController.signInLocal);
         this.router.post('/auth/signup/', this.userController.signupLocal);
         this.router.get("/auth/facebook", passport.authenticate("facebook"));
+
+        this.router.get("/upload/get", this.uploadController.get);
+        this.router.get("/upload/post", this.uploadController.post);
 
 
         this.router.get(

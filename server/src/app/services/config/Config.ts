@@ -15,6 +15,7 @@ class Config implements IConfig {
     }
 
     private loadEnvironmentVariables(): void {
+        
         this.docs = Boolean(process.env.NODE_DOCS || false);
         this.env = Environment[(process.env.NODE_ENV || Environment.development) as keyof typeof Environment];
         this.server = {

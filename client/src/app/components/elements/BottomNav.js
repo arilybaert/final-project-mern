@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { IoIosPodium } from 'react-icons/io';
 import { IoIosHome } from 'react-icons/io';
 import { IoIosStar } from 'react-icons/io';
+import * as Routes from '../../routes'
 
 
 
@@ -23,7 +24,7 @@ const BottomNav = () => {
                     <span>Standings</span>
             </Link>
 
-            <Link to={"/favorites"} className={classnames("col", "m-bottomNav__element")}>
+            <Link to={Routes.FAVORITES} className={classnames("col", "m-bottomNav__element")}>
                     <IoIosStar size='2em'/>
                     <span>Favorites</span>
 

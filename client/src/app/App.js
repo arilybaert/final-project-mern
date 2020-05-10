@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+// import {createHashHistory } from 'history';
 import {NBAContextProvider} from './components/context';
 import { IconContext } from 'react-icons';
 
@@ -11,7 +12,22 @@ import { ApiProvider, AuthProvider } from './services';
 // STYLES
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import { IoIosAdd } from 'react-icons/io';
 
+// const history = createHashHistory();
+
+/*
+<Route exact path={Routes.LANDING} component={HomePage}/>
+            <Redirect from={Routes.HOME} to={Routes.LANDING}/>
+            <Route path={Routes.BOXSCORE}  component={Boxscore}/>
+            <Route path={Routes.STANDINGS}  component={StandingsPage}/>
+            <Route path={Routes.FAVORITES}  component={FavoritesPage}/>
+            <Route path={Routes.FAVORITES_EDIT} exact component={FavoriteEditPage}/>
+            <Route path={Routes.SIGNIN}  component={SignIn}/>
+            
+            <Route path={Routes.BACKOFFICE_LANDING} exact component={AdminPage}/>
+            */
 
 function App() {
   return (
@@ -19,20 +35,21 @@ function App() {
       <AuthProvider>
       <ApiProvider>
 
-        <Router basename='/'>
+        <Router >
           <Switch>
             <NBAContextProvider>
 
 
-            <Route path={Routes.LANDING} exact component={HomePage}/>
-            <Redirect from={Routes.HOME} to={Routes.LANDING}/>
-            <Route path={Routes.BOXSCORE} exact component={Boxscore}/>
-            <Route path={Routes.STANDINGS} exact component={StandingsPage}/>
-            <Route path={Routes.FAVORITES} exact component={FavoritesPage}/>
+            <Route exact path={Routes.LANDING} component={HomePage}/>
+            {/* <Redirect from={Routes.HOME} to={Routes.LANDING}/> */}
+            <Route path={Routes.BOXSCORE}  component={Boxscore}/>
+            <Route path={Routes.STANDINGS}  component={StandingsPage}/>
+            <Route path={Routes.FAVORITES}  component={FavoritesPage}/>
             <Route path={Routes.FAVORITES_EDIT} exact component={FavoriteEditPage}/>
-            <Route path={Routes.SIGNIN} exact component={SignIn}/>
+
+            <Route path={Routes.SIGNIN}  component={SignIn}/>
             
-            <Route path={Routes.BACKOFFICE_LANDING} exact component={AdminPage}/>
+            <Route path={Routes.BACKOFFICE_LANDING} component={AdminPage} />
 
             </NBAContextProvider>
           </Switch>
