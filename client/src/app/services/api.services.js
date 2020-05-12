@@ -54,8 +54,21 @@ const hardDeleteGameday = async (id) => {
     await fetch(url);
     console.log('hard deleted');
 }
+
+const softDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/softdelete/${id}`;
+    await fetch(url);
+}
+
+const softUnDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/softundelete/${id}`;
+    await fetch(url);
+}
+
+
+
     return (
-        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday}}>
+        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday}}>
             {children}
         </ApiContext.Provider>
     );

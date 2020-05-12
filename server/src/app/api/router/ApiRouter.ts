@@ -64,6 +64,8 @@ class ApiRouter {
         this.router.get("/upload/post", this.uploadController.post);
 
         this.router.get('/gamedays/delete/:id', this.gameDayController.hardDelete);
+        this.router.get('/gamedays/softdelete/:id', this.gameDayController.softDelete);
+        this.router.get('/gamedays/softundelete/:id', this.gameDayController.softUnDelete);
 
         this.router.get(
             "/auth/facebook/callback",

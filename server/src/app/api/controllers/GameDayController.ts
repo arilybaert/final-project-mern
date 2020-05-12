@@ -46,15 +46,29 @@ class GameDayController {
         } catch(err) {
             next(err);
         }
+
     }
 
     softDelete = async (req: Request, res: Response, next: NextFunction) => {
         try {
 
             const { id } = req.params;
-            GameDay.softdelete({_id: id}).exec();
-            console.log(`deleted: ${id}`);
+            let gameday = await GameDay.findById(id)
+            gameday._deletedAt = Date.now();
+            await gameday.save();
+            return res.status(200).json(gameday);
+        } catch(err) {
+            next(err);
+        }
+    }
+    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
 
+            const { id } = req.params;
+            let gameday = await GameDay.findById(id)
+            gameday._deletedAt = null;
+            gameday.save();
+            return res.status(200).json(gameday);
         } catch(err) {
             next(err);
         }

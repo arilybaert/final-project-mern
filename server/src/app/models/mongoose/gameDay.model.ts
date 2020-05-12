@@ -1,5 +1,4 @@
 import { default as mongoose, Schema, Document } from 'mongoose';
-import soft_delete from 'mongoose-softdelete';
 interface IGame extends Document {
     _id: string;
     isStartTimeTBD: Boolean;
@@ -39,6 +38,7 @@ const Game = mongoose.model<IGame>('Game', gameSchema);
 interface IGameDay extends Document {
     _id: string;
     games: Array<IGame>;
+    _deletedAt: number;
 }
 
 const gameDaySchema: Schema = new Schema ({

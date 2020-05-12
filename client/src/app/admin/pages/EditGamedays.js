@@ -7,7 +7,7 @@ import * as Routes from '../../routes';
 
 
 const EditGamedays = ({children}) => {
-    const { findAllGames, hardDeleteGameday } = useApi();
+    const { findAllGames, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday } = useApi();
     
     const [gamedays, setGamedays] = useState();
     const [gamedayId,setGamedayId] = useState();
@@ -18,19 +18,36 @@ const EditGamedays = ({children}) => {
         const fetchGame = async () => {
             const data = await findAllGames();
             setGamedays(data);
-            console.log(data);
         }
+
         fetchGame();
-    }, [])
-    const handleSubmit = (id) => {
-        hardDeleteGameday(id);
-        window.location.reload(false);
+    }, [gamedayId])
+
+
+    const setReadableDate = (date) => {
+        var year = date.substring(0,4);
+        var month = date.substring(4,6);
+        var day = date.substring(6,8);
+        return `${day}/${month}/${year}`;
+    }
+    const handleSubmit = async (id) => {
+        await hardDeleteGameday(id);
+        setGamedayId(id);
+    }
+
+    const softDelete = async (id) => {
+        await softDeleteGameday(id);
+        setGamedayId(id);
+    }
+
+    const softUnDelete = async (id) => {
+        await softUnDeleteGameday(id);
+        setGamedayId(id);
 
     }
-    const isEven = (n) => {
-        return n % 2 == 0;
-     };
-    
+
+
+
     return (
         <div>
             <Navbar/>
@@ -47,16 +64,21 @@ const EditGamedays = ({children}) => {
                 </thead>
                 <tbody >
         {
-            gamedays && gamedays.map((data, index) => {
+            gamedays && gamedays.map((data) => {
+                console.log(data._deletedAt);
 
-                    return <tr key={data._id} class={isEven(index)?'' : ''}>
-                            <td>{data._id}</td>
+                    return <tr key={data._id}>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{setReadableDate(data._id)}</td>
                             <td>{data.games.length}</td>
                             <td>
-                                {/* <a class="button hollow success" href={Routes.BACKOFFICE_EDIT_GAMEDAYS} onClick={e => handleSubmit(data._id)}>DELETE</a> */}
                             
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setGamedayId(data._id)}>DELETE
                             </button>
+                            {data._deletedAt != null? 
+                            <button type='button' class='btn btn-warning'  onClick={() => softUnDelete(data._id)}>UNDELETE</button>
+                            
+                            :<button type='button' class='btn btn-warning'  onClick={() => softDelete(data._id)}>SOFT DELETE</button>}
+                            
                             
                             </td>
 
