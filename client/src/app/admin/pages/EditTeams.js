@@ -1,53 +1,40 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import { Navbar } from '../components'
 import { useApi } from '../../services';
 import * as Routes from '../../routes';
 
+const EditTeams = () => {
+    const { refreshTeams, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam } = useApi();
 
+    const [teams, setTeams] = useState();
+    const [teamId, setTeamId] = useState();
 
-const EditGamedays = ({children}) => {
-    const { findAllGames, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday } = useApi();
-    
-    const [gamedays, setGamedays] = useState();
-    const [gamedayId,setGamedayId] = useState();
-
-    // FETCH DATA
     useEffect(() => {
-
-        const fetchGame = async () => {
-            const data = await findAllGames();
-            setGamedays(data);
+        const fetchTeams = async () => {
+            const data = await refreshTeams();
+            console.log(data);
+            setTeams(data);
         }
 
-        fetchGame();
-    }, [gamedayId])
+        fetchTeams();
+    },[])
 
-
-    const setReadableDate = (date) => {
-        var year = date.substring(0,4);
-        var month = date.substring(4,6);
-        var day = date.substring(6,8);
-        return `${day}/${month}/${year}`;
-    }
     const handleSubmit = async (id) => {
-        await hardDeleteGameday(id);
-        setGamedayId(id);
+        await hardDeleteTeam(id);
+        setTeamId(id);
     }
 
     const softDelete = async (id) => {
-        await softDeleteGameday(id);
-        setGamedayId(id);
+        await softDeleteTeam(id);
+        setTeamId(id);
     }
 
     const softUnDelete = async (id) => {
-        await softUnDeleteGameday(id);
-        setGamedayId(id);
+        await softUnDeleteTeam(id);
+        setTeamId(id);
     }
-
-
-
-    return (
+    return(
         <div>
             <Navbar/>
             <div class="container">
@@ -63,15 +50,17 @@ const EditGamedays = ({children}) => {
                 </thead>
                 <tbody >
         {
-            gamedays && gamedays.map((data) => {
-                console.log(data._deletedAt);
+            teams && teams.map((data) => {
+                console.log(data);
 
-                    return <tr key={data._id}>
-                            <td className={data._deletedAt != null? "text-muted" : ""}>{setReadableDate(data._id)}</td>
-                            <td>{data.games.length}</td>
+                    return data.isNBAFranchise ?
+                    
+                        <tr key={data._id}>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
+                            <td>{}</td>
                             <td>
                             
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setGamedayId(data._id)}>DELETE
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setTeamId(data._id)}>DELETE
                             </button>
                             {data._deletedAt != null? 
                             <button type='button' class='btn btn-warning'  onClick={() => softUnDelete(data._id)}>UNDELETE</button>
@@ -81,7 +70,10 @@ const EditGamedays = ({children}) => {
                             
                             </td>
 
-                            </tr>
+                        </tr>
+
+                        :
+                        ''
                         
             })
         }
@@ -107,7 +99,7 @@ const EditGamedays = ({children}) => {
                     </div> */}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-danger" onClick={e => handleSubmit(gamedayId)}>Yes</button>
+                        <button type="button" class="btn btn-danger" onClick={e => handleSubmit(teamId)}>Yes</button>
                     </div>
                     </div>
                 </div>
@@ -118,4 +110,4 @@ const EditGamedays = ({children}) => {
     )
 }
 
-export default EditGamedays;
+export default EditTeams;

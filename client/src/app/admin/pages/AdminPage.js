@@ -6,6 +6,7 @@ import * as Routes from '../../routes';
 import UploadPage from './UploadPage';
 import DashboardPage from './DashboardPage';
 import EditGamedays from './EditGamedays';
+import EditTeams from './EditTeams';
 
 const AdminPage = ({children}) => {
 
@@ -18,6 +19,7 @@ const AdminPage = ({children}) => {
             <Route exact path={Routes.BACKOFFICE_UPLOAD} component={UploadPage}/>
 
             <Route exact path={Routes.BACKOFFICE_EDIT_GAMEDAYS} component={EditGamedays}/>
+            <Route exact path={Routes.BACKOFFICE_EDIT_TEAMS} component={EditTeams}/>
         </div>
     )
 }

@@ -21,12 +21,14 @@ const Navbar = () => {
         <Link to={Routes.BACKOFFICE_UPLOAD} class="nav-link" >Upload</Link>
       </li>
       <li class="nav-item">
-        <Link to={Routes.LANDING} class="nav-link" >Web app</Link>
-      </li>
-      <li class="nav-item">
         <Link to={Routes.BACKOFFICE_EDIT_GAMEDAYS} class="nav-link" >Gamedays</Link>
       </li>
-      
+      <li class="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_TEAMS} class="nav-link" >Teams</Link>
+      </li>
+      <li class="nav-item">
+        <Link to={Routes.LANDING} class="nav-link text-warning" > Return to Web-app</Link>
+      </li>
     </ul>
     <div class="my-2 my-lg-0">
         <Link to={Routes.LANDING} class="text-danger" >Log out</Link>

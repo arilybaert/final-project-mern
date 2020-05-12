@@ -48,7 +48,7 @@ const findStandings = async () => {
 /*
 EDIT
 */
-
+// GAMEDAY
 const hardDeleteGameday = async (id) => {
     let url = `${BASE_URL}/gamedays/delete/${id}`;
     await fetch(url);
@@ -65,10 +65,25 @@ const softUnDeleteGameday = async (id) => {
     await fetch(url);
 }
 
+// TEAMS
+const hardDeleteTeam = async (id) => {
+    let url = `${BASE_URL}/teams/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
 
+const softDeleteTeam = async (id) => {
+    let url = `${BASE_URL}/teams/softdelete/${id}`;
+    await fetch(url);
+}
+
+const softUnDeleteTeam = async (id) => {
+    let url = `${BASE_URL}/teams/softundelete/${id}`;
+    await fetch(url);
+}
 
     return (
-        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday}}>
+        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam}}>
             {children}
         </ApiContext.Provider>
     );
