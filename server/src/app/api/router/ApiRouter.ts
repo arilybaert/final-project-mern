@@ -72,6 +72,8 @@ class ApiRouter {
         this.router.get('/teams/softdelete/:id', this.teamController.softDelete);
         this.router.get('/teams/softundelete/:id', this.teamController.softUnDelete);
 
+        this.router.get('/standings/delete', this.standingsController.hardDelete);
+
         this.router.get(
             "/auth/facebook/callback",
             passport.authenticate("facebook", {

@@ -27,6 +27,9 @@ const Navbar = () => {
         <Link to={Routes.BACKOFFICE_EDIT_TEAMS} className="nav-link" >Teams</Link>
       </li>
       <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_STANDINGS} className="nav-link" >Standings</Link>
+      </li>
+      <li className="nav-item">
         <Link to={Routes.LANDING} className="nav-link text-warning" > Return to Web-app</Link>
       </li>
     </ul>

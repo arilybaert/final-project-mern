@@ -18,6 +18,44 @@ class StandingsController {
             next(err);
         }
     }
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            const deleted = await Standings.findById("5e9712673107205c65e46f97").exec();
+            return res.status(200).json(deleted);
+
+
+        } catch(err) {
+            next(err);
+        }
+
+    }
+
+    softDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let standings = await Standings.findById(id)
+            standings._deletedAt = Date.now();
+            await standings.save();
+            return res.status(200).json(standings);
+        } catch(err) {
+            next(err);
+        }
+    }
+    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let standings = await Standings.findById(id)
+            standings._deletedAt = null;
+            standings.save();
+            return res.status(200).json(standings);
+        } catch(err) {
+            next(err);
+        }
+    }
 }
 
 export default StandingsController;

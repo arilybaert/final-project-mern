@@ -18,6 +18,11 @@ const standingsSchema = new Schema ({
         defaultOrder: {type: Number, required: true },
         teamCode: {type: String, required: true},
         teamNickname: {type: String, required: true},
+        _createdAt: { type: Number, required: true, default: Date.now() },
+        _modifiedAt: { type: Number, required: false, default: null },
+        _deletedAt: { type: Number, required: false, default: null },
+        
+
     }],
     conferenceStandings: {
         east: [{
@@ -29,6 +34,9 @@ const standingsSchema = new Schema ({
             confRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         }],
         west: [{
             teamId: { type: String, required: true },
@@ -39,6 +47,9 @@ const standingsSchema = new Schema ({
             confRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         }]
     },
     divisionStandings: {
@@ -51,6 +62,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
         atlantic: {
             teamId: { type: String, required: true },
@@ -61,6 +75,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
         central: {
             teamId: { type: String, required: true },
@@ -71,6 +88,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
         southwest: {
             teamId: { type: String, required: true },
@@ -81,6 +101,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
         pacific: {
             teamId: { type: String, required: true },
@@ -91,6 +114,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
         northwest: {
             teamId: { type: String, required: true },
@@ -101,6 +127,9 @@ const standingsSchema = new Schema ({
             divRank: { type: Number, required: true },
             teamCode: {type: String, required: true},
             teamNickname: {type: String, required: true},
+            _createdAt: { type: Number, required: true, default: Date.now() },
+            _modifiedAt: { type: Number, required: false, default: null },
+            _deletedAt: { type: Number, required: false, default: null },
         },
     }
 },

@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 
 const GameItem = ({data}) => {
-    const { findTeam } = useApi();
+    const { findTeam, refreshTeams } = useApi();
 
     const [vTeamName, setVTeamName ] = useState();
     const [hTeamName, setHTeamName ] = useState();
@@ -16,6 +16,7 @@ const GameItem = ({data}) => {
     useEffect(() => {
 
         const fetchGame = async () => {
+            await refreshTeams();
             const vTeamData = await findTeam(data.vTeam);
             const hTeamData = await findTeam(data.hTeam);
             setVTeamName(vTeamData.nickname);
