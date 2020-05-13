@@ -22,7 +22,7 @@ const Standings = () => {
     const [divCENStandings, setDivCENStandings] = useState();
     const [divSWStandings, setDivSWStandings] = useState();
     const [divPACtandings, setDivPACStandings] = useState();
-    const [divNWtandings, setDivNWStandings] = useState();
+    const [divNWStandings, setDivNWStandings] = useState();
     const { displayLeague } = useContext(NBAContext);
 
 
@@ -250,7 +250,7 @@ const Standings = () => {
                         </thead>
                         <tbody>
                         {
-                            divNWtandings && divNWtandings.map((data) => {
+                            divNWStandings && divNWStandings.map((data) => {
                                 return <DivisionLeagueStandings key={data.teamId} data={data}/>
                             })
                         }

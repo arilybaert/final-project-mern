@@ -9,6 +9,7 @@ class StandingsController {
         this.standingsSeeder = new StandingsSeeder();
     }
 
+    // THIS FINDS AND UPDATES THE STANDINGS WITH THE OFFICIAL NBA-API
     show = async (req: Request, res: Response, next: NextFunction) => {
         try {
             await this.standingsSeeder.createStandings(this.standingsSeeder.ALLSTANDINGS_URL, this.standingsSeeder.CONFSTANDINGS_URL, this.standingsSeeder.DIVSTANDINGS_URL);
@@ -18,6 +19,12 @@ class StandingsController {
             next(err);
         }
     }
+
+    /*
+    FUNCTION DOESN'T WORK:
+    CAN'T FIND A WAY TO DELETE A SPEFIC SUBDOCUMENT (ARRAY) IN THE STANDINGS COLLECTION
+    */
+
     hardDelete = async (req: Request, res: Response, next: NextFunction) => {
         try {
 
@@ -32,30 +39,30 @@ class StandingsController {
 
     }
 
-    softDelete = async (req: Request, res: Response, next: NextFunction) => {
-        try {
+    // softDelete = async (req: Request, res: Response, next: NextFunction) => {
+    //     try {
 
-            const { id } = req.params;
-            let standings = await Standings.findById(id)
-            standings._deletedAt = Date.now();
-            await standings.save();
-            return res.status(200).json(standings);
-        } catch(err) {
-            next(err);
-        }
-    }
-    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
-        try {
+    //         const { id } = req.params;
+    //         let standings = await Standings.findById(id)
+    //         standings._deletedAt = Date.now();
+    //         await standings.save();
+    //         return res.status(200).json(standings);
+    //     } catch(err) {
+    //         next(err);
+    //     }
+    // }
+    // softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+    //     try {
 
-            const { id } = req.params;
-            let standings = await Standings.findById(id)
-            standings._deletedAt = null;
-            standings.save();
-            return res.status(200).json(standings);
-        } catch(err) {
-            next(err);
-        }
-    }
+    //         const { id } = req.params;
+    //         let standings = await Standings.findById(id)
+    //         standings._deletedAt = null;
+    //         standings.save();
+    //         return res.status(200).json(standings);
+    //     } catch(err) {
+    //         next(err);
+    //     }
+    // }
 }
 
 export default StandingsController;
