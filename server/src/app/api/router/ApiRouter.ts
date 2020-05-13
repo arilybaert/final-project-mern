@@ -72,6 +72,10 @@ class ApiRouter {
         this.router.get('/teams/softdelete/:id', this.teamController.softDelete);
         this.router.get('/teams/softundelete/:id', this.teamController.softUnDelete);
 
+        this.router.get('/users/delete/:id', this.userController.hardDelete);
+        this.router.get('/users/softdelete/:id', this.userController.softDelete);
+        this.router.get('/users/softundelete/:id', this.userController.softUnDelete);
+
         this.router.get('/standings/delete', this.standingsController.hardDelete);
 
         this.router.get(

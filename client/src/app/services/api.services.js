@@ -6,7 +6,12 @@ const useApi = () => useContext(ApiContext);
 
 const ApiProvider = ({children}) => {
 const BASE_URL = `http://localhost:8080/api`;
-
+// FIND ALL USERS
+const findAllUsers = async () => {
+    let url = `${BASE_URL}/users`;
+    const response = await fetch(url);
+    return response.json();
+}
 // FIND ALL GAMES
 const findAllGames = async () => {
     let url = `${BASE_URL}/gamedays`;
@@ -88,8 +93,26 @@ const softUnDeleteTeam = async (id) => {
     await fetch(url);
 }
 
+
+// USERS
+const hardDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
+
+const softDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/softdelete/${id}`;
+    await fetch(url);
+}
+
+const softUnDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/softundelete/${id}`;
+    await fetch(url);
+}
+
     return (
-        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam}}>
+        <ApiContext.Provider value={{ findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser}}>
             {children}
         </ApiContext.Provider>
     );

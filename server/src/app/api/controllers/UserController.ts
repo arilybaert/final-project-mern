@@ -30,6 +30,48 @@ class UserController {
             next(err);
         }
     }
+
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+      try {
+
+          const { id } = req.params;
+          const deleted = await User.deleteOne({_id: id}).exec();
+          console.log(`deleted: ${id}`);
+          return res.status(200).json(deleted);
+
+
+      } catch(err) {
+          next(err);
+      }
+
+  }
+
+  softDelete = async (req: Request, res: Response, next: NextFunction) => {
+      try {
+
+          const { id } = req.params;
+          let user = await User.findById(id)
+          user._deletedAt = Date.now();
+          await user.save();
+          return res.status(200).json(user);
+      } catch(err) {
+          next(err);
+      }
+  }
+  softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+      try {
+
+          const { id } = req.params;
+          let user = await User.findById(id)
+          user._deletedAt = null;
+          user.save();
+          return res.status(200).json(user);
+      } catch(err) {
+          next(err);
+      }
+  }
+
+  // AUTH
     signupLocal = async (
       req: Request,
       res: Response,

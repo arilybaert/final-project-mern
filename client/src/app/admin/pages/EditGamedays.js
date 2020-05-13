@@ -56,9 +56,9 @@ const EditGamedays = ({children}) => {
             <table className="stack table-striped">
                 <thead>
                 <tr>
-                    <th width="200">Day</th>
-                    <th width="200">Games</th>
-                    <th width="200">Actie</th>
+                    <th width="300">Day</th>
+                    <th width="300">Games</th>
+                    <th width="300">Actie</th>
                 </tr>
                 </thead>
                 <tbody >

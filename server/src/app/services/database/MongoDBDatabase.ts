@@ -1,6 +1,5 @@
 import { default as mongoose, Connection } from 'mongoose';
 import { default as faker } from 'faker';
-import { default as DateMaker } from '../../utilities/DateMaker';
 
 
 import { IConfig } from '../config';

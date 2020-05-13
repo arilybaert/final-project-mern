@@ -4,36 +4,37 @@ import { Navbar } from '../components'
 import { useApi } from '../../services';
 import * as Routes from '../../routes';
 
-const EditTeams = () => {
-    const { allTeams, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam } = useApi();
+const EditUsers = () => {
+    const { findAllUsers, hardDeleteUser, softDeleteUser, softUnDeleteUser } = useApi();
 
-    const [teams, setTeams] = useState();
-    const [teamId, setTeamId] = useState();
+    const [users, setUsers] = useState();
+    const [userId, setUserId] = useState();
 
     useEffect(() => {
-        const fetchTeams = async () => {
-            const data = await allTeams();
-            setTeams(data);
+        const fetchUsers = async () => {
+            const data = await findAllUsers();
+            setUsers(data);
         }
 
-        fetchTeams();
-    },[teamId]);
+        fetchUsers();
+    },[userId]);
 
 
     const handleSubmit = async (id) => {
-        await hardDeleteTeam(id);
-        setTeamId(id);
+        await hardDeleteUser(id);
+        setUserId(id);
     };
 
     const softDelete = async (id) => {
-        await softDeleteTeam(id);
-        setTeamId(id);
+        await softDeleteUser(id);
+        setUserId(id);
     }
 
     const softUnDelete = async (id) => {
-        await softUnDeleteTeam(id);
-        setTeamId(id);
+        await softUnDeleteUser(id);
+        setUserId(id);
     }
+    // 
     return(
         <div>
             <Navbar/>
@@ -43,23 +44,27 @@ const EditTeams = () => {
             <table className="stack table-striped">
                 <thead>
                 <tr>
-                    <th width="300">Day</th>
-                    <th width="300">Games</th>
+                    <th width="300">Firstname</th>
+                    <th width="300">Lastname</th>
+                    <th width="300">Email</th>
+                    <th width="300">Role</th>
                     <th width="300">Actie</th>
                 </tr>
                 </thead>
                 <tbody >
         {
-            teams && teams.map((data) => {
-
-                     if(data.isNBAFranchise){
+            users && users.map((data) => {
                         return(
                         <tr key={data._id}>
-                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
-                            <td>{}</td>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.profile.firstName}</td>
+                            <td>{data.profile.lastName}</td>
+                            <td>{data.email}</td>
+                            <td>{data.role}</td>
+                            {/* <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
+                            <td>{}</td>*/}
                             <td>
                             
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setTeamId(data._id)}>DELETE
+                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setUserId(data._id)}>DELETE
                             </button>
                             {data._deletedAt != null? 
                             <button type='button' className='btn btn-warning'  onClick={() => softUnDelete(data._id)}>UNDELETE</button>
@@ -67,11 +72,10 @@ const EditTeams = () => {
                             :<button type='button' className='btn btn-warning'  onClick={() => softDelete(data._id)}>SOFT DELETE</button>}
                             
                             
-                            </td>
+                            </td> 
 
                         </tr>
                         )
-                            }
             })
         }
                         </tbody>
@@ -96,7 +100,7 @@ const EditTeams = () => {
                     </div> */}
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">No</button>
-                        <button type="button" className="btn btn-danger" onClick={e => handleSubmit(teamId) }data-dismiss="modal" >Yes</button>
+                        <button type="button" className="btn btn-danger" onClick={e => handleSubmit(userId) } data-dismiss="modal" >Yes</button>
                     </div>
                     </div>
                 </div>
@@ -107,4 +111,4 @@ const EditTeams = () => {
     )
 }
 
-export default EditTeams;
+export default EditUsers;
