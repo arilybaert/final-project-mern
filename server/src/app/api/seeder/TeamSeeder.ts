@@ -60,7 +60,6 @@ class TeamSeeder {
         const promises = [];
 
         let data = await this.getTeams();
-        console.log(data.league.standard);
         data.league.standard.forEach(function (team) {
         
         const teams: Array<any> = []

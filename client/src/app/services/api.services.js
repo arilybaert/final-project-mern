@@ -27,6 +27,12 @@ const refreshTeams = async () => {
     return response.json();
 }
 
+const allTeams = async () => {
+    let url = `${BASE_URL}/teams/all`;
+    const response = await fetch(url);
+    return response.json();
+}
+
 const findTeam = async (id) => {
     let url = `${BASE_URL}/teams/${id}`;
     const response = await fetch(url);
@@ -83,7 +89,7 @@ const softUnDeleteTeam = async (id) => {
 }
 
     return (
-        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam}}>
+        <ApiContext.Provider value={{ findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam}}>
             {children}
         </ApiContext.Provider>
     );

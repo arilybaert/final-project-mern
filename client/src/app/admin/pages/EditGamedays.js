@@ -107,7 +107,7 @@ const EditGamedays = ({children}) => {
                     </div> */}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-danger" onClick={e => handleSubmit(gamedayId)}>Yes</button>
+                        <button type="button" class="btn btn-danger" onClick={e => handleSubmit(gamedayId)}data-dismiss="modal">Yes</button>
                     </div>
                     </div>
                 </div>

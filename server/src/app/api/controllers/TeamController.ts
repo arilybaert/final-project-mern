@@ -30,6 +30,54 @@ class TeamController {
             next(err);
         }
     }
+    showAll = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const post = await Team.find().exec();
+            return res.status(200).json(post);
+        } catch(err) {
+            next(err);
+        }
+    }
+    
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            const deleted = await Team.deleteOne({_id: id}).exec();
+            console.log(`deleted: ${id}`);
+            return res.status(200).json(deleted);
+
+
+        } catch(err) {
+            next(err);
+        }
+
+    }
+
+    softDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let team = await Team.findById(id)
+            team._deletedAt = Date.now();
+            await team.save();
+            return res.status(200).json(team);
+        } catch(err) {
+            next(err);
+        }
+    }
+    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let team = await Team.findById(id)
+            team._deletedAt = null;
+            team.save();
+            return res.status(200).json(team);
+        } catch(err) {
+            next(err);
+        }
+    }
 };
 
 export default TeamController;

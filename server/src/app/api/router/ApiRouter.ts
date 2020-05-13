@@ -50,6 +50,7 @@ class ApiRouter {
         this.router.get('/gamedays', this.gameDayController.index);
         this.router.get('/gamedays/:id', this.gameDayController.show);
         this.router.get('/teams', this.teamController.index);
+        this.router.get('/teams/all', this.teamController.showAll);
         this.router.get('/teams/:id', this.teamController.show);
         this.router.get('/gameStats', this.gameStatsController.index);
         this.router.get('/gameStats/:date/:id', this.gameStatsController.show);
@@ -66,6 +67,10 @@ class ApiRouter {
         this.router.get('/gamedays/delete/:id', this.gameDayController.hardDelete);
         this.router.get('/gamedays/softdelete/:id', this.gameDayController.softDelete);
         this.router.get('/gamedays/softundelete/:id', this.gameDayController.softUnDelete);
+        
+        this.router.get('/teams/delete/:id', this.teamController.hardDelete);
+        this.router.get('/teams/softdelete/:id', this.teamController.softDelete);
+        this.router.get('/teams/softundelete/:id', this.teamController.softUnDelete);
 
         this.router.get(
             "/auth/facebook/callback",

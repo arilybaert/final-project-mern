@@ -5,33 +5,33 @@ import  * as Routes  from '../../routes';
 const Navbar = () => {
 
     return (
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Backoffice</a>
+  <a className="navbar-brand" href="#">Backoffice</a>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+  <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li className="nav-item active">
         {/* <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> */}
-        <Link to={Routes.BACKOFFICE_DASHBOARD} class="nav-link" >Home</Link>
+        <Link to={Routes.BACKOFFICE_DASHBOARD} className="nav-link" >Home</Link>
       </li>
-      <li class="nav-item">
-        <Link to={Routes.BACKOFFICE_UPLOAD} class="nav-link" >Upload</Link>
+      <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_UPLOAD} className="nav-link" >Upload</Link>
       </li>
-      <li class="nav-item">
-        <Link to={Routes.BACKOFFICE_EDIT_GAMEDAYS} class="nav-link" >Gamedays</Link>
+      <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_GAMEDAYS} className="nav-link" >Gamedays</Link>
       </li>
-      <li class="nav-item">
-        <Link to={Routes.BACKOFFICE_EDIT_TEAMS} class="nav-link" >Teams</Link>
+      <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_TEAMS} className="nav-link" >Teams</Link>
       </li>
-      <li class="nav-item">
-        <Link to={Routes.LANDING} class="nav-link text-warning" > Return to Web-app</Link>
+      <li className="nav-item">
+        <Link to={Routes.LANDING} className="nav-link text-warning" > Return to Web-app</Link>
       </li>
     </ul>
-    <div class="my-2 my-lg-0">
-        <Link to={Routes.LANDING} class="text-danger" >Log out</Link>
+    <div className="my-2 my-lg-0">
+        <Link to={Routes.LANDING} className="text-danger" >Log out</Link>
       </div>
   </div>
 </nav>
