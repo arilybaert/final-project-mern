@@ -48,8 +48,8 @@ class UserController {
   update = async (req: Request, res: Response, next: NextFunction) => {
     try {
 
-        console.log(req.body);
         const id = req.body.Id;
+
         const data = {
           'email': req.body.Email,
           'profile': {
@@ -61,7 +61,6 @@ class UserController {
         };
 
         const user = await User.findOneAndUpdate({_id: id}, data, {new: true});
-        console.log(user);
         return res.status(200).json(user);
 
     } catch(err) {
