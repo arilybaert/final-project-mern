@@ -75,6 +75,7 @@ class ApiRouter {
         this.router.get('/users/delete/:id', this.userController.hardDelete);
         this.router.get('/users/softdelete/:id', this.userController.softDelete);
         this.router.get('/users/softundelete/:id', this.userController.softUnDelete);
+        this.router.post('/users/update', this.userController.update);
 
         this.router.get('/standings/delete', this.standingsController.hardDelete);
 

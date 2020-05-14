@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import { Navbar } from '../components'
 import { useApi } from '../../services';
 import * as Routes from '../../routes';
@@ -71,7 +71,7 @@ const EditUsers = () => {
                             
                             :<button type='button' className='btn btn-warning'  onClick={() => softDelete(data._id)}>SOFT DELETE</button>}
                             
-                            
+                            <Link to={`${Routes.BACKOFFICE_EDIT_USERS}/${data._id}`} className='btn btn-info'>Edit</Link>
                             </td> 
 
                         </tr>

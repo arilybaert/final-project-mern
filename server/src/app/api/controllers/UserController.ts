@@ -45,6 +45,30 @@ class UserController {
       }
 
   }
+  update = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        console.log(req.body);
+        const id = req.body.Id;
+        const data = {
+          'email': req.body.Email,
+          'profile': {
+            'firstName': req.body.Firstname,
+            'lastName': req.body.Lastname,
+          },
+          'role': req.body.Role,
+          '_modifiedAt': Date.now(),
+        };
+
+        const user = await User.findOneAndUpdate({_id: id}, data, {new: true});
+        console.log(user);
+        return res.status(200).json(user);
+
+    } catch(err) {
+        next(err);
+    }
+
+}
 
   softDelete = async (req: Request, res: Response, next: NextFunction) => {
       try {

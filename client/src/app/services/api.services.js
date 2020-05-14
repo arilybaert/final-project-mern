@@ -6,6 +6,13 @@ const useApi = () => useContext(ApiContext);
 
 const ApiProvider = ({children}) => {
 const BASE_URL = `http://localhost:8080/api`;
+
+// FIND USER
+const findUser = async (id) => {
+    let url = `${BASE_URL}/users/${id}`;
+    const response = await fetch(url);
+    return response.json();
+}
 // FIND ALL USERS
 const findAllUsers = async () => {
     let url = `${BASE_URL}/users`;
@@ -112,7 +119,7 @@ const softUnDeleteUser = async (id) => {
 }
 
     return (
-        <ApiContext.Provider value={{ findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser}}>
+        <ApiContext.Provider value={{ findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser}}>
             {children}
         </ApiContext.Provider>
     );

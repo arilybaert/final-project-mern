@@ -13,3 +13,4 @@ export const BACKOFFICE_EDIT_GAMEDAYS= '/admin/edit/gamedays';
 export const BACKOFFICE_EDIT_TEAMS= '/admin/edit/teams';
 export const BACKOFFICE_EDIT_STANDINGS= '/admin/edit/standings';
 export const BACKOFFICE_EDIT_USERS= '/admin/edit/users';
+export const BACKOFFICE_MODIFY_USERS= '/admin/edit/users/:id/';
