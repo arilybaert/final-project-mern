@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { Navbar } from '../components'
 import { useApi } from '../../services';
 
 
@@ -37,16 +38,15 @@ const ModifyUsers = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
               },
             body: JSON.stringify(formData),
-            mode: 'cors', // no-cors, *cors, same-origin
+            mode: 'cors', 
         });
     }
 
 return (
     <div>
-
+            <Navbar/>
 <form onSubmit={handleSubmit}>
   <div class="form-row">
     <div class="form-group col-md-6">

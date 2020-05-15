@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link to={Routes.BACKOFFICE_EDIT_GAMEDAYS} className="nav-link" >Gamedays</Link>
       </li>
       <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_BOXSCORE} className="nav-link" >Boxscore</Link>
+      </li>
+      <li className="nav-item">
         <Link to={Routes.BACKOFFICE_EDIT_TEAMS} className="nav-link" >Teams</Link>
       </li>
       <li className="nav-item">

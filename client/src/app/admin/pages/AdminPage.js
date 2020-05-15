@@ -10,6 +10,7 @@ import EditTeams from './EditTeams';
 import EditStandings from './EditStandings';
 import EditUsers from './EditUsers';
 import ModifyUsers from './ModifyUsers';
+import EditBoxscore from './EditBoxscore';
 
 const AdminPage = ({children}) => {
 
@@ -26,6 +27,7 @@ const AdminPage = ({children}) => {
             <Route exact path={Routes.BACKOFFICE_EDIT_STANDINGS} component={EditStandings}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_USERS} component={EditUsers}/>
             <Route path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
+            <Route path={Routes.BACKOFFICE_EDIT_BOXSCORE} component={EditBoxscore}/>
             
             
         </div>
