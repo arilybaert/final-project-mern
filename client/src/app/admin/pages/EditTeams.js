@@ -23,16 +23,19 @@ const EditTeams = () => {
     const handleSubmit = async (id) => {
         await hardDeleteTeam(id);
         setTeamId(id);
+        window.location.reload(false);
     };
 
     const softDelete = async (id) => {
         await softDeleteTeam(id);
         setTeamId(id);
+        window.location.reload(false);
     }
 
     const softUnDelete = async (id) => {
         await softUnDeleteTeam(id);
         setTeamId(id);
+        window.location.reload(false);
     }
     return(
         <div>

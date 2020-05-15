@@ -49,6 +49,7 @@ const EditBoxscore = () => {
                         <th width="300">Home Team</th>
                         <th width="300">Is Game TBD</th>
                         <th width="300">Away Team</th>
+                        <th width="300">Actie</th>
                     </tr>
                     </thead>
                     <tbody >
@@ -57,7 +58,7 @@ const EditBoxscore = () => {
                             return(
                             <tr key={data._id}>
                                 <td className={data._deletedAt != null? "text-muted" : ""}>{data.hTeam.triCode}</td>
-                                <td>{data.isStartTimeTBD}</td>
+                                <td>{data.isStartTimeTBD.toString()}</td>
                                 <td>{data.vTeam.triCode}</td>
                                 {/* <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
                                 <td>{}</td>*/}

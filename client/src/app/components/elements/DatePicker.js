@@ -3,9 +3,12 @@ import {NBAContext} from '../context';
 import classnames from 'classnames';
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
+import { useApi } from '../../services';
+
 
 const DatePicker = () => {
-    const { setUtilDate } = useContext(NBAContext);
+    const { utilDate,setUtilDate } = useContext(NBAContext);
+    const { findGames } = useApi();
 
     const [standardDate, setStandardDate] = useState(new Date());
     const [readableDate, setReadableDate] = useState();
@@ -21,7 +24,7 @@ const DatePicker = () => {
     };
 
 
-useEffect(() => {
+useEffect( () => {
     
         const date = standardDate;
         const day = date.getDate();
@@ -35,7 +38,8 @@ useEffect(() => {
 
             // TIME STRING USER INTERFACE e.g.( 20/04/2020 )
             //return `${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`;
-            
+
+        
         setReadableDate(`${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`);
         setUtilDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
 

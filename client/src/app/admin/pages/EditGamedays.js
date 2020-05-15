@@ -33,16 +33,19 @@ const EditGamedays = ({children}) => {
     const handleSubmit = async (id) => {
         await hardDeleteGameday(id);
         setGamedayId(id);
+        window.location.reload(false);
     }
 
     const softDelete = async (id) => {
         await softDeleteGameday(id);
         setGamedayId(id);
+        window.location.reload(false);
     }
 
     const softUnDelete = async (id) => {
         await softUnDeleteGameday(id);
         setGamedayId(id);
+        window.location.reload(false);
     }
 
 
