@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-do
 import {NBAContextProvider} from './components/context';
 import { IconContext } from 'react-icons';
 
-import {HomePage, StandingsPage, FavoritesPage, FavoriteEditPage, Boxscore, SignIn} from './pages';
+import {HomePage, StandingsPage, FavoritesPage, FavoriteEditPage, Boxscore, SignIn, NoMatch} from './pages';
 import {AdminPage} from './admin/pages';
 import * as Routes from './routes'
 import { ApiProvider, AuthProvider } from './services';
@@ -34,26 +34,26 @@ function App() {
     <div className="container">
       <AuthProvider>
       <ApiProvider>
+            <NBAContextProvider>
 
         <Router >
           <Switch>
-            <NBAContextProvider>
-
 
             <Route exact path={Routes.LANDING} component={HomePage}/>
             {/* <Redirect from={Routes.HOME} to={Routes.LANDING}/> */}
-            <Route path={Routes.BOXSCORE}  component={Boxscore}/>
-            <Route path={Routes.STANDINGS}  component={StandingsPage}/>
-            <Route path={Routes.FAVORITES}  component={FavoritesPage}/>
+            <Route path={Routes.BOXSCORE} component={Boxscore}/>
+            <Route path={Routes.STANDINGS} component={StandingsPage}/>
+            <Route path={Routes.FAVORITES} component={FavoritesPage}/>
             <Route path={Routes.FAVORITES_EDIT} exact component={FavoriteEditPage}/>
 
             <Route path={Routes.SIGNIN}  component={SignIn}/>
             
             <Route path={Routes.BACKOFFICE_LANDING} component={AdminPage} />
+            <Route component={NoMatch} />
 
-            </NBAContextProvider>
           </Switch>
         </Router>
+            </NBAContextProvider>
 
       </ApiProvider>
       </AuthProvider>

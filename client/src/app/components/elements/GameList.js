@@ -10,7 +10,7 @@ const GameList = () => {
 
     const { findGames } = useApi();
     const { refreshTeams } = useApi();
-    const [ games, setGames ] = useState(true);
+    const [ games, setGames ] = useState(false);
 
     const { utilDate } = useContext(NBAContext);
 
@@ -40,8 +40,9 @@ const GameList = () => {
     useEffect(() => {
         const fetchGame = async () => {
             if(utilDate !== null){
-                //const data = await findGames(utilDate);
-                const data = await findGames('20200307');
+                const data = await findGames(utilDate);
+                // const data = await findGames('20200307');
+                console.log(data.games);
                 // console.log(utilDate);
                  // await refreshTeams();
                 setGames(data.games);
@@ -60,9 +61,9 @@ const GameList = () => {
             <div className="row">
             <div className="col-12">
                 {
-                    games===true?
+                    games==false || games==undefined ?
                     
-                    <div> no games</div>
+                    <div className="a-noGameList"><span>No games today</span></div>
                     :
 
                     games && games.map((data) => {

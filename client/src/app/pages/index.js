@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import StandingsPage from './StandingsPage';
 import Boxscore from './Boxscore';
 import SignIn from './SignIn';
+import NoMatch from './NoMatch';
 
 export {
     FavoritesPage,
@@ -12,4 +13,5 @@ export {
     StandingsPage,
     Boxscore,
     SignIn,
+    NoMatch,
 };
