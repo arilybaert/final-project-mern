@@ -8938,3 +8938,15 @@
 2020-05-15 15:28:17 [[32minfo[39m]: 	listening on localhost : 8080 {
   "object": {}
 }
+2020-05-15 18:26:26 [[32minfo[39m]: 	Server is gracefully shutdown {
+  "object": {}
+}
+2020-05-15 18:26:29 [[32minfo[39m]: 	Connected to the mongodb database {
+  "object": {}
+}
+2020-05-15 18:26:29 [[32minfo[39m]: 	We have a connection! {
+  "object": true
+}
+2020-05-15 18:26:29 [[32minfo[39m]: 	listening on localhost : 8080 {
+  "object": {}
+}

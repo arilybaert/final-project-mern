@@ -29,7 +29,7 @@ class GameDayController {
             // return res.status(200).json(gameday);
                     await this.gameDaySeeder.createGamedays(id);
                     const gameday =  await GameDay.findById(id).sort({_createdAt: -1}).exec();
-                    return res.status(200).json();
+                    return res.status(200).json(gameday);
 
         } catch(err) {
             // next(err);

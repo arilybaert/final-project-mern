@@ -12,7 +12,8 @@ const DatePicker = () => {
 
     const [standardDate, setStandardDate] = useState(new Date());
     const [readableDate, setReadableDate] = useState();
-
+    const [nearestPastGameDate, setNearestPastGameDate] = useState();
+    const [dataStatus, setDataStatus] = useState();
 
     // MAKE DATE READABLE
     const addZero = (input, n) => {
@@ -25,23 +26,31 @@ const DatePicker = () => {
 
 
 useEffect( () => {
+
+            const date = standardDate;
+            const day = date.getDate();
+            const month = date.getMonth();
+            const year = date.getFullYear();
     
-        const date = standardDate;
-        const day = date.getDate();
-        const month = date.getMonth();
-        const year = date.getFullYear();
+            
+            setReadableDate(`${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`);
+            setUtilDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
+    
+            // // SEARCH FOR NEAREST GAME IN THE PAST
+            // let data = await findGames(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
+            // while(data === false){
+            //     const pastDate = standardDate;
+            //     pastDate.setDate(pastDate.getDate()-1);
+                
+            //     const day = pastDate.getDate();
+            //     const month = pastDate.getMonth();
+            //     const year = pastDate.getFullYear();
+                
+            //     data = await findGames(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
+            // };
+            // setNearestPastGameDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
+            // console.log(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
 
-            // // TIME STRING UTILITIES e.g. ( 20200420 )
-            // setUtilDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
-            // setReadableDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
-            // return `${year}${addZero(month+1, 2)}${addZero(day, 2)}`;
-
-            // TIME STRING USER INTERFACE e.g.( 20/04/2020 )
-            //return `${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`;
-
-        
-        setReadableDate(`${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`);
-        setUtilDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
 
 });
 
@@ -50,7 +59,6 @@ useEffect( () => {
         const date = standardDate;
         date.setDate(date.getDate()-1);
         setStandardDate(date);
-        console.log('click');
         setReadableDate();
     }
 
@@ -62,8 +70,14 @@ useEffect( () => {
         setReadableDate();
     }
 
+    const goNearestGameday = () => {
+        const date = new Date(2020, 2, 10, 0, 0);
+        setStandardDate(date)
+        setReadableDate();
+    }
 
     return (
+        <div>
         <div className="row">
             <div className={classnames("col-12", "o-datePicker")}>
                 <div className="row">
@@ -83,6 +97,13 @@ useEffect( () => {
                 </div>
             </div>
         </div>
+        {
+        // dataStatus == false ?
+         <div onClick={goNearestGameday}>Go to nearest gameday</div>
+        // :
+            // <div></div>
+        }
+</div>
     )
 }
 

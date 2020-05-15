@@ -42,9 +42,7 @@ const GameList = () => {
             if(utilDate !== null){
                 const data = await findGames(utilDate);
                 // const data = await findGames('20200307');
-                console.log(data.games);
-                // console.log(utilDate);
-                 // await refreshTeams();
+                // await refreshTeams();
                 setGames(data.games);
             }
         }
