@@ -11,6 +11,7 @@ import EditStandings from './EditStandings';
 import EditUsers from './EditUsers';
 import ModifyUsers from './ModifyUsers';
 import EditBoxscore from './EditBoxscore';
+import ModifyGamedays from './ModifyGamedays';
 
 const AdminPage = ({children}) => {
 
@@ -21,14 +22,14 @@ const AdminPage = ({children}) => {
             </Route>
             <Route exact path={Routes.BACKOFFICE_DASHBOARD} component={DashboardPage}/>
             <Route exact path={Routes.BACKOFFICE_UPLOAD} component={UploadPage}/>
-
+            
             <Route exact path={Routes.BACKOFFICE_EDIT_GAMEDAYS} component={EditGamedays}/>
+            <Route exact path={Routes.BACKOFFICE_MODIFY_GAMEDAYS} component={ModifyGamedays}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_TEAMS} component={EditTeams}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_STANDINGS} component={EditStandings}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_USERS} component={EditUsers}/>
             <Route path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
             <Route path={Routes.BACKOFFICE_EDIT_BOXSCORE} component={EditBoxscore}/>
-            
             
         </div>
     )

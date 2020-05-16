@@ -43,7 +43,7 @@ function App() {
             {/* <Redirect from={Routes.HOME} to={Routes.LANDING}/> */}
             <Route path={Routes.BOXSCORE} component={Boxscore}/>
             <Route path={Routes.STANDINGS} component={StandingsPage}/>
-            <Route path={Routes.FAVORITES} component={FavoritesPage}/>
+            <Route path={Routes.FAVORITES} exact component={FavoritesPage}/>
             <Route path={Routes.FAVORITES_EDIT} exact component={FavoriteEditPage}/>
 
             <Route path={Routes.SIGNIN}  component={SignIn}/>

@@ -67,6 +67,7 @@ class ApiRouter {
         this.router.get('/gamedays/delete/:id', this.gameDayController.hardDelete);
         this.router.get('/gamedays/softdelete/:id', this.gameDayController.softDelete);
         this.router.get('/gamedays/softundelete/:id', this.gameDayController.softUnDelete);
+        this.router.post('/gamedays/update', this.gameDayController.update);
         
         this.router.get('/teams/delete/:id', this.teamController.hardDelete);
         this.router.get('/teams/softdelete/:id', this.teamController.softDelete);

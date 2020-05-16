@@ -57,9 +57,9 @@ const EditUsers = () => {
                         return(
                         <tr key={data._id}>
                             <td className={data._deletedAt != null? "text-muted" : ""}>{data.profile.firstName}</td>
-                            <td>{data.profile.lastName}</td>
-                            <td>{data.email}</td>
-                            <td>{data.role}</td>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.profile.lastName}</td>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.email}</td>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.role}</td>
                             {/* <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
                             <td>{}</td>*/}
                             <td>

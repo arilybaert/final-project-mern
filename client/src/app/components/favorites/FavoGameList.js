@@ -72,19 +72,25 @@ const FavoGameList = () => {
                 if(utilDate !== null){
                     setRender(true);
                     const tempGames = []
-                    // const data = await findGames(utilDate);
-                    const data = await findGames('20200307');
-                     // await refreshTeams();
-                     checkedTeams.forEach((team) => {
-                         data.games.forEach((game) => {
-                             if(team === game.hTeam){
-                                tempGames.push(game);
-                            } else if (team === game.vTeam) {
-                                tempGames.push(game);
+                    const data = await findGames(utilDate);
+                    console.log(data);
+                    if(data != false) {
+                        const data = await findGames(utilDate);
+                        await refreshTeams();
+   
+                        checkedTeams.forEach((team) => {
+                            data.games.forEach((game) => {
+                                if(team === game.hTeam){
+                                   tempGames.push(game);
+                               } else if (team === game.vTeam) {
+                                   tempGames.push(game);
+   
+                                }
+                            })
+                        })
+                    }
 
-                             }
-                         })
-                     })
+
                      // console.log(data);
                      // console.log(tempGames);
 

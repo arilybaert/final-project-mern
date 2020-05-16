@@ -13,7 +13,7 @@ const DatePicker = () => {
     const [standardDate, setStandardDate] = useState(new Date());
     const [readableDate, setReadableDate] = useState();
     const [nearestPastGameDate, setNearestPastGameDate] = useState();
-    const [dataStatus, setDataStatus] = useState();
+    const [dataStatus, setDataStatus] = useState(true);
 
     // MAKE DATE READABLE
     const addZero = (input, n) => {
@@ -70,10 +70,13 @@ useEffect( () => {
         setReadableDate();
     }
 
-    const goNearestGameday = () => {
+    const goNearestGameday = (e) => {
+        e.preventDefault();
+        // Hard coded, didn't succeed in finding a simple way to find nearst gameday
         const date = new Date(2020, 2, 10, 0, 0);
         setStandardDate(date)
         setReadableDate();
+        setDataStatus(false);
     }
 
     return (
@@ -97,12 +100,18 @@ useEffect( () => {
                 </div>
             </div>
         </div>
+
         {
-        // dataStatus == false ?
-         <div onClick={goNearestGameday}>Go to nearest gameday</div>
-        // :
-            // <div></div>
+
+        dataStatus === true ?
+
+        <div className="m-nearGamedayLink">
+             <a href="" onClick={goNearestGameday}>Go to nearest gameday</a>
+        </div>
+         :
+         <div></div>
         }
+
 </div>
     )
 }

@@ -75,6 +75,26 @@ class GameDayController {
             next(err);
         }
     }
+
+    // PROBLEM CANNOT UPDATE PRIMARY KEY
+    update = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            console.log(req.body.GamedayDate);
+            const id = req.body.Id;
+    
+            const data = {
+              '_id': req.body.GamedayDate,
+              '_modifiedAt': Date.now(),
+            };
+    
+            const gameday = await GameDay.findOneAndUpdate({_id: id}, data, {new: true});
+            console.log(gameday);
+            return res.status(200).json(gameday);
+    
+        } catch(err) {
+            next(err);
+        }
+    }
 }
 
 export default GameDayController;

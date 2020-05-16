@@ -49,6 +49,12 @@
   color: #eee8e8;
 }
 
+.m-nearGamedayLink {
+  padding: 1vh;
+  text-align: center;
+  font-size: large;
+}
+
 .o-scores {
   margin-top: 3vh;
   box-sizing: border-box;
