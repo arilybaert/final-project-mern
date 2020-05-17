@@ -4,13 +4,13 @@
   padding: 3%;
 }
 .o-title .o-accountLogo {
-  color: #eee8e8;
+  color: #f3e9e9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .o-title .a-title {
-  color: #eee8e8;
+  color: #f3e9e9;
   font-size: 20pt;
   font-family: "American Typewriter";
 }
@@ -19,7 +19,7 @@
 }
 
 .a-accountLogo {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 
 .o-datePicker {
@@ -46,7 +46,7 @@
   font-family: "Arial";
   font-weight: bold;
   font-size: 13pt;
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 
 .m-nearGamedayLink {
@@ -103,9 +103,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 3%;
+  padding: 2%;
   background-color: #FF2D00;
-  color: #eee8e8;
+  color: #f3e9e9;
   box-shadow: 0px 0px 6px 0px #131010;
 }
 .o-bottomNav .m-bottomNav__element {
@@ -115,16 +115,16 @@
   align-items: center;
 }
 .o-bottomNav .m-bottomNav__element:link {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 .o-bottomNav .m-bottomNav__element:hover {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 .o-bottomNav .m-bottomNav__element:active {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 .o-bottomNav .m-bottomNav__element:visited {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 
 .o-tableContainer {
@@ -158,7 +158,7 @@
 .a-leagueTitle {
   background-color: #0630AA;
   font-weight: bold;
-  color: #eee8e8;
+  color: #f3e9e9;
   padding: 1vh;
 }
 
@@ -172,7 +172,7 @@
   margin-top: 2vh;
 }
 .o-favoHeader .a-favoritesHeader {
-  color: #eee8e8;
+  color: #f3e9e9;
   font-size: "American Typewriter";
   font-family: "Arial";
   font-weight: bold;
@@ -184,7 +184,7 @@
   margin-top: 1vh;
   border-radius: 15px;
   background-color: #0630AA;
-  color: #eee8e8;
+  color: #f3e9e9;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -226,7 +226,7 @@
   border-radius: 10px;
   background-color: #FF2D00;
   border: none;
-  color: #eee8e8;
+  color: #f3e9e9;
   position: fixed;
   left: 50%;
   bottom: 10px;
@@ -257,7 +257,7 @@
   padding: 2vh;
 }
 .o-title .a-title {
-  color: #eee8e8;
+  color: #f3e9e9;
   font-size: 20pt;
   font-family: "American Typewriter";
   font-weight: bold;
@@ -280,10 +280,10 @@
   display: block;
   font-size: 23pt;
   font-family: "Arial";
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 .o-mainStat .m-mainStat .a-teamLocation {
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 
 .o-actionbar {
@@ -293,7 +293,7 @@
 }
 .o-actionbar .m-actionbar {
   width: 80vw;
-  background-color: #eee8e8;
+  background-color: #f3e9e9;
   border-radius: 40px;
   padding: 0.5vh;
 }
@@ -307,13 +307,13 @@
 }
 .o-actionbar .m-logo .m-stats {
   background-color: #0630AA;
-  color: #eee8e8;
+  color: #f3e9e9;
   box-sizing: border-box;
   border-radius: 15px;
   padding: 5px;
 }
 .o-actionbar .m-logo .m-stats .a-statSelect {
-  background-color: #eee8e8;
+  background-color: #f3e9e9;
   color: #0630AA;
   border: 1px solid #0630AA;
   border-radius: 15px;
@@ -321,13 +321,13 @@
   cursor: pointer;
 }
 .o-actionbar .m-logo .m-stats .a-statNone {
-  color: #eee8e8;
+  color: #f3e9e9;
   cursor: pointer;
 }
 
 .o-leaders {
   text-align: center;
-  color: #eee8e8;
+  color: #f3e9e9;
 }
 .o-leaders .a-leader__score {
   font-size: 14pt;
@@ -344,7 +344,7 @@
 }
 .o-table .m-table {
   font-size: 12pt;
-  color: #eee8e8;
+  color: #f3e9e9;
   text-align: center;
 }
 .o-table td:first-child {

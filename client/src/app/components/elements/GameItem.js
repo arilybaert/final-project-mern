@@ -16,7 +16,7 @@ const GameItem = ({data}) => {
     useEffect(() => {
 
         const fetchGame = async () => {
-            await refreshTeams();
+            //await refreshTeams();
             const vTeamData = await findTeam(data.vTeam);
             const hTeamData = await findTeam(data.hTeam);
             setVTeamName(vTeamData.nickname);

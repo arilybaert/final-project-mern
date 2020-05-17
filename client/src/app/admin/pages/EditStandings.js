@@ -61,6 +61,10 @@ PROBLEM WITH SERVER API: StandingsController.ts
         // setstandingId(id);
     }
 
+    const refreshStandings = async () => {
+        await findStandings();
+    }
+
     return(
         <div>
             <Navbar/>
@@ -91,6 +95,7 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
                             
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -108,7 +113,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -126,7 +132,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
                         </tr>
 
@@ -143,7 +150,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
                         </tr>
 
@@ -160,7 +168,9 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
+
                             </td>
 
                         </tr>
@@ -178,7 +188,9 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
+
                             </td>
 
                         </tr>
@@ -196,7 +208,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -214,7 +227,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -232,7 +246,8 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             
                             {/* : */}
                             <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
+
+                            <button type='button' className='btn btn-warning'  data-toggle="modal" data-target="#update" onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -260,6 +275,26 @@ PROBLEM WITH SERVER API: StandingsController.ts
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">No</button>
                         <button type="button" className="btn btn-danger" onClick={e => handleSubmit(standingId) }data-dismiss="modal" >Yes</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div className="modal fade" id="update" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel">Standings are updated</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {/* <div class="modal-body">
+                        ...
+                    </div> */}
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Ok</button>
+
                     </div>
                     </div>
                 </div>
