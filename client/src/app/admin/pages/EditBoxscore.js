@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useApi } from '../../services';
 import { Navbar } from '../components'
+import * as Routes from '../../routes';
+
 
 
 const EditBoxscore = () => {
@@ -71,7 +74,9 @@ const EditBoxscore = () => {
                                 
                                 :<button type='button' className='btn btn-warning'  onClick={() => softDelete(data._id)}>SOFT DELETE</button>}
                                 
-                                {/* <Link to={`${Routes.BACKOFFICE_EDIT_USERS}/${data._id}`} className='btn btn-info'>Edit</Link> */}
+
+                                
+                                <Link to={`${Routes.BACKOFFICE_EDIT_BOXSCORE}/${data._id}`} className='btn btn-info'>Edit</Link>
                                 </td> 
     
                             </tr>

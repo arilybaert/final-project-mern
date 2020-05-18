@@ -68,8 +68,8 @@ return (
 <div class="form-group col-md-4">
     <label for="role">Role</label>
     <select id="role" class="form-control" name="Role" >
-    <option selected>admin</option>
-    <option>user</option>
+      <option selected>admin</option>
+      <option>user</option>
     </select>
 </div>
 </div>

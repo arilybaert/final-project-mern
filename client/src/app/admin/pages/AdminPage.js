@@ -1,7 +1,9 @@
 import React from 'react';
-import { Route, Router, Redirect} from 'react-router-dom';
+import { Route, Router, Redirect, Switch} from 'react-router-dom';
 
 import * as Routes from '../../routes';
+
+import { NoMatch } from '../../pages';
 
 import UploadPage from './UploadPage';
 import DashboardPage from './DashboardPage';
@@ -13,6 +15,7 @@ import ModifyUsers from './ModifyUsers';
 import EditBoxscore from './EditBoxscore';
 import ModifyGamedays from './ModifyGamedays';
 import ModifyTeams from './ModifyTeams';
+import ModifyBoxscore from './ModifyBoxscore';
 
 const AdminPage = ({children}) => {
     return (
@@ -30,9 +33,11 @@ const AdminPage = ({children}) => {
             <Route exact path={Routes.BACKOFFICE_MODIFY_TEAMS} component={ModifyTeams}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_STANDINGS} component={EditStandings}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_USERS} component={EditUsers}/>
-            <Route path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
-            <Route path={Routes.BACKOFFICE_EDIT_BOXSCORE} component={EditBoxscore}/>
-            
+            <Route exact path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
+            <Route exact path={Routes.BACKOFFICE_EDIT_BOXSCORE} component={EditBoxscore}/>
+            <Route exact path={Routes.BACKOFFICE_MODIFY_BOXSCORE} component={ModifyBoxscore}/>
+
+
         </div>
     )
 }

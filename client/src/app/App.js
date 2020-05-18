@@ -36,17 +36,17 @@ function App() {
       <ApiProvider>
             <NBAContextProvider>
 
-        <Router >
+        <Router>
           <Switch>
 
-            <Route exact path={Routes.LANDING} component={HomePage}/>
+            <Route exact path={Routes.LANDING} exact component={HomePage}/>
             {/* <Redirect from={Routes.HOME} to={Routes.LANDING}/> */}
-            <Route path={Routes.BOXSCORE} component={Boxscore}/>
-            <Route path={Routes.STANDINGS} component={StandingsPage}/>
+            <Route path={Routes.BOXSCORE} exact component={Boxscore}/>
+            <Route path={Routes.STANDINGS}  exact component={StandingsPage}/>
             <Route path={Routes.FAVORITES} exact component={FavoritesPage}/>
             <Route path={Routes.FAVORITES_EDIT} exact component={FavoriteEditPage}/>
 
-            <Route path={Routes.SIGNIN}  component={SignIn}/>
+            <Route path={Routes.SIGNIN} exact component={SignIn}/>
             
             <Route path={Routes.BACKOFFICE_LANDING} component={AdminPage} />
             <Route component={NoMatch} />

@@ -296,7 +296,7 @@ class StandingsSeeder {
             if(err) {
                 console.log('Error when updating standings');
             } else {
-                console.log('stadings are created / updated');
+                console.log('standings are created / updated');
             }
         } )
     }
