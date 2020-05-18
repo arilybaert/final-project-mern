@@ -33,6 +33,8 @@ const ModifyGamedays = () => {
           body: JSON.stringify(formData),
           mode: 'cors', 
       });
+
+      
     }
 
     return (

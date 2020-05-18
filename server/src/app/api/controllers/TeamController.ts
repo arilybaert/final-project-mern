@@ -78,6 +78,27 @@ class TeamController {
             next(err);
         }
     }
+    update = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const id = req.body.Id;
+    
+            const data = {
+              '_id': req.body.Id,
+              'city': req.body.City,
+              'nickname': req.body.Nickname,
+              'triCode': req.body.triCode,
+              '_modifiedAt': Date.now(),
+            };
+    
+            console.log(data);
+            const team = await Team.findOneAndUpdate({_id: id}, data, {new: true});
+            //console.log(team);
+            return res.status(200).json(team);
+    
+        } catch(err) {
+            next(err);
+        }
+    }
 };
 
 export default TeamController;

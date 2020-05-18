@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect} from 'react-router-dom';
+import { Route, Router, Redirect} from 'react-router-dom';
 
 import * as Routes from '../../routes';
 
@@ -12,11 +12,12 @@ import EditUsers from './EditUsers';
 import ModifyUsers from './ModifyUsers';
 import EditBoxscore from './EditBoxscore';
 import ModifyGamedays from './ModifyGamedays';
+import ModifyTeams from './ModifyTeams';
 
 const AdminPage = ({children}) => {
-
     return (
         <div>
+
             <Route exact path={Routes.BACKOFFICE_LANDING}>
                 <Redirect to={Routes.BACKOFFICE_DASHBOARD}/>
             </Route>
@@ -26,6 +27,7 @@ const AdminPage = ({children}) => {
             <Route exact path={Routes.BACKOFFICE_EDIT_GAMEDAYS} component={EditGamedays}/>
             <Route exact path={Routes.BACKOFFICE_MODIFY_GAMEDAYS} component={ModifyGamedays}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_TEAMS} component={EditTeams}/>
+            <Route exact path={Routes.BACKOFFICE_MODIFY_TEAMS} component={ModifyTeams}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_STANDINGS} component={EditStandings}/>
             <Route exact path={Routes.BACKOFFICE_EDIT_USERS} component={EditUsers}/>
             <Route path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
