@@ -12,6 +12,8 @@ const EditBoxscore = () => {
 
     const [ boxscores, setBoxscores ] = useState();
     const [ boxscoreId, setBoxscoreId ] = useState();
+    const [gamedayDate, setGamedayDate] = useState();
+    const [gameId, setGameId] = useState();
 
 
     useEffect (() => {
@@ -39,6 +41,19 @@ const EditBoxscore = () => {
         setBoxscoreId(id);
     }
 
+    const handleDateChange = (e) => {
+        setGamedayDate(e.target.value);
+    }
+
+    const handleIdChange = (e) => {
+        setGameId(e.target.value);
+    }
+    const createUpdateBoxscore = async (id, e) => {
+        e.preventDefault();
+        const data = await findGameStats(gamedayDate, gameId);
+        console.log(data);
+        window.location.reload(false);
+    }
     return (
 
                 <div>
@@ -46,6 +61,11 @@ const EditBoxscore = () => {
                 <div className="container">
                 <div className="row">
                 <div className="medium-12 large-12 columns">
+
+                <button type='button' className='btn btn-primary'  data-toggle="modal" data-target="#createUpdate">
+                                CREATE / UPDATE BOXSCORE
+                </button>
+
                 <table className="stack table-striped">
                     <thead>
                     <tr>
@@ -89,9 +109,9 @@ const EditBoxscore = () => {
                         </div>
                         </div>
     
-    {/* Prefent faulty delete pop-up */}
+{/* Prefent faulty delete pop-up */}
     
-                    <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -110,7 +130,31 @@ const EditBoxscore = () => {
                         </div>
                     </div>
                     </div>
-    
+
+{/* UPDATE / CREATE delete pop-up */}
+
+<div className="modal fade" id="createUpdate" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel">Create / update gamedays</h5>
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div className="modal-body">
+                                <label for="date">Gameday date:</label>
+                                <input type="text" class="form-control" id="date" name="date" placeholder="YYYYMMDD" onChange={handleDateChange}></input>
+                                <label for="id">Game ID:</label>
+                                <input type="text" class="form-control" id="id" name="id" placeholder="1234567" onChange={handleIdChange}></input>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" className="btn btn-primary" onClick={e => createUpdateBoxscore(gamedayDate, e)}data-dismiss="modal">Create/Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
     )

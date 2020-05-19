@@ -68,6 +68,11 @@ const EditGamedays = ({children}) => {
             <div className="container">
             <div className="row">
             <div className="medium-12 large-12 columns">
+
+                            <button type='button' className='btn btn-primary'  data-toggle="modal" data-target="#createEdit">
+                                CREATE / UPDATE GAMEDAY
+                            </button>
+
             <table className="stack table-striped">
                 <thead>
                 <tr>
@@ -94,9 +99,7 @@ const EditGamedays = ({children}) => {
                             
                             <Link to={`${Routes.BACKOFFICE_EDIT_GAMEDAYS}/${data._id}`} className='btn btn-info'>Edit</Link>
 
-                            <button type='button' className='btn btn-primary'  data-toggle="modal" data-target="#createEdit">
-                                CREATE / EDIT
-                            </button>
+
 
                             </td>
 
