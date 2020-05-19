@@ -58,7 +58,6 @@ const EditGamedays = ({children}) => {
     const handleChange = (e) => {
         setGamedayDate(e.target.value);
         
-        // console.log(e.target.value);
     }
 // onClick={() => createUpdateGamedays()}
 

@@ -143,10 +143,10 @@ const EditBoxscore = () => {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                <label for="date">Gameday date:</label>
-                                <input type="text" class="form-control" id="date" name="date" placeholder="YYYYMMDD" onChange={handleDateChange}></input>
-                                <label for="id">Game ID:</label>
-                                <input type="text" class="form-control" id="id" name="id" placeholder="1234567" onChange={handleIdChange}></input>
+                                <label htmlFor="date">Gameday date:</label>
+                                <input type="text" className="form-control" id="date" name="date" placeholder="YYYYMMDD" onChange={handleDateChange}></input>
+                                <label htmlFor="id">Game ID:</label>
+                                <input type="text" className="form-control" id="id" name="id" placeholder="1234567" onChange={handleIdChange}></input>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>

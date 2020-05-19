@@ -16,5 +16,6 @@ export const BACKOFFICE_MODIFY_TEAMS= '/admin/edit/teams/:id/';
 export const BACKOFFICE_EDIT_STANDINGS= '/admin/edit/standings';
 export const BACKOFFICE_EDIT_USERS= '/admin/edit/users';
 export const BACKOFFICE_MODIFY_USERS= '/admin/edit/users/:id/';
+export const BACKOFFICE_CREATE_USERS= '/admin/create/users';
 export const BACKOFFICE_EDIT_BOXSCORE = '/admin/edit/boxscore';
 export const BACKOFFICE_MODIFY_BOXSCORE = '/admin/edit/boxscore/:id';

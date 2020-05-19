@@ -41,6 +41,13 @@ const EditUsers = () => {
             <div className="container">
             <div className="row">
             <div className="medium-12 large-12 columns">
+
+            <Link to={`${Routes.BACKOFFICE_CREATE_USERS}`}>
+            <button type='button' className='btn btn-primary'  data-toggle="modal" data-target="#createUpdate">
+                                CREATE USER
+            </button>
+            </Link>
+
             <table className="stack table-striped">
                 <thead>
                 <tr>

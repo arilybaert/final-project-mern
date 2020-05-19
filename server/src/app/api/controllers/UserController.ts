@@ -2,7 +2,9 @@ import { Request, Response, NextFunction } from "express";
 import { User, IUser } from '../../models/mongoose';
 import  AuthService  from '../../services/auth';
 import IConfig from '../../services/config';
+import {UserSeeder} from '../seeder';
 class UserController {
+  private userSeeder: UserSeeder
 
     private authService: AuthService;
     private config: IConfig;
@@ -10,6 +12,8 @@ class UserController {
     constructor(config: IConfig, authService: AuthService) {
       this.config = config;
       this.authService = authService;
+      this.userSeeder = new UserSeeder()
+
     }
 
     index = async (req: Request, res: Response, next: NextFunction) => {
@@ -45,6 +49,20 @@ class UserController {
       }
 
   }
+
+  createUser = async (req: Request, res: Response, next: NextFunction) => {
+
+    console.log(req.body);
+    this.userSeeder.createUsers(
+      req.body.email,
+      req.body.password,
+      req.body.role,
+      req.body.firstname,
+      req.body.lastname,
+    );
+
+  }
+
   update = async (req: Request, res: Response, next: NextFunction) => {
     try {
 
