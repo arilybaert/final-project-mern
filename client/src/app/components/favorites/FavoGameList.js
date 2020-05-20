@@ -8,7 +8,6 @@ import {Link} from 'react-router-dom';
 import classnames from 'classnames';
 
 import { useApi } from '../../services';
-import FavoGameItem from './FavoGameItem';
 import {GameItem} from '../elements';
 import { NBAContext } from '../context';
 
@@ -74,7 +73,7 @@ const FavoGameList = () => {
                     const tempGames = []
                     const data = await findGames(utilDate);
                     console.log(data);
-                    if(data != false) {
+                    if(data !== false) {
                         const data = await findGames(utilDate);
                         await refreshTeams();
    

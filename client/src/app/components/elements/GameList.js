@@ -9,7 +9,7 @@ import { useApi } from '../../services';
 const GameList = () => {
 
     const { findGames } = useApi();
-    const { refreshTeams } = useApi();
+    // const { refreshTeams } = useApi();
     const [ games, setGames ] = useState(false);
 
     const { utilDate } = useContext(NBAContext);

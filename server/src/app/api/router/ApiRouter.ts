@@ -80,8 +80,9 @@ class ApiRouter {
         this.router.post('/users/update', this.userController.update);
         this.router.post('/users/create', this.userController.createUser);
 
-        this.router.get('/standings/delete', this.standingsController.hardDelete);
-
+        this.router.get('/standings/delete/:id', this.standingsController.hardDelete);
+        this.router.get('/standings/softdelete/:id', this.standingsController.softDelete);
+        this.router.get('/standings/softundelete/:id', this.standingsController.softUnDelete);
         this.router.get(
             "/auth/facebook/callback",
             passport.authenticate("facebook", {

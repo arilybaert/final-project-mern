@@ -19,7 +19,6 @@ const EditBoxscore = () => {
     useEffect (() => {
         const fetchBoxscore = async () => {
             const data = await findAllGameStats();
-            console.log(data);
             setBoxscores(data);
         }
 
@@ -51,7 +50,6 @@ const EditBoxscore = () => {
     const createUpdateBoxscore = async (id, e) => {
         e.preventDefault();
         const data = await findGameStats(gamedayDate, gameId);
-        console.log(data);
         window.location.reload(false);
     }
     return (

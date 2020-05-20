@@ -3,11 +3,17 @@ import { default as mongoose, Schema, Document } from 'mongoose';
 interface IStandings extends Document {
     _id: string;
     allStandings: Array<any>;
+    _createdAt: number;
+    _modifiedAt: number;
+    _deletedAt: number;
 }
 
 const standingsSchema = new Schema ({
     _id: { type: String, required: true },
     seasonYear: { type: Number, required: true },
+    _createdAt: { type: Number, required: true, default: Date.now() },
+    _modifiedAt: { type: Number, required: true, default: null },
+    _deletedAt: { type: Number, required: true, default: null },
     allStandings: [{
         teamId: { type: String, required: true },
         win: { type: String, required: true },
@@ -19,8 +25,8 @@ const standingsSchema = new Schema ({
         teamCode: {type: String, required: true},
         teamNickname: {type: String, required: true},
         _createdAt: { type: Number, required: true, default: Date.now() },
-        _modifiedAt: { type: Number, required: false, default: null },
-        _deletedAt: { type: Number, required: false, default: null },
+        _modifiedAt: { type: Number, required: true, default: null },
+        _deletedAt: { type: Number, required: true, default: null },
         
 
     }],

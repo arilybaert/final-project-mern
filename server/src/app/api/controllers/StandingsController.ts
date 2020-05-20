@@ -29,15 +29,42 @@ class StandingsController {
         try {
 
             const { id } = req.params;
-            const deleted = await Standings.findById("5e9712673107205c65e46f97").exec();
-            return res.status(200).json(deleted);
+            console.log(id);
+            const deleted = await Standings.deleteOne({_id: id}).exec();
+
+            return res.status(200).json();
 
 
         } catch(err) {
             next(err);
         }
-
     }
+
+
+  softDelete = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const { id } = req.params;
+        let standings = await Standings.findById(id)
+        standings._deletedAt = Date.now();
+        await user.save();
+        return res.status(200).json(standings);
+    } catch(err) {
+        next(err);
+    }
+}
+softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+
+        const { id } = req.params;
+        let standings = await Standings.findById(id)
+        standings._deletedAt = null;
+        standings.save();
+        return res.status(200).json(standings);
+    } catch(err) {
+        next(err);
+    }
+}
 
     // softDelete = async (req: Request, res: Response, next: NextFunction) => {
     //     try {

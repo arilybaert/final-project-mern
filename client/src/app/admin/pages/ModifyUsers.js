@@ -10,7 +10,7 @@ const ModifyUsers = () => {
     const { findUser } = useApi();
     const { id } = useParams();
 
-    const [user, setUser] = useState();
+    const [setUser] = useState();
     const USER_UPDATE_URL = "http://localhost:8080/api/users/update";
     useEffect(() => {
         const fetchUser = async () => {

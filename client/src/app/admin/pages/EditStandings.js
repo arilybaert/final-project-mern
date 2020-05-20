@@ -8,7 +8,7 @@ const EditStandings = () => {
     const { findStandings, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings } = useApi();
 
     // ALL
-    const [standingId, setstandingId] = useState();
+    const [standingId, setStandingId] = useState();
     const [standings, setStandings] = useState();
 
     // CONFERENCE
@@ -28,7 +28,8 @@ const EditStandings = () => {
     useEffect(( ) => {
         const fetchStandings = async () => {
             const data = await findStandings();
-
+            console.log(data[0]._id);
+            setStandingId(data[0]._id);
                 setStandings(data[0].allStandings);
                 setConfEastStandings(data[0].conferenceStandings.east);
                 setConfWestStandings(data[0].conferenceStandings.west);
@@ -47,17 +48,17 @@ PROBLEM WITH SERVER API: StandingsController.ts
 */
 
     const handleSubmit = async (id) => {
-        // await hardDeleteStandings(id);
+        await hardDeleteStandings(id);
         // setstandingId(id);
     };
 
     const softDelete = async (id) => {
-        // await softDeleteStandings(id);
+        await softDeleteStandings(id);
         // setstandingId(id);
     }
 
     const softUnDelete = async (id) => {
-        // await softUnDeleteStandings(id);
+        await softUnDeleteStandings(id);
         // setstandingId(id);
     }
 
@@ -71,6 +72,15 @@ PROBLEM WITH SERVER API: StandingsController.ts
             <div className="container">
             <div className="row">
             <div className="medium-12 large-12 columns">
+            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">DELETE
+                            </button>
+                            {/* {data._deletedAt != null?  */}
+                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete(standingId)}>UNDELETE</button>
+                            
+                            {/* : */}
+                            <button type='button' className='btn btn-warning'  onClick={() => softDelete(standingId)}>SOFT DELETE</button>
+
+                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
             <table className="stack table-striped">
                 <thead>
                 <tr>
@@ -86,16 +96,7 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>All Standings</td>
                             <td>{standings && standings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-                            
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
+
                             </td>
 
                         </tr>
@@ -105,16 +106,7 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Conference East Standings</td>
                             <td>{confEastStandings && confEastStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
 
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -124,16 +116,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Conference West Standings</td>
                             <td>{confWestStandings && confWestStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
                         </tr>
 
@@ -142,16 +124,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Division West Standings</td>
                             <td>{divSEStandings && divSEStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
                         </tr>
 
@@ -160,17 +132,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Division Atlantic Standings</td>
                             <td>{divATLStandings && divATLStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
-
                             </td>
 
                         </tr>
@@ -181,16 +142,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>{divCENStandings && divCENStandings.length}</td>
                             <td>
                             
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
-
                             </td>
 
                         </tr>
@@ -200,16 +151,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Division South West Standings</td>
                             <td>{divSWStandings && divSWStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -220,15 +161,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>{divPACStandings && divPACStandings.length}</td>
                             <td>
                             
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>
@@ -238,16 +170,6 @@ PROBLEM WITH SERVER API: StandingsController.ts
                             <td>Division North West Standings</td>
                             <td>{divNWStandings && divNWStandings.length}</td>
                             <td>
-                            
-                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setstandingId()}>DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete('standings')}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete('standings')}>SOFT DELETE</button>
-
-                            <button type='button' className='btn btn-warning'  data-toggle="modal" data-target="#update" onClick={() => refreshStandings()}>CREATE / UPDATE</button>
                             </td>
 
                         </tr>

@@ -7,8 +7,7 @@ import { useApi } from '../../services';
 
 
 const DatePicker = () => {
-    const { utilDate,setUtilDate } = useContext(NBAContext);
-    const { findGames } = useApi();
+    const {setUtilDate } = useContext(NBAContext);
 
     const [standardDate, setStandardDate] = useState(new Date());
     const [readableDate, setReadableDate] = useState();
@@ -36,7 +35,7 @@ useEffect( () => {
             setReadableDate(`${addZero(day, 2)}/${addZero(month+1, 2)}/${year}`);
             setUtilDate(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
     
-            // // SEARCH FOR NEAREST GAME IN THE PAST
+            // // SEARCH FOR NEAREST GAME IN THE PAST, DIDN'T FOUND EFFECTIVE WAY TO IMPLEMENT THIS STRAGEGY
             // let data = await findGames(`${year}${addZero(month+1, 2)}${addZero(day, 2)}`);
             // while(data === false){
             //     const pastDate = standardDate;

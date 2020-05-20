@@ -1186,3 +1186,43 @@
 2020-05-19 15:59:48 [[31merror[39m]: 	Can't launch the application {
   "object": {}
 }
+2020-05-20 08:42:13 [[31merror[39m]: 	Can't connect to the db {
+  "object": {
+    "message": "connection timed out",
+    "name": "MongooseServerSelectionError",
+    "reason": {
+      "type": "ReplicaSetNoPrimary",
+      "setName": null,
+      "maxSetVersion": null,
+      "maxElectionId": null,
+      "servers": {},
+      "stale": false,
+      "compatible": true,
+      "compatibilityError": null,
+      "logicalSessionTimeoutMinutes": null,
+      "heartbeatFrequencyMS": 10000,
+      "localThresholdMS": 15,
+      "commonWireVersion": null
+    }
+  }
+}
+2020-05-20 08:42:13 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "message": "connection timed out",
+    "name": "MongooseServerSelectionError",
+    "reason": {
+      "type": "ReplicaSetNoPrimary",
+      "setName": null,
+      "maxSetVersion": null,
+      "maxElectionId": null,
+      "servers": {},
+      "stale": false,
+      "compatible": true,
+      "compatibilityError": null,
+      "logicalSessionTimeoutMinutes": null,
+      "heartbeatFrequencyMS": 10000,
+      "localThresholdMS": 15,
+      "commonWireVersion": null
+    }
+  }
+}

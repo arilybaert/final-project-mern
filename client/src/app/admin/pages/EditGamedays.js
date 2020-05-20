@@ -146,8 +146,8 @@ const EditGamedays = ({children}) => {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                <label for="date">Gameday date:</label>
-                                <input type="text" class="form-control" id="date" name="date" placeholder="YYYYMMDD" onChange={handleChange}></input>
+                                <label htmlFor="date">Gameday date:</label>
+                                <input type="text" className="form-control" id="date" name="date" placeholder="YYYYMMDD" onChange={handleChange}></input>
 
                             </div>
                             <div className="modal-footer">
