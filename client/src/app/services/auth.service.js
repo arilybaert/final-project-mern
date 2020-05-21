@@ -47,16 +47,18 @@ const AuthProvider = ({ children }) => {
       method: 'POST',
       headers: myHeaders,
       body: JSON.stringify(body),
-      redirect: 'follow'
+      redirect: 'follow',
+      mode: 'cors', 
+
     };
 
     const response = await fetch(`${url}`, options);
-    const user = await response.json();
+    // const user = await response.json();
 
-    localStorage.setItem('mern:authUser', JSON.stringify(user));
-    setCurrentUser(user);
+    // localStorage.setItem('mern:authUser', JSON.stringify(user));
+    // setCurrentUser(user);
 
-    return user;
+    // return user;
   }
 
   const signup = async (email, password) => {

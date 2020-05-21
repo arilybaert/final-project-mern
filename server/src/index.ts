@@ -37,7 +37,8 @@ import MongoDBDatabase from './app/services/database/MongoDBDatabase';
     process.on('SIGTERM', () => stopAllProcesses());
     }
     catch(error) {
-        logger.error('Can\'t launch the application', error);
+        logger.error('Can\'t launch the application',error);
+        console.log(error);
     }
 
 })()

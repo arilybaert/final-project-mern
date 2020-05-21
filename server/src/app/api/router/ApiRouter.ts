@@ -45,8 +45,10 @@ class ApiRouter {
         this.router.get('/messages', this.messageController.index);
         this.router.get('/messages/:id', this.messageController.show);
         this.router.get('/posts/:id', this.postController.show);
+        
         this.router.get('/users', this.userController.index);
         this.router.get('/users/:id', this.userController.show);
+        
         this.router.get('/gamedays', this.gameDayController.index);
         this.router.get('/gamedays/:id', this.gameDayController.show);
         this.router.post('/teams/update', this.teamController.update);
@@ -58,8 +60,9 @@ class ApiRouter {
         this.router.get('/gameStats/sort/:date/:id', this.gameStatsController.sort);
         this.router.get('/standings/all', this.standingsController.show);
 
-        this.router.post('/auth/signin/', this.userController.signInLocal);
-        this.router.post('/auth/signup/', this.userController.signupLocal);
+        this.router.post('/auth/signin/', this.userController.postLogin);
+        // this.router.post('/auth/signup/', this.userController.signupLocal);
+
         this.router.get("/auth/facebook", passport.authenticate("facebook"));
 
         this.router.get("/upload/get", this.uploadController.get);
@@ -74,22 +77,22 @@ class ApiRouter {
         this.router.get('/teams/softdelete/:id', this.teamController.softDelete);
         this.router.get('/teams/softundelete/:id', this.teamController.softUnDelete);
 
-        this.router.get('/users/delete/:id', this.userController.hardDelete);
-        this.router.get('/users/softdelete/:id', this.userController.softDelete);
-        this.router.get('/users/softundelete/:id', this.userController.softUnDelete);
-        this.router.post('/users/update', this.userController.update);
-        this.router.post('/users/create', this.userController.createUser);
+        // this.router.get('/users/delete/:id', this.userController.hardDelete);
+        // this.router.get('/users/softdelete/:id', this.userController.softDelete);
+        // this.router.get('/users/softundelete/:id', this.userController.softUnDelete);
+        // this.router.post('/users/update', this.userController.update);
+        // this.router.post('/users/create', this.userController.createUser);
 
         this.router.get('/standings/delete/:id', this.standingsController.hardDelete);
         this.router.get('/standings/softdelete/:id', this.standingsController.softDelete);
         this.router.get('/standings/softundelete/:id', this.standingsController.softUnDelete);
-        this.router.get(
-            "/auth/facebook/callback",
-            passport.authenticate("facebook", {
-            successRedirect: "/",
-            failureRedirect: "/fail"
-            })
-        );
+        // this.router.get(
+        //     "/auth/facebook/callback",
+        //     passport.authenticate("facebook", {
+        //     successRedirect: "/",
+        //     failureRedirect: "/fail"
+        //     })
+        // );
         
         this.router.get("/fail", (req, res) => {
             res.send("Failed attempt");

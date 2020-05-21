@@ -89,18 +89,16 @@ class MongoDBDatabase {
         role: string,
         firstName: string,
         lastName: string,
-        avatar: string,
+        picture: string,
       ) => {
         const userDetail = {
           email,
-          localProvider: {
-            password,
-          },
+          password,
           role,
           profile: {
             firstName,
             lastName,
-            avatar,
+            picture,
           },
         };
     
@@ -129,19 +127,19 @@ class MongoDBDatabase {
           'https://www.ocregister.com/wp-content/uploads/2020/01/ocfqup-01.web_.lakers1ccc51599-1.jpg?w=620',
         );
     
-        // for (let i = 0; i < 30; i++) {
-        //   const gender = Math.round(Math.random());
-        //   promises.push(
-        //     this.userCreate(
-        //       faker.internet.email(),
-        //       'nmdgent007!',
-        //       'user',
-        //       faker.name.firstName(gender),
-        //       faker.name.lastName(gender),
-        //       faker.internet.avatar(),
-        //     ),
-        //   );
-        // }
+        for (let i = 0; i < 30; i++) {
+          const gender = Math.round(Math.random());
+          promises.push(
+            this.userCreate(
+              faker.internet.email(),
+              'nmdgent007!',
+              'user',
+              faker.name.firstName(gender),
+              faker.name.lastName(gender),
+              faker.internet.avatar(),
+            ),
+          );
+        }
     
         return await Promise.all(promises);
       };

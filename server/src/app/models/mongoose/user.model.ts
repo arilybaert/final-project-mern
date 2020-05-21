@@ -1,110 +1,99 @@
-import { default as mongoose, Schema, Document } from 'mongoose';
-var findOrCreate = require('mongoose-findorcreate')
-import { default as bcrypt } from 'bcrypt';
+import bcrypt from "bcrypt-nodejs";
+import crypto from "crypto";
+import mongoose from "mongoose";
 
-interface ILocalProvider {
-  password: string;
-}
+export type UserDocument = mongoose.Document & {
+    email: string;
+    password: string;
+    passwordResetToken: string;
+    passwordResetExpires: Date;
 
-interface IFacebookProvider {
-  id: string;
-  token: string;
-}
+    facebook: string;
+    tokens: AuthToken[];
 
-interface IProfile {
-  firstName: string;
-  lastName: string;
-  avatar: string;
-}
+    profile: {
+        name: string;
+        gender: string;
+        location: string;
+        website: string;
+        picture: string;
+    };
 
-interface IUser extends Document {
-  email: string;
-  _createdAt: number;
-  _modifiedAt: number;
-  _deletedAt: number;
+    role: string;
 
-  localProvider?: ILocalProvider;
-  facebookProvider?: IFacebookProvider;
-
-  role: string;
-  profile?: IProfile;
-
-  comparePassword(candidatePassword: String, cb: Function): void;
-}
-
-const userSchema: Schema = new Schema({
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  _createdAt: { type: Number, required: true, default: Date.now() },
-  _modifiedAt: { type: Number, required: false, default: null },
-  _deletedAt: { type: Number, required: false, default: null },
-  localProvider: {
-    password: {
-      type: String,
-      required: false,
-    },
-  },
-  facebookProvider: {
-    id: {
-      type: String,
-      required: false,
-    },
-    token: {
-      type: String,
-      required: false,
-    },
-  },
-  role: {
-    type: String,
-    enum: ['user', 'administrator'],
-    default: 'user',
-    required: true,
-  },
-  profile: {
-    firstName: String,
-    lastName: String,
-    avatar: String,
-  },
-});
-
-userSchema.plugin(findOrCreate);
-
-userSchema.pre('save', function(next) {
-  const user: IUser = this as IUser;
-
-  if (!user.isModified('localProvider.password')) return next();
-
-  try {
-    return bcrypt.genSalt(10, (errSalt, salt) => {
-      if (errSalt) throw errSalt;
-
-      bcrypt.hash(user.localProvider.password, salt, (errHash, hash) => {
-        if (errHash) throw errHash;
-
-        user.localProvider.password = hash;
-        return next();
-      });
-    });
-  } catch (err) {
-    return next(err);
-  }
-});
-
-userSchema.methods.comparePassword = function(
-  candidatePassword: String,
-  cb: Function,
-) {
-  const user = this;
-  bcrypt.compare(candidatePassword, user.password, (err, isMatch) => {
-    if (err) return cb(err, null);
-    return cb(null, isMatch);
-  });
+    comparePassword: comparePasswordFunction;
+    gravatar: (size: number) => string;
 };
 
-const User = mongoose.model<IUser>('User', userSchema);
+type comparePasswordFunction = (candidatePassword: string, cb: (err: any, isMatch: any) => {}) => void;
 
+export interface AuthToken {
+    accessToken: string;
+    kind: string;
+}
 
-export { IUser, User, userSchema };
+const userSchema = new mongoose.Schema({
+    email: { type: String, unique: true },
+    password: String,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
+
+    facebook: String,
+    twitter: String,
+    google: String,
+    tokens: Array,
+
+    profile: {
+        firstName: String,
+        lastName: String,
+        gender: String,
+        location: String,
+        website: String,
+        picture: String
+    },  role: {
+      type: String,
+      enum: ['user', 'administrator'],
+      default: 'user',
+      required: true,
+    },
+    _createdAt: { type: Number, required: true, default: Date.now() },
+    _modifiedAt: { type: Number, required: false, default: null },
+    _deletedAt: { type: Number, required: false, default: null },
+});
+
+/**
+ * Password hash middleware.
+ */
+userSchema.pre("save", function save(next) {
+    const user = this as UserDocument;
+    if (!user.isModified("password")) { return next(); }
+    bcrypt.genSalt(10, (err, salt) => {
+        if (err) { return next(err); }
+        bcrypt.hash(user.password, salt, undefined, (err: mongoose.Error, hash) => {
+            if (err) { return next(err); }
+            user.password = hash;
+            next();
+        });
+    });
+});
+
+const comparePassword: comparePasswordFunction = function (candidatePassword, cb) {
+    bcrypt.compare(candidatePassword, this.password, (err: mongoose.Error, isMatch: boolean) => {
+        cb(err, isMatch);
+    });
+};
+
+userSchema.methods.comparePassword = comparePassword;
+
+/**
+ * Helper method for getting user's gravatar.
+ */
+userSchema.methods.gravatar = function (size: number = 200) {
+    if (!this.email) {
+        return `https://gravatar.com/avatar/?s=${size}&d=retro`;
+    }
+    const md5 = crypto.createHash("md5").update(this.email).digest("hex");
+    return `https://gravatar.com/avatar/${md5}?s=${size}&d=retro`;
+};
+
+export const User = mongoose.model<UserDocument>("User", userSchema);
