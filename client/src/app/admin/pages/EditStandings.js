@@ -48,6 +48,7 @@ PROBLEM WITH SERVER API: StandingsController.ts
 */
 
     const handleSubmit = async (id) => {
+        console.log(id);
         await hardDeleteStandings(id);
         // setstandingId(id);
     };
@@ -72,15 +73,14 @@ PROBLEM WITH SERVER API: StandingsController.ts
             <div className="container">
             <div className="row">
             <div className="medium-12 large-12 columns">
-            <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">DELETE
-                            </button>
-                            {/* {data._deletedAt != null?  */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softUnDelete(standingId)}>UNDELETE</button>
-                            
-                            {/* : */}
-                            <button type='button' className='btn btn-warning'  onClick={() => softDelete(standingId)}>SOFT DELETE</button>
+                <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">DELETE</button>
+                {/* {data._deletedAt != null?  */}
+                <button type='button' className='btn btn-warning'  onClick={() => softUnDelete(standingId)}>UNDELETE</button>
+                
+                {/* : */}
+                <button type='button' className='btn btn-warning'  onClick={() => softDelete(standingId)}>SOFT DELETE</button>
 
-                            <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
+                <button type='button' className='btn btn-warning'  onClick={() => refreshStandings()}>CREATE / UPDATE</button>
             <table className="stack table-striped">
                 <thead>
                 <tr>
@@ -196,7 +196,7 @@ PROBLEM WITH SERVER API: StandingsController.ts
                     </div> */}
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">No</button>
-                        <button type="button" className="btn btn-danger" onClick={e => handleSubmit(standingId) }data-dismiss="modal" >Yes</button>
+                        <button type="button" className="btn btn-danger" onClick={e => handleSubmit(standingId) }data-dismiss="modal">Yes</button>
                     </div>
                     </div>
                 </div>

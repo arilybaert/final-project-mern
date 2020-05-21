@@ -13,7 +13,7 @@ class StandingsController {
     show = async (req: Request, res: Response, next: NextFunction) => {
         try {
             await this.standingsSeeder.createStandings(this.standingsSeeder.ALLSTANDINGS_URL, this.standingsSeeder.CONFSTANDINGS_URL, this.standingsSeeder.DIVSTANDINGS_URL);
-            const standings = await  Standings.find().exec();
+            const standings = await Standings.find().exec();
             return res.status(200).json(standings);
         } catch (err) {
             next(err);
@@ -22,49 +22,50 @@ class StandingsController {
 
     /*
     FUNCTION DOESN'T WORK:
-    CAN'T FIND A WAY TO DELETE A SPEFIC SUBDOCUMENT (ARRAY) IN THE STANDINGS COLLECTION
+    MONGOOSE CAN'T FIND BY ID IN THIS COLLECTION
     */
+
 
     hardDelete = async (req: Request, res: Response, next: NextFunction) => {
         try {
+  
+            const {id} = req.params;
+            
+            const deleted = await Standings.deleteOne({_id: id}).exec();
+            console.log(`deleted: ${id}`);
+            console.log(deleted);
+            return res.status(200).json(deleted);
+  
+  
+        } catch(err) {
+            next(err);
+        }
+  
+    }
+    softDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
 
             const { id } = req.params;
-            console.log(id);
-            const deleted = await Standings.deleteOne({_id: id}).exec();
-
-            return res.status(200).json();
-
-
+            let standings = await Standings.findById(id)
+            standings._deletedAt = Date.now();
+            await standings.save();
+            return res.status(200).json(standings);
         } catch(err) {
             next(err);
         }
     }
+    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
 
-
-  softDelete = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-
-        const { id } = req.params;
-        let standings = await Standings.findById(id)
-        standings._deletedAt = Date.now();
-        await user.save();
-        return res.status(200).json(standings);
-    } catch(err) {
-        next(err);
+            const { id } = req.params;
+            let standings = await Standings.findById(id)
+            standings._deletedAt = null;
+            standings.save();
+            return res.status(200).json(standings);
+        } catch(err) {
+            next(err);
+        }
     }
-}
-softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-
-        const { id } = req.params;
-        let standings = await Standings.findById(id)
-        standings._deletedAt = null;
-        standings.save();
-        return res.status(200).json(standings);
-    } catch(err) {
-        next(err);
-    }
-}
 
     // softDelete = async (req: Request, res: Response, next: NextFunction) => {
     //     try {

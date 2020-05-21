@@ -138,12 +138,9 @@ const standingsSchema = new Schema ({
             _deletedAt: { type: Number, required: false, default: null },
         },
     }
-},
-{
-    timestamps: true,
 })
 
-const Standings = mongoose.model('standings', standingsSchema);
+const Standings = mongoose.model<IStandings>('standings', standingsSchema);
 
 export {
     IStandings,

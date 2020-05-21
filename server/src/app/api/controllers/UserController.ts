@@ -41,6 +41,7 @@ class UserController {
           const { id } = req.params;
           const deleted = await User.deleteOne({_id: id}).exec();
           console.log(`deleted: ${id}`);
+          console.log(deleted);
           return res.status(200).json(deleted);
 
 
