@@ -4,7 +4,7 @@ import { default as faker } from 'faker';
 
 import { IConfig } from '../config';
 import { ILogger } from '../logger';
-import { IMessage, Message, IUser, User, Post, IPost, IGameDay, IGame, GameDay, Game } from '../../models/mongoose';
+import { IGameDay, IGame, GameDay, Game, IUser, User } from '../../models/mongoose';
 import { GameDayController } from '../../api/controllers';
 
 class MongoDBDatabase {
@@ -13,7 +13,6 @@ class MongoDBDatabase {
     private db: Connection;
 
     private users: Array<IUser>;
-    private posts: Array<IPost>;
 
     private gameDayController: GameDayController;
 
@@ -23,7 +22,6 @@ class MongoDBDatabase {
         this.config = config;
 
         this.users = [];
-        this.posts = [];
         this.gameDayController = new GameDayController();
 
     }
@@ -61,26 +59,7 @@ class MongoDBDatabase {
             })
         })
     }
-    // CREATE EMPTY MESSAGE
-    private messageCreate = async (body: string) => {
-        const message = new Message({ body });
-        try {
-            const newMessage = await message.save()
-    
-            this.logger.info(`Message created with id ${newMessage._id}`, {});
-        } catch(error){
-            this.logger.error('An error occured when creating a message', error);
-        }
-    }
 
-    // FILL MESSAGE
-    private createMessages = async () => {
-        await Promise.all([
-            (async () => this.messageCreate(faker.lorem.paragraph()))
-            (),
-
-        ]);
-    }
 
     // CREATE EMPTY USER
     private userCreate = async (
@@ -144,56 +123,9 @@ class MongoDBDatabase {
         return await Promise.all(promises);
       };
 
-    // CREATE EMPTY POST
-    private postCreate = async (
-      title: string,
-      synopsis: string,
-      body: string,
-    ) => {
-      const postDetail = {
-        title,
-        synopsis,
-        body,
-      };
-  
-      const post: IPost = new Post(postDetail);
-  
-      try {
-        const createdPost = await post.save();
-        this.posts.push(createdPost);
-  
-        this.logger.info(`Gameday created with id: ${createdPost._id}`, {});
-      } catch (err) {
-        this.logger.error(`An error occurred when creating a Post ${err}`, err);
-      }
-    };
-
-    // FILL POST
-    private createPosts = async () => {
-        const promises = [];
-    
-        for (let i = 0; i < 16; i++) {
-          promises.push(
-            this.postCreate(
-              faker.lorem.sentence(),
-              faker.lorem.paragraph(),
-              `<p>${faker.lorem.paragraphs(10, '</p><p>')}</p>`,
-            ),
-          );
-        }
-    
-        return await Promise.all(promises);
-      };
-
     // SEED DATA TO DB
     public seed = async () => {
-        const messages = await Message.estimatedDocumentCount().exec()
-            .then(async count => {
-                if(count === 0) {
-                    await this.createMessages();
-                } 
-                return Message.find().exec();
-            });
+
 
       this.users = await User.estimatedDocumentCount().exec().then(async (count) => {
               if(count === 0) {
@@ -201,14 +133,7 @@ class MongoDBDatabase {
               }
               return User.find().exec();
           })
-
-        this.posts = await Post.estimatedDocumentCount().exec().then(async (count) => {
-          if(count === 0) {
-              await this.createPosts()
-          }
-          return Post.find().exec();
-      })
-    }
+        }
 }
 
 

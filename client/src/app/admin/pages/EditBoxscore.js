@@ -8,7 +8,7 @@ import * as Routes from '../../routes';
 
 const EditBoxscore = () => {
 
-    const { findGameStats, findAllGameStats } = useApi();
+    const { findGameStats, findAllGameStats, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore } = useApi();
 
     const [ boxscores, setBoxscores ] = useState();
     const [ boxscoreId, setBoxscoreId ] = useState();
@@ -26,22 +26,31 @@ const EditBoxscore = () => {
     },[])
 
     const handleSubmit = async (id) => {
-        // await hardDeleteUser(id);
+        console.log(id);
+        await hardDeleteBoxscore(id);
         setBoxscoreId(id);
+        window.location.reload(false);
+
     };
 
     const softDelete = async (id) => {
-        // await softDeleteUser(id);
+        await softDeleteBoxscore(id);
         setBoxscoreId(id);
+        window.location.reload(false);
+
     }
 
     const softUnDelete = async (id) => {
-        // await softUnDeleteUser(id);
+        await softUnDeleteBoxscore(id);
         setBoxscoreId(id);
+        window.location.reload(false);
+
     }
 
     const handleDateChange = (e) => {
         setGamedayDate(e.target.value);
+        window.location.reload(false);
+
     }
 
     const handleIdChange = (e) => {

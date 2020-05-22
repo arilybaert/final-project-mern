@@ -15,12 +15,7 @@ class Config implements IConfig {
     }
 
     private loadEnvironmentVariables(): void {
-        
-        // this.passport = {
-        //     clientId: String(process.env.AUTH_FACEBOOK_CLIENT_ID),
-        //     clientSecret: String(process.env.AUTH_FACEBOOK_CLIENT_SECRET),
 
-        // }
         this.docs = Boolean(process.env.NODE_DOCS || false);
         this.env = Environment[(process.env.NODE_ENV || Environment.development) as keyof typeof Environment];
         this.server = {

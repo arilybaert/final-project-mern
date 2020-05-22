@@ -51,6 +51,47 @@ class GameStatsController {
         return res.status(200).json(stats);
         
     }
+
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            console.log('hey');
+            // const {id} = req.params;
+            
+            console.log(`deleted: ${id}`);
+            const deleted = await GameStats.deleteOne({_id: id}).exec();
+            console.log(deleted)
+            return res.status(200).json();
+  
+  
+        } catch(err) {
+            next(err);
+        }
+  
+    }
+    softDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let gameStats = await GameStats.findById(id)
+            gameStats._deletedAt = Date.now();
+            await gameStats.save();
+            return res.status(200).json(gameStats);
+        } catch(err) {
+            next(err);
+        }
+    }
+    softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+
+            const { id } = req.params;
+            let gameStats = await GameStats.findById(id)
+            gameStats._deletedAt = null;
+            gameStats.save();
+            return res.status(200).json(gameStats);
+        } catch(err) {
+            next(err);
+        }
+    }
 }
 
 export default GameStatsController;

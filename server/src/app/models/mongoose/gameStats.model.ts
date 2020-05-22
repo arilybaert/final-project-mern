@@ -4,6 +4,7 @@ interface IGameStats extends Document {
     _id: string;
     vTeam: object;
     hTeam: object;
+    _deletedAt: Number;
 };
 
 const gameStatsSchema = new Schema ({

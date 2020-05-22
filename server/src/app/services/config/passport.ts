@@ -3,13 +3,13 @@ import passport from "passport";
 import passportLocal from "passport-local";
 import passportFacebook from "passport-facebook";
 import _ from "lodash";
-
+import {default as Config} from './Config';
 
 // import { User, UserType } from '../models/User';
 import { User, UserDocument } from "../../models/mongoose";
 import { Request, Response, NextFunction } from "express";
 
-
+const config = new Config();
 
 const LocalStrategy = passportLocal.Strategy;
 const FacebookStrategy = passportFacebook.Strategy;
@@ -52,8 +52,8 @@ passport.use(new LocalStrategy({ usernameField: "email"}, (email, password, done
 
 
 passport.use(new FacebookStrategy({
-    clientID: '',
-    clientSecret: '',
+    clientID: config.auth.facebook.clientId,
+    clientSecret: config.auth.facebook.clientSecret,
     callbackURL: "/auth/facebook/callback",
     profileFields: ["name", "email", "link", "locale", "timezone"],
     passReqToCallback: true

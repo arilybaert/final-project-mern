@@ -129,6 +129,23 @@ const softUnDeleteUser = async (id) => {
     await fetch(url);
 };
 
+// BOXSCORE
+const hardDeleteBoxscore = async (id) => {
+    let url = `${BASE_URL}/gameStats/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
+
+const softDeleteBoxscore = async (id) => {
+    let url = `${BASE_URL}/gameStats/softdelete/${id}`;
+    await fetch(url);
+};
+
+const softUnDeleteBoxscore = async (id) => {
+    let url = `${BASE_URL}/gameStats/softundelete/${id}`;
+    await fetch(url);
+};
+
 // STANDINGS
 const hardDeleteStandings = async (id) => {
     let url = `${BASE_URL}/standings/delete/${id}`;
@@ -147,7 +164,7 @@ const softUnDeleteStandings = async (id) => {
 };
 
     return (
-        <ApiContext.Provider value={{ findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings}}>
+        <ApiContext.Provider value={{ findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore}}>
             {children}
         </ApiContext.Provider>
     );
