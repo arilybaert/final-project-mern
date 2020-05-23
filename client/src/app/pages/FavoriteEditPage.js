@@ -112,7 +112,6 @@ const FavoriteEditPage = ({}) => {
                 })
                 }
 
-
                         <Link to={FAVORITES}>
                             <button onClick={() => handleSubmit(_id, checkedTeams)}className='a-buttonCheckbox'>SAVE</button>
                         </Link>

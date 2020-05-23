@@ -29,7 +29,7 @@ const EditBoxscore = () => {
         console.log(id);
         await hardDeleteBoxscore(id);
         setBoxscoreId(id);
-        window.location.reload(false);
+        // window.location.reload(false);
 
     };
 

@@ -62,8 +62,8 @@ class ApiRouter {
         this.router.get('/gameStats/:date/:id', this.gameStatsController.show);
         this.router.get('/gameStats/sort/:date/:id', this.gameStatsController.sort);
         this.router.get('/gameStats/delete/:id', this.gameStatsController.hardDelete);
-        this.router.get('/gameStats/softdelete/:id', this.gameStatsController.softDelete);
-        this.router.get('/gameStats/softundelete/:id', this.gameStatsController.softUnDelete);
+        // this.router.get('/gameStats/softdelete/:id', this.gameStatsController.softDelete);
+        // this.router.get('/gameStats/softundelete/:id', this.gameStatsController.softUnDelete);
         
         this.router.get('/standings/all', this.standingsController.show);
         this.router.get('/standings/delete/:id', this.standingsController.hardDelete);

@@ -132,8 +132,8 @@ const softUnDeleteUser = async (id) => {
 // BOXSCORE
 const hardDeleteBoxscore = async (id) => {
     let url = `${BASE_URL}/gameStats/delete/${id}`;
+    console.log(url);
     await fetch(url);
-    console.log('hard deleted');
 }
 
 const softDeleteBoxscore = async (id) => {
