@@ -163,8 +163,26 @@ const softUnDeleteStandings = async (id) => {
     await fetch(url);
 };
 
+const createFavorites = async(_id, checkedTeams) => {
+    let url = `${BASE_URL}/favorites/create`;
+    const data = {
+        '_id' : _id,
+        'teams': checkedTeams
+    };
+    await fetch(url,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(data),
+        mode: 'cors', 
+    })
+}
+
     return (
-        <ApiContext.Provider value={{ findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore}}>
+        <ApiContext.Provider value={{ 
+            findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore, createFavorites
+            }}>
             {children}
         </ApiContext.Provider>
     );

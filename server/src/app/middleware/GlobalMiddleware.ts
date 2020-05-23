@@ -13,6 +13,7 @@ class GlobalMiddleware {
         app.set('views', path.join(rootPath, 'views'));
         app.set('view engine', 'ejs');
 
+
         const corsOptions = {
             origin: true,
             methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',

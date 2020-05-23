@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react';
 import classnames from 'classnames';
 import {Link} from 'react-router-dom';
+import { useId } from "react-id-generator";
 
 import {Navbar, BottomNav} from '../components/elements';
 import { useApi } from '../services';
@@ -10,8 +11,9 @@ import { NBAContext } from '../components/context';
 
 
 const FavoriteEditPage = ({}) => {
+    const [_id] = useId();
 
-    const { refreshTeams } = useApi();
+    const { refreshTeams, createFavorites } = useApi();
     const { checkedTeams } = useContext(NBAContext);
     const { setCheckedTeams } = useContext(NBAContext);
 
@@ -62,6 +64,10 @@ const FavoriteEditPage = ({}) => {
         // this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
  
     }
+    
+    const handleSubmit = async (_id, checkedTeams) => {
+        await createFavorites(_id, checkedTeams);
+    }
 
     return (
         <div className='o-checkbox'>
@@ -108,7 +114,7 @@ const FavoriteEditPage = ({}) => {
 
 
                         <Link to={FAVORITES}>
-                            <button className='a-buttonCheckbox'>SAVE</button>
+                            <button onClick={() => handleSubmit(_id, checkedTeams)}className='a-buttonCheckbox'>SAVE</button>
                         </Link>
 
 

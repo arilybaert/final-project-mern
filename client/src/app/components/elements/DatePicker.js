@@ -80,9 +80,9 @@ useEffect( () => {
 
     return (
         <div>
-        <div className="row">
-            <div className={classnames("col-12", "o-datePicker")}>
-                <div className="row">
+            <div className="row">
+                <div className={classnames("col-12", "o-datePicker")}>
+                    <div className="row">
 
                         <div className={classnames("col-4", "m-arrow")} onClick={handleLeftClick}>
                             <IoIosArrowBack size='2em' color='white'/>

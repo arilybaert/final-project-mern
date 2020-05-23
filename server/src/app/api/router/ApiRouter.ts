@@ -1,6 +1,6 @@
 import {default as express, Router, Application, Request, Response } from 'express';
 import passport from "passport";
-import { UserController, GameDayController, TeamController, GameStatsController, StandingsController, UploadController } from '../controllers';
+import { UserController, GameDayController, TeamController, GameStatsController, StandingsController, UploadController, FavoritesController } from '../controllers';
 import multer from 'multer';
 
 
@@ -13,6 +13,7 @@ class ApiRouter {
     private gameStatsController: GameStatsController;
     private standingsController: StandingsController;
     private uploadController: UploadController;
+    private favoritesController: FavoritesController;
     private upload: Object;
 
     constructor() {
@@ -33,6 +34,7 @@ class ApiRouter {
         this.gameStatsController = new GameStatsController();
         this.standingsController = new StandingsController();
         this.uploadController = new UploadController()
+        this.favoritesController = new FavoritesController()
 
     }
 
@@ -68,6 +70,10 @@ class ApiRouter {
         this.router.get('/standings/softdelete/:id', this.standingsController.softDelete);
         this.router.get('/standings/softundelete/:id', this.standingsController.softUnDelete);
 
+
+        this.router.post('/favorites/create', this.favoritesController.create);
+
+        this.favoritesController
         // this.router.get('/users/delete/:id', this.userController.hardDelete);
         // this.router.get('/users/softdelete/:id', this.userController.softDelete);
         // this.router.get('/users/softundelete/:id', this.userController.softUnDelete);
