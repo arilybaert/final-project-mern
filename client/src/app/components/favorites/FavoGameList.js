@@ -18,9 +18,11 @@ const FavoGameList = () => {
     
     const { findGames } = useApi();
     const { refreshTeams } = useApi();
+    const { findFavorites } = useApi();
     
-    const { checkedTeams } = useContext(NBAContext);
+    const { checkedTeams, setCheckedTeams } = useContext(NBAContext);
     const { utilDate } = useContext(NBAContext);
+
 
     // Author mentioned above
     function getUnique(arr, comp) {
@@ -43,11 +45,26 @@ const FavoGameList = () => {
     }, [checkedTeams]);
 
 
+    useEffect(() => {
+        
+        const fetchFavorites = async () => {
+            if(localStorage.getItem('_id')){
+                console.log(localStorage.getItem('_id'));
+                const data = await findFavorites(localStorage.getItem('_id'));
+                console.log(data);
+                setCheckedTeams(data.teams);
+
+            }
+        }
+
+        fetchFavorites();
+    },[]);
+    
 
     // FETCH DATA
     useEffect(() => {
         const fetchGame = async () => {
-            if(checkedTeams.length > 0){
+            if(checkedTeams !== undefined){
                 if(utilDate !== null){
                     setRender(true);
                     const tempGames = []
@@ -68,10 +85,6 @@ const FavoGameList = () => {
                             })
                         })
                     }
-
-
-                     // console.log(data);
-                     // console.log(tempGames);
 
                     setGames(getUnique(tempGames,'_id'));
                 }

@@ -1,18 +1,14 @@
 import React, {useEffect, useState, useContext} from 'react';
 import classnames from 'classnames';
 import {Link} from 'react-router-dom';
-import { useId } from "react-id-generator";
 
 import {Navbar, BottomNav} from '../components/elements';
 import { useApi } from '../services';
 import {FAVORITES} from '../routes'
-import {DatePicker} from '../components/elements';
 import { NBAContext } from '../components/context';
 
 
 const FavoriteEditPage = ({}) => {
-    const [_id] = useId();
-
     const { refreshTeams, createFavorites } = useApi();
     const { checkedTeams } = useContext(NBAContext);
     const { setCheckedTeams } = useContext(NBAContext);
@@ -64,8 +60,20 @@ const FavoriteEditPage = ({}) => {
         // this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
  
     }
+
+    /*
     
-    const handleSubmit = async (_id, checkedTeams) => {
+    I was going to save favorites with userId but I can't get the sign-in / sign-up to work so I ended up saving favorites per localStorage to fake functionality
+    
+    */
+
+    const handleSubmit = async (checkedTeams) => {
+let _id
+        if(!localStorage.getItem('_id')){
+            _id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        }
+
+        localStorage.setItem('_id', _id);
         await createFavorites(_id, checkedTeams);
     }
 
@@ -113,7 +121,7 @@ const FavoriteEditPage = ({}) => {
                 }
 
                         <Link to={FAVORITES}>
-                            <button onClick={() => handleSubmit(_id, checkedTeams)}className='a-buttonCheckbox'>SAVE</button>
+                            <button onClick={() => handleSubmit(checkedTeams)}className='a-buttonCheckbox'>SAVE</button>
                         </Link>
 
 

@@ -16,6 +16,30 @@ class FavoritesController {
         }
     }
 
+    show = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { id } = req.params;
+            const favorites = await Favorites.findById(id).exec();
+            return res.status(200).json(favorites);
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    update = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            console.log(req.params);
+            // const { id } = req.params;
+            // const data = req.params.teams;
+            // Favorites.update(
+            //     { _id: id },
+            //     { $addToSet: { teams: data } }
+            //  )
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     create = async (req: Request, res: Response, next: NextFunction) => {
         try {
 

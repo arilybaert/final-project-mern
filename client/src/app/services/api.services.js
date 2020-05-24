@@ -156,6 +156,14 @@ const softUnDeleteStandings = async (id) => {
     await fetch(url);
 };
 
+// FAVORITES
+const findFavorites = async (id) => {
+    let url = `${BASE_URL}/favorites/${id}`;
+    const response = await fetch(url);
+    return response.json()
+
+};
+
 
 
 // POST
@@ -200,7 +208,7 @@ const modifyUser = async (formData) => {
 
             findStandings, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, 
 
-            createFavorites, 
+            createFavorites, findFavorites
 
             }}>
             {children}

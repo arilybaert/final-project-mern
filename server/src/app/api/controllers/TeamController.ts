@@ -21,6 +21,7 @@ class TeamController {
             next(err);
         }
     }
+
     show = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { id } = req.params;
@@ -30,6 +31,7 @@ class TeamController {
             next(err);
         }
     }
+
     showAll = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const post = await Team.find().exec();
@@ -38,7 +40,7 @@ class TeamController {
             next(err);
         }
     }
-    
+
     hardDelete = async (req: Request, res: Response, next: NextFunction) => {
         try {
 
@@ -46,12 +48,9 @@ class TeamController {
             const deleted = await Team.deleteOne({_id: id}).exec();
             console.log(`deleted: ${id}`);
             return res.status(200).json(deleted);
-
-
         } catch(err) {
             next(err);
         }
-
     }
 
     softDelete = async (req: Request, res: Response, next: NextFunction) => {
@@ -66,6 +65,7 @@ class TeamController {
             next(err);
         }
     }
+
     softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
         try {
 
@@ -78,6 +78,7 @@ class TeamController {
             next(err);
         }
     }
+
     update = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const id = req.body.Id;
@@ -90,7 +91,6 @@ class TeamController {
               '_modifiedAt': Date.now(),
             };
     
-            console.log(data);
             const team = await Team.findOneAndUpdate({_id: id}, data, {new: false});
             team.save();
             return res.status(200).json(team);
