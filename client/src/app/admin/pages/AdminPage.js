@@ -17,6 +17,7 @@ import ModifyGamedays from './ModifyGamedays';
 import ModifyTeams from './ModifyTeams';
 import ModifyBoxscore from './ModifyBoxscore';
 import CreateUser from './CreateUser';
+import EditFavorites from './EditFavorites';
 
 const AdminPage = ({children}) => {
     return (
@@ -36,6 +37,7 @@ const AdminPage = ({children}) => {
             <Route exact path={Routes.BACKOFFICE_EDIT_USERS} component={EditUsers}/>
             <Route exact path={Routes.BACKOFFICE_MODIFY_USERS} component={ModifyUsers}/>
             <Route exact path={Routes.BACKOFFICE_CREATE_USERS} component={CreateUser}/>
+            <Route exact path={Routes.BACKOFFICE_EDIT_FAVORITES} component={EditFavorites}/>
             
             <Route exact path={Routes.BACKOFFICE_EDIT_BOXSCORE} component={EditBoxscore}/>
             <Route exact path={Routes.BACKOFFICE_MODIFY_BOXSCORE} component={ModifyBoxscore}/>

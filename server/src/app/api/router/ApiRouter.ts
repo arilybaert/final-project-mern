@@ -74,6 +74,10 @@ class ApiRouter {
         this.router.post('/favorites/create', this.favoritesController.create);
         this.router.get('/favorites/:id', this.favoritesController.show);
         this.router.post('/favorites/update/:id', this.favoritesController.update);
+        this.router.get('/favorites/all', this.favoritesController.index);
+        this.router.get('/favorites/delete/:id', this.userController.hardDelete);
+        this.router.get('/favorites/softdelete/:id', this.userController.softDelete);
+        this.router.get('/favorites/softundelete/:id', this.userController.softUnDelete);
 
         this.favoritesController
         this.router.get('/users/delete/:id', this.userController.hardDelete);

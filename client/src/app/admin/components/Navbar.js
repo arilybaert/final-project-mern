@@ -36,6 +36,10 @@ const Navbar = () => {
         <Link to={Routes.BACKOFFICE_EDIT_USERS} className="nav-link" >Users</Link>
       </li>
       <li className="nav-item">
+        <Link to={Routes.BACKOFFICE_EDIT_FAVORITES} className="nav-link" >Favorites</Link>
+      </li>
+      
+      <li className="nav-item">
         <Link to={Routes.LANDING} className="nav-link text-warning" > Return to Web-app</Link>
       </li>
     </ul>

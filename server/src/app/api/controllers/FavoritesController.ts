@@ -9,7 +9,8 @@ class FavoritesController {
 
     index = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const favorites = await Favorites.find().sort({_createdAt: -1}).exec();
+            const favorites = await Favorites.find().exec();
+            console.log(favorites);
             return res.status(200).json(favorites);
         } catch (err) {
             next(err);
@@ -61,6 +62,47 @@ class FavoritesController {
         }
     }
 
+
+    hardDelete = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+      
+            const { id } = req.params;
+            const deleted = await Favorites.deleteOne({_id: id}).exec();
+            console.log(`deleted: ${id}`);
+            console.log(deleted);
+            return res.status(200).json(deleted);
+      
+      
+        } catch(err) {
+            next(err);
+        }
+      }
+
+
+softDelete = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+  
+        const { id } = req.params;
+        let favorite = await Favorites.findById(id)
+        favorite._deletedAt = Date.now();
+        await favorite.save();
+        return res.status(200).json(favorite);
+    } catch(err) {
+        next(err);
+    }
+  }
+  softUnDelete = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+  
+        const { id } = req.params;
+        let favorite = await Favorites.findById(id)
+        favorite._deletedAt = null;
+        favorite.save();
+        return res.status(200).json(favorite);
+    } catch(err) {
+        next(err);
+    }
+  }
 }
 
 export default FavoritesController;

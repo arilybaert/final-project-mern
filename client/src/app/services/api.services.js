@@ -174,7 +174,27 @@ const updateFavorites = async (id, favorites) => {
         mode: 'cors', 
     })
 };
+const findAllFavorites = async () => {
+    let url = `${BASE_URL}/favorites/all`;
+    const response = await fetch(url);
+    return response.json();
+};
 
+const hardDeleteFavorites = async (id) => {
+    let url = `${BASE_URL}/favorites/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
+
+const softDeleteFavorites = async (id) => {
+    let url = `${BASE_URL}/favorites/softdelete/${id}`;
+    await fetch(url);
+};
+
+const softUnDeleteFavorites = async (id) => {
+    let url = `${BASE_URL}/favorites/softundelete/${id}`;
+    await fetch(url);
+};
 
 
 // POST
@@ -219,7 +239,7 @@ const modifyUser = async (formData) => {
 
             findStandings, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, 
 
-            createFavorites, findFavorites, updateFavorites
+            createFavorites, findFavorites, updateFavorites,findAllFavorites, hardDeleteFavorites, softDeleteFavorites, softUnDeleteFavorites
 
             }}>
             {children}

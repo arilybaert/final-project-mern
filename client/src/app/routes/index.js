@@ -19,3 +19,4 @@ export const BACKOFFICE_MODIFY_USERS= '/admin/edit/users/:id/';
 export const BACKOFFICE_CREATE_USERS= '/admin/create/users';
 export const BACKOFFICE_EDIT_BOXSCORE = '/admin/edit/boxscore';
 export const BACKOFFICE_MODIFY_BOXSCORE = '/admin/edit/boxscore/:id';
+export const BACKOFFICE_EDIT_FAVORITES = '/admin/edit/favorites';
