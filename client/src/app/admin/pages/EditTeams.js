@@ -51,7 +51,7 @@ const EditTeams = () => {
                 <thead>
                 <tr>
                     <th width="300">Day</th>
-                    <th width="300">Games</th>
+                    <th width="300">triCode</th>
                     <th width="300">Actie</th>
                 </tr>
                 </thead>
@@ -62,8 +62,8 @@ const EditTeams = () => {
                      if(data.isNBAFranchise){
                         return(
                         <tr key={data._id}>
-                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.fullName}</td>
-                            <td>{}</td>
+                            <td className={data._deletedAt != null? "text-muted" : ""}>{data.city} {data.nickname}</td>
+                            <td>{data.tricode}</td>
                             <td>
                             
                             <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => setTeamId(data._id)}>DELETE

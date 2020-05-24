@@ -91,8 +91,8 @@ class TeamController {
             };
     
             console.log(data);
-            const team = await Team.findOneAndUpdate({_id: id}, data, {new: true});
-            //console.log(team);
+            const team = await Team.findOneAndUpdate({_id: id}, data, {new: false});
+            team.save();
             return res.status(200).json(team);
     
         } catch(err) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import * as Routes from '../../routes';
 
 
@@ -11,6 +11,7 @@ import { Navbar } from '../components'
 
 const ModifyTeams = () => {
     let { id } = useParams();
+    let history = useHistory();
     const { findTeam } = useApi();
 
     const [team, setTeam] = useState();
@@ -48,6 +49,8 @@ const ModifyTeams = () => {
           body: JSON.stringify(formData),
           mode: 'cors', 
       });
+      history.push(Routes.BACKOFFICE_EDIT_TEAMS); 
+
 
       //return <Redirect to={Routes.BACKOFFICE_EDIT_TEAMS}/>
     }
