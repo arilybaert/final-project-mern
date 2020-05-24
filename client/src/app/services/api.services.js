@@ -7,35 +7,68 @@ const useApi = () => useContext(ApiContext);
 const ApiProvider = ({children}) => {
 const BASE_URL = `http://localhost:8080/api`;
 
-// FIND USER
+
+// USERS
 const findUser = async (id) => {
     let url = `${BASE_URL}/users/${id}`;
     const response = await fetch(url);
     return response.json();
 };
 
-// FIND ALL USERS
 const findAllUsers = async () => {
     let url = `${BASE_URL}/users`;
     const response = await fetch(url);
     return response.json();
 };
 
-// FIND ALL GAMES
+const hardDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+}
+
+const softDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/softdelete/${id}`;
+    await fetch(url);
+};
+
+const softUnDeleteUser = async (id) => {
+    let url = `${BASE_URL}/users/softundelete/${id}`;
+    await fetch(url);
+};
+
+
+// GAMEDAY
 const findAllGames = async () => {
     let url = `${BASE_URL}/gamedays`;
     const response = await fetch(url);
     return response.json();
 };
 
-// FIND GAMES PER DAY
 const findGames = async (date) => {
     let url = `${BASE_URL}/gamedays/${date}`;
     const response = await fetch(url);
     return response.json();
 };
 
-// FIND TEAMS
+const hardDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/delete/${id}`;
+    await fetch(url);
+    console.log('hard deleted');
+};
+
+const softDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/softdelete/${id}`;
+    await fetch(url);
+}
+
+const softUnDeleteGameday = async (id) => {
+    let url = `${BASE_URL}/gamedays/softundelete/${id}`;
+    await fetch(url);
+};
+
+
+// TEAMS
 const refreshTeams = async () => {
     let url = `${BASE_URL}/teams`;
     const response = await fetch(url);
@@ -53,48 +86,7 @@ const findTeam = async (id) => {
     const response = await fetch(url);
     return response.json();
 };
-// FIND GAMES statistics
-const findGameStats = async (date, id, signal) => {
-    let url = `${BASE_URL}/gameStats/sort/${date}/${id}`;
-    const response = await fetch(url, {signal: signal});
-    return response.json()
-};
 
-// FIND ALL GAME STATISTICS
-const findAllGameStats = async () => {
-    let url = `${BASE_URL}/gameStats`;
-    const response = await fetch(url);
-    return response.json();
-};
-
-// FIND GAMES statistics
-const findStandings = async () => {
-    let url = `${BASE_URL}/standings/all`;
-    const response = await fetch(url);
-    return response.json()
-};
-
-/*
-EDIT
-*/
-// GAMEDAY
-const hardDeleteGameday = async (id) => {
-    let url = `${BASE_URL}/gamedays/delete/${id}`;
-    await fetch(url);
-    console.log('hard deleted');
-};
-
-const softDeleteGameday = async (id) => {
-    let url = `${BASE_URL}/gamedays/softdelete/${id}`;
-    await fetch(url);
-}
-
-const softUnDeleteGameday = async (id) => {
-    let url = `${BASE_URL}/gamedays/softundelete/${id}`;
-    await fetch(url);
-};
-
-// TEAMS
 const hardDeleteTeam = async (id) => {
     let url = `${BASE_URL}/teams/delete/${id}`;
     await fetch(url);
@@ -112,24 +104,18 @@ const softUnDeleteTeam = async (id) => {
 };
 
 
-// USERS
-const hardDeleteUser = async (id) => {
-    let url = `${BASE_URL}/users/delete/${id}`;
-    await fetch(url);
-    console.log('hard deleted');
-}
-
-const softDeleteUser = async (id) => {
-    let url = `${BASE_URL}/users/softdelete/${id}`;
-    await fetch(url);
+// BOXSCORE / GAMESTATS
+const findGameStats = async (date, id, signal) => {
+    let url = `${BASE_URL}/gameStats/sort/${date}/${id}`;
+    const response = await fetch(url, {signal: signal});
+    return response.json()
 };
 
-const softUnDeleteUser = async (id) => {
-    let url = `${BASE_URL}/users/softundelete/${id}`;
-    await fetch(url);
+const findAllGameStats = async () => {
+    let url = `${BASE_URL}/gameStats`;
+    const response = await fetch(url);
+    return response.json();
 };
-
-// BOXSCORE
 const hardDeleteBoxscore = async (id) => {
     let url = `${BASE_URL}/gameStats/delete/${id}`;
     console.log(url);
@@ -146,7 +132,14 @@ const softUnDeleteBoxscore = async (id) => {
     await fetch(url);
 };
 
+
 // STANDINGS
+const findStandings = async () => {
+    let url = `${BASE_URL}/standings/all`;
+    const response = await fetch(url);
+    return response.json()
+};
+
 const hardDeleteStandings = async (id) => {
     let url = `${BASE_URL}/standings/delete/${id}`;
     await fetch(url);
@@ -164,7 +157,8 @@ const softUnDeleteStandings = async (id) => {
 };
 
 
-// ADMIN PANEL
+
+// POST
 const createFavorites = async(_id, checkedTeams) => {
     let url = `${BASE_URL}/favorites/create`;
     const data = {
@@ -192,13 +186,22 @@ const modifyUser = async (formData) => {
         body: JSON.stringify(formData),
         mode: 'cors', 
     });
-
-
 }
 
     return (
         <ApiContext.Provider value={{ 
-            findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore, createFavorites, modifyUser
+            findUser, findAllUsers, hardDeleteUser, softDeleteUser, softUnDeleteUser, modifyUser,
+
+            findAllGames, findGames,  hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, 
+
+            refreshTeams, allTeams, findTeam, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam,
+
+            findGameStats, findAllGameStats, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore, 
+
+            findStandings, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, 
+
+            createFavorites, 
+
             }}>
             {children}
         </ApiContext.Provider>

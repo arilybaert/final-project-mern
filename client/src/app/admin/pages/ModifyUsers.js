@@ -10,7 +10,6 @@ const ModifyUsers = () => {
     const { findUser, modifyUser } = useApi();
     const { id } = useParams();
 
-    const USER_UPDATE_URL = "http://localhost:8080/api/users/update";
     useEffect(() => {
         const fetchUser = async () => {
             const data = await findUser(id);
