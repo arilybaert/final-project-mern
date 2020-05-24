@@ -23,18 +23,24 @@ const EditUsers = () => {
     const handleSubmit = async (id) => {
         await hardDeleteUser(id);
         setUserId(id);
+        window.location.reload(false);
+
     };
 
     const softDelete = async (id) => {
         await softDeleteUser(id);
         setUserId(id);
+        window.location.reload(false);
+
     }
 
     const softUnDelete = async (id) => {
         await softUnDeleteUser(id);
         setUserId(id);
+        window.location.reload(false);
+
     }
-    // 
+
     return(
         <div>
             <Navbar/>

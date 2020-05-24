@@ -38,6 +38,7 @@ class StandingsController {
   
   
         } catch(err) {
+            console.log(err);
             next(err);
         }
   

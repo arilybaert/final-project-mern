@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
+import { useParams, useHistory } from 'react-router-dom';
 import { Navbar } from '../components'
 import { useApi } from '../../services';
 
 
 const ModifyUsers = () => {
-
-    const { findUser } = useApi();
+    
+  let history = useHistory();
+    const { findUser, modifyUser } = useApi();
     const { id } = useParams();
 
-    const [setUser] = useState();
     const USER_UPDATE_URL = "http://localhost:8080/api/users/update";
     useEffect(() => {
         const fetchUser = async () => {
             const data = await findUser(id);
-            console.log(data);
-            setUser(data);
         }
 
         fetchUser();
@@ -34,14 +31,9 @@ const ModifyUsers = () => {
             'Role': data.get('Role'),
           };
 
-        await fetch(USER_UPDATE_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-              },
-            body: JSON.stringify(formData),
-            mode: 'cors', 
-        });
+        await modifyUser(formData);
+        history.push("/admin/edit/users"); 
+
     }
 
 return (
@@ -68,7 +60,7 @@ return (
 <div className="form-group col-md-4">
     <label for="role">Role</label>
     <select id="role" className="form-control" name="Role" >
-      <option selected>admin</option>
+      <option selected>administrator</option>
       <option>user</option>
     </select>
 </div>

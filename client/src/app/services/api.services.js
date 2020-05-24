@@ -163,6 +163,8 @@ const softUnDeleteStandings = async (id) => {
     await fetch(url);
 };
 
+
+// ADMIN PANEL
 const createFavorites = async(_id, checkedTeams) => {
     let url = `${BASE_URL}/favorites/create`;
     const data = {
@@ -179,9 +181,24 @@ const createFavorites = async(_id, checkedTeams) => {
     })
 }
 
+// MODIFY USER
+const modifyUser = async (formData) => {
+    let url = `${BASE_URL}/users/update`;
+    await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(formData),
+        mode: 'cors', 
+    });
+
+
+}
+
     return (
         <ApiContext.Provider value={{ 
-            findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore, createFavorites
+            findUser, findAllUsers, findAllGames, findGames, refreshTeams, allTeams, findTeam, findGameStats, findAllGameStats, findStandings, hardDeleteGameday, softDeleteGameday, softUnDeleteGameday, hardDeleteTeam, softDeleteTeam, softUnDeleteTeam, hardDeleteUser, softDeleteUser, softUnDeleteUser, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, hardDeleteBoxscore, softDeleteBoxscore, softUnDeleteBoxscore, createFavorites, modifyUser
             }}>
             {children}
         </ApiContext.Provider>
