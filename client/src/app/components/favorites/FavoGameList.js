@@ -38,11 +38,6 @@ const FavoGameList = () => {
       
          return unique;
       }
-      
-      // console.log(getUnique(arr,'id'));
-    useEffect(() => {
-        console.log(checkedTeams);
-    }, [checkedTeams]);
 
 
     useEffect(() => {

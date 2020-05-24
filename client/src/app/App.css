@@ -162,6 +162,10 @@
   padding: 1vh;
 }
 
+.a-logo__fav {
+  height: 40px;
+}
+
 .o-favoHeader {
   display: flex;
   justify-content: center;

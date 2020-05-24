@@ -28,15 +28,15 @@ class FavoritesController {
 
     update = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            console.log(req.params);
-            // const { id } = req.params;
-            // const data = req.params.teams;
-            // Favorites.update(
-            //     { _id: id },
-            //     { $addToSet: { teams: data } }
-            //  )
+            const {id} = req.params;
+
+            const update = await Favorites.findOneAndUpdate({ _id: id }, { $set: {teams: req.body}})
+        
+
         } catch (err) {
             console.log(err);
+            next(err);
+            
         }
     }
 

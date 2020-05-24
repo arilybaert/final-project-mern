@@ -89,13 +89,20 @@ let _id
                     // RETURN CHECKED OR UNCHECKED CHECKBOX
                     if(checkedTeams.includes(NBATeam.key)){
                         return(
-                            <div className="row">
-                                <div className={classnames('col-12', 'o-teamsCheckbox')}>
-                                    <label key={NBATeam.key}>
-                                        {NBATeam.label}
-                                        <input type='checkbox' checked name={NBATeam.key}   onChange={handleChange}/>
-                                    </label>
-                                </div>
+                            <div className="row" key={NBATeam.key}>
+
+
+                                <div className='col'>
+                                        <img className="a-logo__fav" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${NBATeam.label}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
+                                        </div>
+                                        <div className={classnames('col', 'a-teamnameCheckbox')}>
+                                            <span>
+                                                {NBATeam.label}
+                                            </span>
+                                        </div>
+                                        <div className={classnames('col', 'm-inputCheckbox')}>
+                                            <input type='checkbox' checked name={NBATeam.key}   onChange={handleChange}/>
+                                        </div>
                             </div>
                             )
                     } else {
@@ -104,7 +111,7 @@ let _id
                                 <div className={classnames('col-12')}>
                                     <div className='row'>
                                         <div className='col'>
-                                            <image alt='image' title='image'></image>
+                                        <img className="a-logo__fav" alt="teamlogo" title="teamlogo" src={`${process.env.REACT_APP_IMAGE_LINK_PREFIX}${NBATeam.label}${process.env.REACT_APP_IMAGE_LINK_SUFFIX}`}></img>
                                         </div>
                                         <div className={classnames('col', 'a-teamnameCheckbox')}>
                                             <span>

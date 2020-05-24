@@ -216,6 +216,9 @@ $fontsize-small: 13pt;
 
 // FAVORITES
 
+.a-logo__fav {
+    height: 40px;
+}
 .o-favoHeader {
     display: flex;
     justify-content: center;
@@ -556,3 +559,4 @@ $fontsize-small: 13pt;
       font-size: 120px;
     }
   }
+
