@@ -9,9 +9,8 @@ import { NBAContext } from '../components/context';
 
 
 const FavoriteEditPage = ({}) => {
-    const { refreshTeams, createFavorites } = useApi();
-    const { checkedTeams } = useContext(NBAContext);
-    const { setCheckedTeams } = useContext(NBAContext);
+    const { refreshTeams, createFavorites, updateFavorites } = useApi();
+    const { checkedTeams, setCheckedTeams } = useContext(NBAContext);
 
     const [NBATeamsCheckBox, setNBATeamsCheckbox] = useState();
 
@@ -46,6 +45,7 @@ const FavoriteEditPage = ({}) => {
         fetchTeams();
     }, [])
 
+
     // ONCHANGE HANDLER CHECKBOX
     const handleChange = (e) => {
         const key = e.target.name;
@@ -57,7 +57,7 @@ const FavoriteEditPage = ({}) => {
             setCheckedTeams(tempChecked);
         }
         console.log(checkedTeams);
-        // this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
+
  
     }
 
@@ -71,10 +71,13 @@ const FavoriteEditPage = ({}) => {
 let _id
         if(!localStorage.getItem('_id')){
             _id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+            localStorage.setItem('_id', _id);
+            await createFavorites(_id, checkedTeams);
+        } else {
+            
+            await updateFavorites(localStorage.getItem('_id'), checkedTeams);
         }
 
-        localStorage.setItem('_id', _id);
-        await createFavorites(_id, checkedTeams);
     }
 
     return (

@@ -49,9 +49,7 @@ const FavoGameList = () => {
         
         const fetchFavorites = async () => {
             if(localStorage.getItem('_id')){
-                console.log(localStorage.getItem('_id'));
                 const data = await findFavorites(localStorage.getItem('_id'));
-                console.log(data);
                 setCheckedTeams(data.teams);
 
             }
@@ -69,7 +67,6 @@ const FavoGameList = () => {
                     setRender(true);
                     const tempGames = []
                     const data = await findGames(utilDate);
-                    console.log(data);
                     if(data !== false) {
                         const data = await findGames(utilDate);
                         await refreshTeams();

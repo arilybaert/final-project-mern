@@ -161,7 +161,18 @@ const findFavorites = async (id) => {
     let url = `${BASE_URL}/favorites/${id}`;
     const response = await fetch(url);
     return response.json()
+};
+const updateFavorites = async (id, favorites) => {
+    let url = `${BASE_URL}/favorites/update/${id}`;
 
+    await fetch(url,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(favorites),
+        mode: 'cors', 
+    })
 };
 
 
@@ -208,7 +219,7 @@ const modifyUser = async (formData) => {
 
             findStandings, hardDeleteStandings, softDeleteStandings, softUnDeleteStandings, 
 
-            createFavorites, findFavorites
+            createFavorites, findFavorites, updateFavorites
 
             }}>
             {children}
