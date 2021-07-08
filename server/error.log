@@ -1,0 +1,1283 @@
+2020-03-28 15:00:08 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 18:56:20 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 18:56:23 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-28 19:44:00 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-29 13:28:59 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-29 13:33:07 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-29 13:49:02 [[31merror[39m]: 	An error occurred when creating a Post ReferenceError: createdUser is not defined {
+  "object": {}
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:48:52 [[31merror[39m]: 	An error occurred when creating a Post ValidationError: games.0.startDateEastern: Cast to Date failed for value "6oClock" at path "startDateEastern", games.1.startDateEastern: Cast to Date failed for value "7oClock" at path "startDateEastern" {
+  "object": {
+    "errors": {
+      "games.0.startDateEastern": {
+        "stringValue": "\"6oClock\"",
+        "kind": "Date",
+        "value": "6oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"6oClock\"",
+          "kind": "date",
+          "value": "6oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"6oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"6oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      },
+      "games.1.startDateEastern": {
+        "stringValue": "\"7oClock\"",
+        "kind": "Date",
+        "value": "7oClock",
+        "path": "startDateEastern",
+        "reason": {
+          "stringValue": "\"7oClock\"",
+          "kind": "date",
+          "value": "7oClock",
+          "path": "startDateEastern",
+          "reason": {
+            "generatedMessage": true,
+            "name": "AssertionError [ERR_ASSERTION]",
+            "code": "ERR_ASSERTION",
+            "actual": false,
+            "expected": true,
+            "operator": "=="
+          },
+          "message": "Cast to date failed for value \"7oClock\" at path \"startDateEastern\"",
+          "name": "CastError"
+        },
+        "message": "Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+        "name": "CastError"
+      }
+    },
+    "_message": "GameDay validation failed",
+    "message": "GameDay validation failed: games.0.startDateEastern: Cast to Date failed for value \"6oClock\" at path \"startDateEastern\", games.1.startDateEastern: Cast to Date failed for value \"7oClock\" at path \"startDateEastern\"",
+    "name": "ValidationError"
+  }
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:50:57 [[31merror[39m]: 	An error occurred when creating a Post TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-30 13:53:57 [[31merror[39m]: 	An error occurred when creating a gameday TypeError: Cannot read property 'push' of undefined {
+  "object": {}
+}
+2020-03-31 12:01:31 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200311" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200311"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200311\" }"
+  }
+}
+2020-03-31 12:02:37 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200311" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200311"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200311\" }"
+  }
+}
+2020-03-31 12:50:16 [[31merror[39m]: 	An error occurred when creating a gameday MongoError: E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: "20200331" } {
+  "object": {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "_id": 1
+    },
+    "keyValue": {
+      "_id": "20200331"
+    },
+    "errmsg": "E11000 duplicate key error collection: test.gamedays index: _id_ dup key: { _id: \"20200331\" }"
+  }
+}
+2020-04-03 20:01:00 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-04-03 20:01:26 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-04-04 12:15:52 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-04-04 12:18:00 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-04-05 19:39:40 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 16:39:57 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 16:40:08 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 16:42:33 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 16:44:23 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 16:45:04 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 17:06:18 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-10 17:10:11 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "errno": -30,
+    "syscall": "mkdir",
+    "code": "EROFS",
+    "path": "/uploads"
+  }
+}
+2020-05-10 17:24:31 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "errno": -30,
+    "syscall": "mkdir",
+    "code": "EROFS",
+    "path": "/uploads"
+  }
+}
+2020-05-10 17:27:55 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "errno": -30,
+    "syscall": "mkdir",
+    "code": "EROFS",
+    "path": "/uploads"
+  }
+}
+2020-05-14 12:05:55 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-19 15:57:07 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-19 15:58:47 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-19 15:59:48 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-20 08:42:13 [[31merror[39m]: 	Can't connect to the db {
+  "object": {
+    "message": "connection timed out",
+    "name": "MongooseServerSelectionError",
+    "reason": {
+      "type": "ReplicaSetNoPrimary",
+      "setName": null,
+      "maxSetVersion": null,
+      "maxElectionId": null,
+      "servers": {},
+      "stale": false,
+      "compatible": true,
+      "compatibilityError": null,
+      "logicalSessionTimeoutMinutes": null,
+      "heartbeatFrequencyMS": 10000,
+      "localThresholdMS": 15,
+      "commonWireVersion": null
+    }
+  }
+}
+2020-05-20 08:42:13 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "message": "connection timed out",
+    "name": "MongooseServerSelectionError",
+    "reason": {
+      "type": "ReplicaSetNoPrimary",
+      "setName": null,
+      "maxSetVersion": null,
+      "maxElectionId": null,
+      "servers": {},
+      "stale": false,
+      "compatible": true,
+      "compatibilityError": null,
+      "logicalSessionTimeoutMinutes": null,
+      "heartbeatFrequencyMS": 10000,
+      "localThresholdMS": 15,
+      "commonWireVersion": null
+    }
+  }
+}
+2020-05-21 17:00:37 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:00:58 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:01:03 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:01:21 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:03:31 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:07:44 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:07:58 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:09:31 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:12:35 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:14:01 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 17:14:17 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-21 20:34:21 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-22 16:55:59 [[31merror[39m]: 	Can't launch the application {
+  "object": {}
+}
+2020-05-24 13:15:11 [[31merror[39m]: 	Can't connect to the db {
+  "object": {
+    "errno": "ETIMEOUT",
+    "code": "ETIMEOUT",
+    "syscall": "queryTxt",
+    "hostname": "cluster0-zrmrh.gcp.mongodb.net"
+  }
+}
+2020-05-24 13:15:11 [[31merror[39m]: 	Can't launch the application {
+  "object": {
+    "errno": "ETIMEOUT",
+    "code": "ETIMEOUT",
+    "syscall": "queryTxt",
+    "hostname": "cluster0-zrmrh.gcp.mongodb.net"
+  }
+}

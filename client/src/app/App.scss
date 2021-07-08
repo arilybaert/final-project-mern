@@ -1,0 +1,562 @@
+// COLORS
+$primary: #0630AA;
+$secondary: #FF2D00;
+$black: rgb(19, 16, 16);
+$white: rgb(243, 233, 233);
+
+// FONTS
+$fontsize-primary: 'American Typewriter';
+$font-content: 'Arial';
+
+$font-title: 20pt;
+$fontsize-scores: 17pt;
+$fontsize-small: 13pt;
+
+// NAVIGATION
+
+.o-title {
+
+  margin-top: 1.5vh;
+  background-color: $primary;
+  padding: 3%;
+
+  .o-accountLogo {
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .a-title {
+      color: $white;
+      font-size: $font-title;
+      font-family: $fontsize-primary;
+  }
+
+  .a-title__bold {
+      font-weight: bolder;
+  }
+}
+
+.a-accountLogo {
+    color: $white;
+}
+
+// DATE PICKER
+
+.o-datePicker {
+
+  box-sizing: border-box;
+  background-color: $secondary;
+  padding: 2.3vh;
+  border-radius: 45pt;
+  margin-top: 2vh;
+
+
+  .m-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .a-arrow {
+          height: 25px;
+      }
+
+      .a-arrow__transform {
+          transform: scaleX(-1);
+      }
+  }
+
+
+  .a-currentDate {
+      display: block;
+      text-align: center;
+      font-family: $font-content;
+      font-weight: bold;
+      font-size: $fontsize-small;
+      color: $white;
+  }
+
+}
+
+
+.m-nearGamedayLink {
+    padding: 1vh;
+    text-align: center;
+    font-size: large;
+}
+
+// SCORES
+
+.o-scores {
+
+  margin-top: 3vh;
+  box-sizing: border-box;
+  box-shadow: 3px 2px 8px 1px rgba(0,0,0,0.35);
+  padding: 1vh;
+  border-radius: 45pt;
+
+
+  .m-gameStatus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      .a-gameStatus{
+          text-align: center;
+      }
+  }
+  .a-teamScore {
+      font-family: $font-content;
+      font-size: 19pt;
+      color: $primary;
+  }
+
+  // @TODO
+  .a-teamScore__win {
+      // font-weight: bold;
+  }
+  
+  .m-logo {
+      text-align: center;
+
+      .a-logo {
+          height: 40px;
+      }
+      .a-teamName {
+          color: $primary;
+          font-family: $font-content;
+          display: block;
+          text-align: center;
+      }
+  }
+}
+
+.a-noGameList {
+    padding: 5vh;
+    text-align: center;
+    font-size: larger;
+}
+
+
+// BOTTOM NAVIGATION
+.o-bottomNav {
+    display: flex;
+    position:fixed;
+    max-height: 115px;
+	bottom:0;
+	left:0;
+	right:0;
+    z-index:1000;
+    padding: 2%;
+    background-color: $secondary;
+    color: $white;
+    box-shadow: 0px 0px 6px 0px $black;
+
+    .m-bottomNav__element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-bottomNav__element:link {
+        color: $white;
+    }
+    .m-bottomNav__element:hover{
+        color: $white;
+    }
+    .m-bottomNav__element:active {
+        color: $white;
+    }
+    .m-bottomNav__element:visited {
+        color: $white;
+    }
+}
+
+
+// STANDINGS
+
+.o-tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    margin-bottom: 20vw;
+
+    .m-standingsTable {
+        text-align: center;
+        padding: 3px;
+        width: 95%;
+        border-radius: 15px;
+        box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.23);
+
+        th {
+            padding: 5px;
+        }
+
+
+        .a-standings {
+            padding: 1vh;
+        }
+
+        .a-standingsLogo {
+            height: 3vh;
+        }
+    }
+}
+.m-tableHead {
+    border-radius: 15px;
+}
+
+.a-leagueTitle {
+    background-color: $primary;
+    font-weight: bold;
+    color: $white;
+    padding: 1vh;
+}
+
+// FAVORITES
+
+.a-logo__fav {
+    height: 40px;
+}
+.o-favoHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    border-radius: 45pt;
+    padding: 2.3vh;
+    margin-top: 2vh;
+
+    .a-favoritesHeader {
+        color: $white;
+        font-size: $fontsize-primary;
+        font-family: $font-content;
+        font-weight: bold;
+    }
+
+}
+
+.o-favoAddBtn {
+    display: flex;
+    padding: 3vh;
+    margin-top: 1vh;
+    border-radius: 15px;
+    background-color: $primary;
+    color: $white;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    .a-favoAddBtn {
+        font-size: 15pt;
+        line-height: 0rem;
+    }
+}
+
+// FAVORITES CHECKBOX
+.o-checkbox {
+    margin-bottom: 15vh;
+}
+.o-teamsCheckbox {
+    box-shadow: 3px 2px 8px 1px rgba(0,0,0,0.35);
+    border-radius: 1vh;
+    padding: 1vh;
+    margin-top: 1vh;
+}
+
+.a-teamnameCheckbox {
+    text-align: center;
+    font-size: 15pt;
+}
+.m-inputCheckbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-inputCheckbox{
+    height: 25px;
+    width: 25px;
+}
+
+.a-buttonCheckbox {
+    padding: 2vh 4vh;
+    border-radius: 10px;
+    background-color: $secondary;
+    border: none;
+    color: $white;
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.23);
+}
+
+.m-noFavoriteGames {
+    margin-top: 1vh;
+    text-align: center;
+}
+// GAMESTATS
+// BACKGROUND
+
+.o-gameStats {
+    background-color: $secondary;
+    border-radius: 25px 25px 0px 0px;
+    padding-bottom: 5vw;
+}
+.o-bgc {
+    background-color: $secondary;
+    padding-bottom: 5vw;
+}
+
+// NAVIGATION
+.o-title {
+
+    margin-top: 1.5vh;
+    background-color: $primary;
+    padding: 2vh;
+
+    .a-title {
+        color: $white;
+        font-size: $font-title;
+        font-family: $fontsize-primary;
+        font-weight: bold;
+    }
+
+    .a-title__bold {
+        font-weight: bolder;
+    }
+}
+
+.o-mainStat {
+    // background-color: $secondary;
+    // border-radius: 25px 25px 0px 0px;
+    margin-top: 5vh;
+    padding: 3vh;
+
+    .m-mainStat {
+        text-align: center;
+        .a-logo {
+            height: 90px;
+        }
+        
+        .a-score {
+            display: block;
+            font-size: 23pt;
+            font-family: $font-content;
+            color: $white;
+        }
+
+        .a-teamLocation {
+            color: $white;
+        }
+    }
+}
+
+// ACTIONBAR
+.o-actionbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .m-actionbar {
+        width: 80vw;
+        background-color: $white;
+        border-radius: 40px;
+        padding: 0.5vh;
+    }
+
+    .m-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .a-actionLogo {
+            color: $primary;
+        }
+
+        .m-stats {
+            background-color: $primary;
+            color: $white;
+            box-sizing: border-box;
+            border-radius: 15px;
+            padding: 5px;
+
+
+            .a-statSelect {
+                background-color: $white;
+                color: $primary;
+                border: 1px solid $primary;
+                border-radius: 15px;
+                padding: 4px;
+                cursor: pointer;
+            }
+            .a-statNone {
+                color: $white;
+                cursor: pointer;
+
+            }
+        }
+    }
+}
+
+// LEADER
+.o-leaders {
+    text-align: center;
+    color: $white;
+
+    .a-leader__score {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+}
+
+// STATS TABLE
+.o-table {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 25px 25px;
+
+    
+    .m-table {
+        font-size: 12pt;
+        color: $white;
+        text-align: center;
+    }
+    td:first-child { 
+        text-align: left; 
+        padding-left: 3vw;
+        width: 31vw;
+    }
+    th:first-child { 
+        text-align: left;
+        padding-left: 3vw;
+
+    }
+    td {
+        padding-top: 2vh;
+        padding-left: 1vw;
+    }
+}
+
+.a-noGameNotification {
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+// SIGN IN FORM
+
+.o-signinForm {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .m-signinForm {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 2px 8px 1px rgba(0,0,0,0.35);
+        padding: 5vw;
+        justify-content: space-evenly;
+    }
+    label {
+        margin-bottom: 0.3vh;
+    }
+    input {
+        margin-bottom: 0.3vh;
+    }
+}
+
+// 404
+
+#notfound {
+    position: relative;
+    height: 100vh;
+  }
+  
+  #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .notfound {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    padding: 0px 15px;
+  }
+  
+  .notfound .notfound-404 {
+    position: relative;
+    height: 150px;
+    line-height: 150px;
+    margin-bottom: 25px;
+  }
+  
+  .notfound .notfound-404 h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 186px;
+    font-weight: 900;
+    margin: 0px;
+    text-transform: uppercase;
+    color: $secondary;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .notfound h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .notfound p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+  }
+  
+  .notfound a {
+    font-family: 'Titillium Web', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background: $primary;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 1px;
+    margin-top: 15px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .notfound a:hover {
+    opacity: 0.8;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .notfound .notfound-404 {
+      height: 110px;
+      line-height: 110px;
+    }
+    .notfound .notfound-404 h1 {
+      font-size: 120px;
+    }
+  }
+
